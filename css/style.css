@@ -31,7 +31,6 @@ body,html{
     direction: rtl !important;
     overflow-x: hidden;
     font-family: cairo;
-
 }
 body{
     background-color: var(--body--bg);
@@ -99,10 +98,6 @@ font-weight: 400;
     display: block;
     background-color: var(--man--bg);
     border-radius: 5px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
 }
 .header-section span{
     font-size: 20px;
@@ -686,7 +681,17 @@ font-size: 14px;
 }
 
 /* //========= Trusted_companies section ===== */
-.Trusted_companies .box{ padding-right: 15px; margin-top: 40px;border-radius: 16px; background: #FFF; border-right:4px solid  #13C636; box-shadow: 0px 4px 37px 0px rgba(242, 242, 242, 0.10); -webkit-border-radius:; -moz-border-radius:; -ms-border-radius:; -o-border-radius:;
+.Trusted_companies .box{
+     padding-right: 15px;
+     margin-top:     40px;
+     border-radius: 16px;
+     background: #FFF;
+     border-right:4px solid  #13C636 ;
+     box-shadow: 0px 4px 37px 0px rgba(242, 242, 242, 0.10);
+     -webkit-border-radius: 16px;
+     -moz-border-radius: 16px;
+     -ms-border-radius: 16px;
+     -o-border-radius: 16px;
 }
 
 .Trusted_companies .box .action button{
@@ -752,12 +757,48 @@ height: 56px;
             padding-bottom: 0;
             margin-bottom: 0;
         }
-
+    }
         @media screen and (max-width: 400px) {
             .Trusted_companies .box{width: 335px;}
             .header-section h3{
                 font-size: 14px;
             }
         }
+        /* /// Conpanyies articles  section ======  */
+  .comp_articles .main{
+ width: 282px !important;
+height: 307px;
+border-radius: 12px;
+background: #FFF;
+margin-top: 40px;
+       }
+  .comp_articles .main img{
+    height: 190px;
+    display: block;
+    width: 281px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.comp_articles .main h4{
+    font-size: 16px;
+font-weight: 700;
+width: 202px;
+}
+.comp_articles .main p{
+    width: 251px;
+    height: 46px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 167.5%; /* 16.75px */
+    
+}
+.comp_articles .main p span{ color:var(--man--bg)}
 
+@media screen and (max-width: 768px) {
+    .comp_articles .main{
+        margin: 20px auto;
+    }
 }
