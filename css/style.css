@@ -426,6 +426,7 @@ height: 66px;
  margin-right: -10px;
  font-size: 13px;
  gap: 5px;
+ margin-top: -110px;
  justify-content: space-between;
  -webkit-border-radius: 16px 0px 0px 16px;
  -moz-border-radius: 16px 0px 0px 16px;
@@ -463,6 +464,7 @@ gap: 8px;
     .warning-list .warning-content .box{
     width: 345px;
     height: 370px;
+    
     padding: 20px !important;
     margin: 15px auto !important;
     border-radius: 5px;
