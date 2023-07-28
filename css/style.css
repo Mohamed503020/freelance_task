@@ -411,10 +411,7 @@ height: 66px;
  margin-top: -133px;
  margin-right: -128px;
  margin-bottom: 40px;
- -webkit-border-radius:;
- -moz-border-radius:;
- -ms-border-radius:;
- -o-border-radius:;
+
 }
 
    .services .box-service h5{
@@ -465,10 +462,7 @@ gap: 8px;
     width: 305px;
     border-radius: 12px;
     margin-top: 10px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+
 }
    @media screen and (max-width: 986px) {
     .warning-list .warning-content .box{
