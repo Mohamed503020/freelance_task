@@ -241,8 +241,10 @@ button.btn-close{
     }
 /* ////// === company Description Area  */
 .company_desc{
+    padding: 5px;
     height: 550px;
-    background: url("../assets/images/bg1.png"), lightgray 0px 0px / 100% 100% no-repeat ;
+    background: url("../assets/images/BG.png"), lightgray 0px 0px / 100% 100% no-repeat ;
+    background-size: cover;
 }
 
 @media screen and (max-width: 1200px) {
@@ -326,10 +328,7 @@ margin-bottom: 30px;
    font-size: 20px;
    font-weight: 700;
    background: var(--man--bg);
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   -ms-border-radius: 10px;
-   -o-border-radius: 10px;
+
 }
    .company_desc .search i{
     font-size: 20px;
@@ -382,7 +381,10 @@ height: 66px;
     padding: 5px;
     border-radius: 5px;
     color:var(--man--bg);
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 @media screen and (max-width: 500px) {
@@ -395,7 +397,8 @@ height: 66px;
    .last-warning .services{
  font-size: 16px;
  display: flex;
- width: 980px !important; height: 159px;
+ width: 1086px !important;
+ height: 159px;
  padding: 0px 60px;
  align-items: center;
  justify-content: end;
@@ -406,10 +409,10 @@ height: 66px;
  margin-top: -133px;
  margin-right: -128px;
  margin-bottom: 40px;
- -webkit-border-radius: 32px;
- -moz-border-radius: 32px;
- -ms-border-radius: 32px;
- -o-border-radius: 32px;
+ -webkit-border-radius:;
+ -moz-border-radius:;
+ -ms-border-radius:;
+ -o-border-radius:;
 }
 
    .services .box-service h5{
@@ -458,8 +461,13 @@ gap: 8px;
    .warning-list .warning-content .box{
     padding:  10px 16px !important;
     width: 305px;
+    border-radius: 12px;
     margin-top: 10px;
-   }
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
    @media screen and (max-width: 986px) {
     .warning-list .warning-content .box{
     width: 345px;
@@ -619,7 +627,9 @@ font-weight: 700;
 .instruction{
     padding-top: 100px;
 }
-
+.instruction .row{
+    gap: 80px;
+}
 .instruction h5{
 width: 400px;
 margin-top: 50px;
