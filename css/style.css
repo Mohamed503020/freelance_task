@@ -223,6 +223,7 @@ font-weight: 700;
     border:none;
     outline: none;
     margin: 0;
+    overflow: hidden;
     height: 844px;
     width: 110% !important;
     background: #FBFBFB;
