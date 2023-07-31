@@ -15,7 +15,6 @@
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
-    border-radius:0 !important ;
 }
 a{
     text-decoration: none;
@@ -58,6 +57,7 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+  button{ border-radius:0 !important ; -webkit-border-radius:0 !important ; -moz-border-radius:0 !important ; -ms-border-radius:0 !important ; -o-border-radius:0 !important ; }
 /* =========== Classes ============== */
 .seconnd-btn{
 display: flex !important;
