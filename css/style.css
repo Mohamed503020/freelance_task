@@ -15,6 +15,7 @@
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
+    border-radius:0 !important ;
 }
 a{
     text-decoration: none;
@@ -196,10 +197,6 @@ font-weight: 700;
      display: block;
      color: var(--man--bg);
      transform: scale(1.1);
-     -webkit-transform:;
-     -moz-transform:;
-     -ms-transform:;
-     -o-transform:;
 }
  .main-header .bar .fa-bars:before,  .main-header .bar  .fa-navicon:before {
     margin-top: 14px;
@@ -227,22 +224,19 @@ font-weight: 700;
     outline: none;
     margin: 0;
     margin-right: -10px;
-    overflow: hidden;
-    /*enableverticalscrolling*/scrollbar-color: #ccc #f5f5f5;
-    /*customizethescrollbarcolors*/scrollbar-width: thin;
     height: 844px;
     width: 390px;
     width: 100%;
     background: #FBFBFB;
     box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
+}
+.modal-content{
+    border-radius: 0;
+    border:none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
-}
-.modal-content{
-    border-radius: 0;
-    border:none
 }
  .modal-dialog a{
     color:#000
@@ -384,6 +378,10 @@ margin-bottom: 30px;
    font-size: 20px;
    font-weight: 700;
    background: var(--man--bg);
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   -ms-border-radius: 0;
+   -o-border-radius: 0;
 }
    .company_desc .search i{
     font-size: 20px;
@@ -485,7 +483,7 @@ font-weight: 700;
    .warning-list .row{gap: 40px;}
 
    .warning-list .warning-content .box{
-    padding:  10px 16px !important;
+    padding:  10px 16px 0 !important;
     width: 385px;
     margin-top: 10px;
 
@@ -575,15 +573,23 @@ height: 7px;
 font-size: 13px;
 font-weight: 700;
  }
- .warning-content .method .warn-btn{
+ .warning-content .method a{
+    display: block; width: 50%;
+    flex-shrink: 0;
+}
+.warning-content .method.action{
+    margin: 0;
+    margin-top: 25px;
+}
+ .warning-content .method button.warn-btn{
     display: flex;
-    width: 137px;
     height: 43px;
     padding: 18px 27px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: #FFF;
+    flex-shrink: 0;
     font-size: 14px;
  background-color: var(--man--bg);
  }
