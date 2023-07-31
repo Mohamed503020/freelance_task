@@ -1109,6 +1109,7 @@ width: 202px;
 @media screen and (max-width: 768px) {
     .comp_articles .main{
         margin: 20px auto;
+        width:100% !important;
     }
 }
 
