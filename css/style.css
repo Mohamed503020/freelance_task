@@ -527,7 +527,7 @@ font-weight: 700;
 width:100%;
    }
    .warning-list .warning-content .box .status {
-    margin-right: 254px !important;
+    margin-right: 85% !important;
    }
    }
    .warning-list .warning-content .box .status{
