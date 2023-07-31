@@ -39,6 +39,24 @@ body,html{
 body{
     background-color: var(--body--bg);
 }
+/* scroll Area  */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
 /* =========== Classes ============== */
 .seconnd-btn{
 display: flex !important;
@@ -107,7 +125,7 @@ font-weight: 400;
     height: 5px;
     display: block;
     background-color: var(--man--bg);
-    border-radius: 5px;
+
 }
 .header-section span{
     font-size: 20px;
@@ -178,10 +196,10 @@ font-weight: 700;
      display: block;
      color: var(--man--bg);
      transform: scale(1.1);
-     -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-     -ms-transform: scale(1.1);
-     -o-transform: scale(1.1);
+     -webkit-transform:;
+     -moz-transform:;
+     -ms-transform:;
+     -o-transform:;
 }
  .main-header .bar .fa-bars:before,  .main-header .bar  .fa-navicon:before {
     margin-top: 14px;
@@ -199,52 +217,88 @@ font-weight: 700;
     padding: 10px 30px !important;
    }
   }
-  .main-header  button{margin-top: -5px;}
+  .main-header  button{ margin-top: -5px; border-radius:0 !important ; -webkit-border-radius:0 !important ; -moz-border-radius:0 !important ; -ms-border-radius:0 !important ; -o-border-radius:0 !important ; } 
  /* // side nav  */
 
  .modal-dialog{
-    margin: 0;
-    width: 430px !important;
- }
- @media screen and (max-width:450px) {
-    .modal-dialog{
-        width: 182px;
-     }
- }
-
- .modal-content{
-    height: 100vh;
+    padding: 0;
     border-radius: 0;
+    border:none;
+    outline: none;
+    margin: 0;
+    margin-right: -10px;
+    overflow: hidden;
+    /*enableverticalscrolling*/scrollbar-color: #ccc #f5f5f5;
+    /*customizethescrollbarcolors*/scrollbar-width: thin;
+    height: 844px;
+    width: 390px;
+    width: 100%;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
+.modal-content{
+    border-radius: 0;
+    border:none
+}
+ .modal-dialog a{
+    color:#000
+ }
+
 .modal-header{
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-}
-.modal-body {
-    padding-top: 120px;
-    display: flex !important;
-    flex-direction: column;
-    background-color: var(--man--bg);
-    align-content: space-between;
+    border:none;
+    margin-top: 20px;
+    margin-bottom: -20px;
 
 }
-.modal-body a{
-    font-size: 25px;
-    margin-top: 140px !important;
+.modal-body{
+    margin-top: 20px;
+    padding: 0 24px;
+    font-size: 14px;
 }
+.modal-body .model-line{
+margin:  0 0;
+padding: 0 24px;
+margin-top: 20px;
+font-size: 18px;
+font-weight: 700;
+padding-bottom: 15px;
+border-bottom:1px solid #D6D4D4;
+
+}
+.modal-body .other_links{
+    margin-top: 50px;
+    font-size: 20px;
+font-weight: 600;
+    width: 390px;
+    padding: 0 24px;
+height: 158px;
+
+}
+.modal-body .services{
+    font-weight: 600;
+line-height: 120%;
+margin-top: 80px;
+padding: 0 24px;
+font-size: 14px;
+}
+.modal-body .services .box-service {margin-right: 10px;}
 button.btn-close{
     display: block;
     padding: 15px;
     margin-right: 150px !important;
-    font-size: 20px;
+    font-size: 18px;
 }
-@media screen and (max-width: 410px) {
-    .modal-dialog{
-        margin: 0;
-        width: 350px !important;
-     }
-    }
+.modal-body .footer{
+    font-size: 14px;
+    margin-top: 75px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
 /* ////// === company Description Area  */
 .company_desc{
     padding: 5px;
@@ -295,7 +349,10 @@ margin-bottom: 30px;
         }
    }
 
-.company_desc .search{ display: flex; width: 632px; height: 55px; padding: 6px 18px 6px 7px; justify-content: space-between; align-items: center; border-radius: 12px; border: 1px solid #FFF; -webkit-border-radius: 12px; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px;
+.company_desc .search{ display: flex; width: 632px;
+     height: 55px; padding: 6px 18px 6px 7px; 
+     justify-content: space-between; align-items: center;
+      border: 1px solid #FFF; 
 }
    .company_desc .search input{
     background-color: transparent;
@@ -322,12 +379,11 @@ margin-bottom: 30px;
    padding: 15px 26px;
    justify-content: center;
    align-items: center;
+   border-radius: 0;
    gap: 10px;
-   border-radius: 10px;
    font-size: 20px;
    font-weight: 700;
    background: var(--man--bg);
-
 }
    .company_desc .search i{
     font-size: 20px;
@@ -378,12 +434,7 @@ height: 66px;
     justify-content: center;
     background-color: #ccc;
     padding: 5px;
-    border-radius: 5px;
     color:var(--man--bg);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 @media screen and (max-width: 500px) {
@@ -403,13 +454,13 @@ padding: 36px 20px;
 box-shadow: 0px 4px 7px 0px rgba(239, 219, 219, 0.5);
 gap: 22px;
 }
-.last-warning .services .box-service .icon{
+ .services .box-service .icon{
     display: flex;
     width: 50px;
     height: 50px;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+  border-radius : 50%;
     border: 2px solid #D50900;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -462,8 +513,8 @@ width: 330px;
     width: 64px;
     transform: rotate(-24.571deg);
     padding: 5px 10px;
-    margin-right: 270px;
-    margin-top: 1px;
+    margin-right: 309px;
+    margin-top: -1px;
     font-size: 12px;
     color:#fff;
     -webkit-transform: rotate(-24.571deg);
@@ -482,12 +533,7 @@ width: 330px;
     padding: 8px 7px 7px 8px;
     justify-content: center;
     align-items: center;
-    border-radius: 11px;
     background: rgba(237, 237, 237, 0.50);
-    -webkit-border-radius: 11px;
-    -moz-border-radius: 11px;
-    -ms-border-radius: 11px;
-    -o-border-radius: 11px;
 }
 
    .warning-content .box-head .icon{
@@ -557,11 +603,7 @@ background-color: var(--man--bg);
      padding: 14px;
      margin-top: 15px;
      background-color: #fff;
-     border-radius: 8px;
-     -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-     -ms-border-radius: 8px;
-     -o-border-radius: 8px;
+
 }
  @media screen and (max-width: 768px) {
     .Statistics .St-box.first{
@@ -700,12 +742,8 @@ line-height: 227%; /* 40.86px */
     font-size: 20px;
     font-weight: 700;
     margin-top: 50px;
-    border-radius: 12px;
     display: block;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+
 }
 .instruction button:hover{background-color: var(--man--bg); color:#fff}
 
@@ -889,12 +927,7 @@ margin-left: 28px;
     width: 131px;
     height: 36px;
     padding: 12px 29px 13px 28px;
-    border-radius: 4px;
     margin-right: 40px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
     font-size: 16px;
 }
        .Trusted_companies .box .action a{
@@ -947,12 +980,6 @@ margin-bottom: 10px;
     width: 131px;
     height: 36px;
     padding: 12px 29px 13px 28px;
-    border-radius: 4px;
-    margin-right: 40px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
 }
        .Trusted_companies .box .action a{
         margin-top: 10px;
@@ -1006,24 +1033,15 @@ align-items: flex-start;
         /* /// Conpanyies articles  section ======  */
   .comp_articles .main{
  width: 304px !important;
- border-radius: 12px;
  background: #fff;
  margin-top: 10px;
  padding-bottom: 10px;
- -webkit-border-radius: 12px;
- -moz-border-radius: 12px;
- -ms-border-radius: 12px;
- -o-border-radius: 12px;
+
 }
   .comp_articles .main img{
     height: 190px;
     display: block;
     width: 100%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 .comp_articles .user_info{margin-top: 10px; margin-left: 5px; margin-right: 5px;}
 .comp_articles .user_info h6{
@@ -1034,8 +1052,8 @@ align-items: flex-start;
     font-size: 14px;
 font-weight: 600;
 text-transform: uppercase;
-    height: 30px; border-radius: 25px; background: #A4E3FF;justify-content: center;
-     padding: 10px 0px; align-items: center; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px;
+    height: 30px; background: #A4E3FF;justify-content: center;
+     padding: 10px 0px; align-items: center;
 }
 .comp_articles .user_info span.date{
     font-family: Tajawal;
