@@ -3,7 +3,7 @@
 :root{
     --man--bg:#D50900;
     --body--bg:#fff;
-    --main--font: "apple system";
+    --main--font: 'Tajawal';
     --main-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
  /* Global setting 
@@ -102,7 +102,7 @@ font-weight: 500;
 
    .not-header img{
     width: 65.8px;
-height: 14px;
+height: 100%;
    }
  .rating{
     margin-top: -7px;
@@ -113,7 +113,7 @@ height: 14px;
   .rating i.complete{
     color:#FFB800;
    }
-   .location{font-size: 8px;}
+   .location{font-size: 10px;}
    .body{
     width: 204px;
     color: rgba(255, 255, 255, 0.60);
@@ -261,10 +261,10 @@ font-weight: 700;
 .modal-content{
     border-radius: 0;
     border:none;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
  .modal-dialog a{
     color:#000
@@ -475,13 +475,11 @@ height: 66px;
     margin-top: -130px;
 }
 .last-warning .services .box-service{
-    border: 2px solid var(--man--bg);
-    background-color: #fafafa;
-width: 322px;
-padding: 30px 20px;
+    background-color: #fff;
+    width: 320px;
+    padding: 22px 22px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-gap: 22px;
-padding-bottom: 10px;
+gap: 18px;
 }
  .services .box-service .icon{
   display: flex;
@@ -499,11 +497,13 @@ padding-bottom: 10px;
   -o-border-radius: 50%;
 }
    .services .box-service h5{
-    font-size: 20px;
-font-weight: 700;
+    font-size: 17px;
+    color:var(--man--bg);
+font-weight:700;
    }
-   .services .box-service p{font-size: 17px;
-        font-weight: 300;
+   .services .box-service p{font-size: 16px;
+        font-weight: 400;
+        color:#444;
     line-height: 120%; /* 16.8px */
 }
 
@@ -511,14 +511,15 @@ font-weight: 700;
    .warning-list {
     margin-bottom: 100px;
    }
-   .warning-list .row{gap: 20px;}
+
 
    .warning-list .warning-content .box{
-    padding:  10px 20px !important;
-    width: 350px;
+    padding:  20px 20px !important;
     margin-top: 10px;
-    background-color: #fafafa;
-    box-shadow: var(--main-shadow);
+    width: 95%;
+    margin: 10px auto;
+    background: #Fff;
+
 }
 .warning-list .end_arrow a{
     display: none;
@@ -530,35 +531,67 @@ font-weight: 700;
     .warning-list .header-section a{display: none;}
     .warning-list .end_arrow a{display: block;}
 }
-   @media (min-width:429px) and (max-width: 986px) {
-    .warning-list .warning-content .box{ 
-    margin: 15px auto !important;
-    box-shadow: 0px 4px 7px 0px rgba(239, 219, 219, 0.5); 
-    
-}
+
+
+   @media (min-width:375px) and (max-width:380px) {
+    .warning-list .warning-content .box {
+        width:100% !important;
+           }
+           .warning-list .warning-content .box h6{
+            font-size: 16px;
+           }
+           .warning-list .warning-content .box .method button{
+           font-size: 10px;
+           margin-right: 5px;
+           }
    }
    @media screen and (max-width: 430px) {
     .last-warning .services{
         margin-top: 10px !important;
     }
    .warning-list .warning-content .box {
-width:100%;
+width: 100% !important;
+   }
+   .warning-list .warning-content .box h6{
+    font-size: 16px;
    }
    .warning-list .warning-content .box .method button{
-   font-size: 14px;
+   font-size: 10px;
+   margin-right: 5px;
    }
    }
-
+   @media (min-width:768px) and (max-width:991px) {
+    .warning-list .warning-content .box .method button{
+        font-size: 10px;
+        margin-right: 10px;
+        }
+        .warning-list  .method h6{
+            font-size: 15px;
+           }
+}
+.warning-content .box-head .head-state span{
+    font-size: 15px;
+color:#5a5a5a;   
+ font-weight: 500
+}
+.warning-content .box-head .head-state h6{
+    font-size: 16px;
+font-weight: 700;
+text-transform: capitalize;
+}
    .warning-content .box-head .img{
     display: flex;
-    width: 70px;
-    height: 55px;
-    padding: 8px 7px 7px 8px;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    padding: 14px 12px 13px 13px;
     margin-bottom: 10px;
     justify-content: center;
     align-items: center;
+    border-radius: 11px;
     background: rgba(237, 237, 237, 0.50);
 }
+.warning-content .box-head .img img{width: 40px;height: 40px;}
 
    .warning-content .box-head .icon{
     gap: 13px;
@@ -579,10 +612,10 @@ font-weight: 700;
    }
 .method span{
 text-align: right;
-font-size: 17px;
+font-size: 16px;
 font-weight: 700;
 text-transform: capitalize;
-margin-right: 7px;
+margin-right: 8px;
    }
     .line{
     width: 1px;
@@ -608,7 +641,7 @@ height: 7px;
     gap: 10px;
     color: #FFF;
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 12px;
 }
  .warning-content .method button.warn-btn{
  background-color: var(--man--bg);
@@ -666,70 +699,57 @@ font-weight: 700;
     }
  }
  /* ///// ==== comments section Area == */
- .comments .row {
-    gap: 8px;
+ .comments{
+    padding: 40px;
+    width: 100%;
  }
+
 .comments .user{
     display: flex;
-    width: 410px;
-    height: 106px;
+    margin-top: 20px;
+    width: 97%;
     padding: 8px 14px 12px 14px;
     align-items: center;
     gap: 9px;
-    background-color: #fff;
+    background: #F7F7F7;
 
 }
 .comments .user_logo{
-    height: 78px;
-padding: 27px 8px 29px 8px;
-background: #D80027;
-font-size: 32px;
-font-weight: 400
+    height: 60px;
+    padding: 21px 12px 22px 12px;
+    background: #D80027;
+    font-size: 24px;
+    border-radius:50px;
+    font-weight: 400;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    -ms-border-radius:50px;
+    -o-border-radius:50px;
 }
-.comments .user .body{font-size: 10px;}
-.comments .header span {cursor: pointer;}
+.comments .user i{font-size: 14px; margin: 0;}
+.comments .user .body{font-size: 14px;margin-top: 2px; width:95%;color: #5A5A5A; font-weight: 400;}
+.comments .header span {cursor: pointer; font-size: 13px;}
 .comments .header img{width: 47px;
     height: 10px;}
-.comments .user .location i{font-size: 10px;}
-.comments .user .rating{margin-right: 40px;}
-@media (min-width:368px) and (max-width: 420px) {
-    .comments .user{width: 346px;}
-    .comments .user_logo{
-font-size: 24px;
-font-weight: 400;
-height: 77px;
-padding: 0px 12px;
-    }
-    .comments .user .not-header div{
-        font-size: 14px;
-    }
-    .comments .not-header img{width: 47px;
-        height: 10px;}
-    .comments .user .rating{margin-right: 15px;}
+    .comments .user .date{font-size: 14px;}
+.comments .user .location {font-size: 14px;}
 
-}
-
-@media screen and (max-width:367px){
-    .comments .user_logo{
-        font-size: 20px;
-        font-weight: 400;
-        height: 70px;
-        padding: 0px 10px;
-            }
-            .comments .user .not-header div {font-size: 14px !important;}
-            .comments .user .not-header img{
-                width: 30px;
-                height: 10px;
-            }
-}
 .comments .user .not-header div{
     color:#000;
     font-size: 16px;
 }
-
+@media (max-width:400px) {
+    .comments .container{width: 100%;padding-left: 5px !important; padding-right: 5px !important;}
+  .comments .user{
+    width: 110% !important;
+  }  
+.comments .user .body{width: 100%;font-size: 12px;}
+}
 /* //////======== instruction section ======= */
 .instruction{
     padding-top: 100px;
+    background-color: #e4f9d8;
+    padding: 20px;
 }
 .instruction .row{
     gap: 80px;
@@ -843,6 +863,9 @@ font-size: 14px;
 }
 
 /* //========= Trusted_companies section ===== */
+.Trusted_companies{
+    margin: 0;
+}
 .Trusted_companies .box{
      
     padding:20px 10px;
