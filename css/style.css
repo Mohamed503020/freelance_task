@@ -39,6 +39,8 @@ body{
     background-color: var(--body--bg);
     font-family:var(--main--font);
     font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
 /* scroll Area  */
 
@@ -1052,22 +1054,43 @@ width: 202px;
     }
 }
 
+ /* ============= Sponser section ==============  */
+   .sponser{
+    margin-top: 45px;
+    padding: 50px 0;
+    background-color: #f2fcfe;
+   }
+   .sponser{padding-left: 5px;}
+   .sponser img{
+    width: 10%;
+    margin-right: 30px;
+    height: 60px;
+    margin: 20px auto;
+   }
+   .sponser .content {width: 100%;}
+   @media (min-width:576px) and (max-width:860px){
+    .sponser img{width: 35%;}
+   }
+    
+   @media (max-width:575px) {
+    .sponser img{width: 50%;}
+   }
 /* //===============footer section================// */
 footer{
-    padding-top: 20px;
-    margin-top: 80px;
+    padding-top: 50px;
     margin-bottom: 10px;
+    background-color: #f9f9f9;
 }
 
 .contact h4{
 margin-top: 15px;
 height: 24px;
-font-size: 16px;
+font-size: 14px;
 font-weight: 700;
 }
 
 .contact .icon {
-    align-items: center;
+  align-items: center;
 gap: 41px;
 display: flex;
 font-size: 19px;
@@ -1082,15 +1105,12 @@ font-size: 19px;
     -ms-transition: all 05s ease-in-out;
     -o-transition: all 05s ease-in-out;
 }
-
 Footer .links {
-    display: flex;
-gap: 20px;
 font-size: 16px;
-font-style: normal;
 font-weight: 700;
 }
-footer .links a{color:#000;}
+footer .links a{color:#6c757d;display: block; font-size: 14px;}
+footer .links h6{font-size: 16px;}
 footer .conction_info{
 gap: 16px;
 }
@@ -1100,7 +1120,7 @@ font-weight: 600;
 margin-top: 10px;
 }
 .conction_info h6 i{font-size: 16px;}
-@media (min-width: 780px) and (max-width: 1400px) {
+/* @media (min-width: 780px) and (max-width: 1400px) {
   .conction_info h6 i{
     font-size: 12px;
   }
@@ -1109,8 +1129,8 @@ margin-top: 10px;
   }
   footer .links a{font-size: 16px;font-weight: 6000; margin-top: 10px;
 }
-}
-@media screen and (max-width: 779px) {
+} */
+/* @media screen and (max-width: 779px) {
  footer .links{
     flex-direction: row !important;
     font-size: 12px;
@@ -1120,7 +1140,7 @@ margin-top: 10px;
    margin-right: 10px;
     
 }
-}
+} */
 .footer .other_links ul{
     color: #000;
     font-size: 14px;
@@ -1132,8 +1152,10 @@ margin-top: 10px;
     color: #000;
     text-align: center;
     
-    font-size: 18px;
+    font-size: 16px;
 font-style: normal;
 font-weight: 500;
     
 }
+
+footer .copy{font-size: 14px;}
