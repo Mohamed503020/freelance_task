@@ -21,13 +21,13 @@
 
 <body>
   <!-- ====satrt top Header ====== -->
-  <div class="top-header d-none d-lg-block">
+  <div class="top-header d-none d-lg-block  " >
     <div class="container">
-      <ul>
-        <li><a href="">التعليم</a></li>
-        <li><a href="">التعليم</a></li>
-        <li><a href="">التعليم</a></li>
-        <li><a href="">التعليم</a></li>
+      <ul class="me-auto">
+        <li><a href="#">اخلاء المسؤوليه</a></li>
+        <li><a href="#">الشروط والاحكام</a></li>
+        <li><a href="#">الخصوصية</a></li>
+        <li><a href="#">Apsi</a></li>
       </ul>
     </div>
   </div>
@@ -78,19 +78,44 @@
             </svg>
           </div>
         </div>
-        <div class="col-md-6 d-none d-lg-block ">
-          <div class="links d-flex justify-content-center">
+        <div class="col-md-7 d-none d-lg-block ">
+          <div class="links d-flex text-center">
             <ul>
-              <li><a href="#">الصفحة الرئيسية </a></li>
-              <li><a href="#">معلومات عنا </a></li>
-              <li><a href="#"> تواصل معانا </a></li>
+              <li ><a href="" id="peple_links">  أفراد</a>
+              <div class="menu menu1 shadow-lg border rounded" id="menu1">
+              <h6><i class="fa-solid fa-people-group"></i> افراد </h6>
+              <div class="links-menu d-flex flex-column gap-3 align-items-center justify-content-center">
+                <a href="">ابلاغ عن احتيال </a>
+                <a href="">خدمة استرجاع احوال الاحتيال</a>
+                <a href="">تقديم شكوى عن الاحتيال</a>
+              </div>
+              </div>
+              
+              </li>
+              <li><a href="#" id="company_links"> شركات </a>
+                <div class="menu menu1 shadow-lg border rounded" id="menu2">
+                  <h6><i class="fa-solid fa-building"></i> الشركات  </h6>
+                  <div class="links-menu d-flex flex-column gap-3 align-items-center justify-content-center">
+                    <a href="">المطلبات لحساب شركة</a>
+                    <a href="">بيانات الموقع API</a>
+                    <a href="">تقديم شكوى عن الاحتيال</a>
+                    <a href="">طلب الشركة</a>
+                    <a href="">اجراء الاخطاء وازاله الانذار</a>
+
+                  </div>
+                  </div>
+              </li>
+              <li><a href="#">  تحذير الاحتلال </a></li>
+              <li><a href="#">   الشركات والهيئة  </a></li>
+              <li><a href="#">     عن المنصة </a></li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-3 col-1 d-none d-lg-block">
-          <div class="action  d-flex justify-content-end">
+        <div class="col-lg-2 col-1 d-none d-lg-block">
+          <div class="action  d-flex ">
             <!-- <button class="btn btn-outline-dark seconnd-btn ">سماسرة</button> -->
-            <button class="btn seconnd-btn main-btn rounded shadow-sm">تقديم شكوى احتيال</button>
+            <button class="btn  main-btn rounded shadow">تقديم شكوى احتيال 
+            </button>
           </div>
          </div>
         <div class="col-1 d-lg-none text-end d-flex justify-content-center ">
@@ -101,6 +126,7 @@
       </div>
     </div>
   </div>
+  
   <!-- // side nave in small screen Area  -->
   <!-- Modal -->
   <div class="modal fade" id="sidenav" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
