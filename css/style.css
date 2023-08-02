@@ -5,6 +5,7 @@
     --body--bg:#fff;
     --main--font: 'Tajawal';
     --main-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --second-bg:#FAFAFA;
     }
  /* Global setting 
   */
@@ -28,11 +29,7 @@ button,button:hover{
 ul{
     list-style: none;
 }
-@font-face {
-    font-family: "apple system";
-    src: url("../fonts/FiraSansCondensed-Italic.otf") format("otf"),
-         
-}  
+ 
 body,html{
     direction: rtl !important;
     overflow-x: hidden;
@@ -44,27 +41,7 @@ body{
     font-weight: 700;
 }
 /* scroll Area  */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
+
   button{ border-radius:0 !important ; -webkit-border-radius:0 !important ; -moz-border-radius:0 !important ; -ms-border-radius:0 !important ; -o-border-radius:0 !important ; }
 /* =========== Classes ============== */
 .seconnd-btn{
@@ -234,11 +211,14 @@ font-weight: 700;
     width: 110% !important;
     background: #FBFBFB;
     box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
-
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
  .modal {
     overflow-y: scroll;
-    scrollbar-color: #888 #f5f5f5;
+    scrollbar-color: #888 var(--second-bg);
   }
   
    .modal::-webkit-scrollbar {
@@ -256,15 +236,15 @@ font-weight: 700;
 }
   
    .modal-dialog::-webkit-scrollbar-track {
-    background-color: #f5f5f5;
+    background-color: var(--second-bg);
   }
 .modal-content{
     border-radius: 0;
     border:none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
  .modal-dialog a{
     color:#000
@@ -406,10 +386,10 @@ margin-bottom: 30px;
    font-size: 20px;
    font-weight: 700;
    background: var(--man--bg);
-   -webkit-border-radius: 0;
-   -moz-border-radius: 0;
-   -ms-border-radius: 0;
-   -o-border-radius: 0;
+   -webkit-border-radius:;
+   -moz-border-radius:;
+   -ms-border-radius:;
+   -o-border-radius:;
 }
    .company_desc .search i{
     font-size: 20px;
@@ -527,10 +507,7 @@ font-weight:700;
     font-size: 18px;
 }
 .warning-list .end_arrow a i{color:var(--man--bg)}
-@media (max-width: 992px) {
-    .warning-list .header-section a{display: none;}
-    .warning-list .end_arrow a{display: block;}
-}
+
 
 
    @media (min-width:375px) and (max-width:380px) {
@@ -590,6 +567,10 @@ text-transform: capitalize;
     align-items: center;
     border-radius: 11px;
     background: rgba(237, 237, 237, 0.50);
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
 }
 .warning-content .box-head .img img{width: 40px;height: 40px;}
 
@@ -700,7 +681,7 @@ font-weight: 700;
  }
  /* ///// ==== comments section Area == */
  .comments{
-    padding: 40px;
+    padding: 50px 0;
     width: 100%;
  }
 
@@ -741,20 +722,20 @@ font-weight: 700;
 @media (max-width:400px) {
     .comments .container{width: 100%;padding-left: 5px !important; padding-right: 5px !important;}
   .comments .user{
-    width: 110% !important;
+    width: 100% !important;
   }  
 .comments .user .body{width: 100%;font-size: 12px;}
 }
 /* //////======== instruction section ======= */
-.instruction{
-    padding-top: 100px;
-    background-color: #e4f9d8;
-    padding: 20px;
+.instruction{padding: 50px 0;}
+.instruction .content{
+    background-color: #F7F7F7;
+    width: 100%;
+
 }
-.instruction .row{
-    gap: 80px;
-}
-.instruction h5{
+.instruction .desc{padding-bottom: 30px;}
+.instruction .desc h5{
+    font-family: Cairo;
 width: 400px;
 margin-top: 50px;
 color: #000;
@@ -767,13 +748,14 @@ line-height: 169%; /* 40.56px */
     margin-top: 20px;
     width: 500px;
 font-size: 18px;
+font-family: Cairo;
 font-weight: 500;
 line-height: 227%; /* 40.86px */
 }
-
-.instruction img{
-    height: 440px;
-    width: 600px;
+.instruction  .img{width: 100%;height: 100%;}
+.instruction  .img img{
+   width: 100%;
+   height: 100%;
 }
 .instruction button{
     background-color:var(--man--bg);
@@ -787,84 +769,34 @@ line-height: 227%; /* 40.86px */
     gap: 10px;
     font-size: 20px;
     font-weight: 700;
-    margin-top: 50px;
+    margin-top: 40px;
     display: block;
 
 }
 .instruction button:hover{background-color: var(--man--bg); color:#fff}
-
-@media screen and (max-width: 990px) {
-    .instruction{
-        padding-top: 30px;
-        margin: 0 auto !important;
-
-    }
-    .instruction .desc {
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-    }
-    .instruction .img{    
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-    
-      }
-    .instruction img{
-        width: 346px;
-        height: 264px;
-    }
-    .instruction h5{
-        align-items: center;
-        width: 340px;
-        font-size: 20px;
-        margin-top: 15px;
-    }
-    .instruction p{
-display: flex;
-width: 344px;
-height: 93px;
-justify-content: start;
-font-size: 14px;
-margin-top: 10px;
-    }
-    .instruction button{
-        display: block;
-        margin-top: 30px;
-    }
+@media (min-width:992px) and (max-width: 1199px) {
+    .instruction .desc p{font-size: 14px; width: fit-content;margin-right: 10px;}
+}
+@media (min-width:768px) and (max-width: 991px) {
+    .instruction .desc h5{font-size: 18px; margin-right: 20px; width:fit-content;}
+    .instruction .desc p{font-size: 13px; margin-right: 20px; width: fit-content;}
 }
 
-@media (min-width: 991px) and (max-width: 1400px) {
-    .instruction{
-        padding-top: 30px;
-    }
-    .instruction img{
-        width: 340px;
-    height: 250px;
-    }
-    .instruction h5{
-        align-items: center;
-        width: 310px;
-        font-size: 17px;
-        margin-top: 15px;
-    }
-    .instruction p{
+@media screen and (max-width:550px) {
+    .instruction{background-color: #f7f7f7; padding: 0;}
+    .instruction .img img {width: 107%;margin-right: -10px;}
+    .instruction .content{padding-bottom: 0; width: 100%; padding: 0;background-color: #f7f7f7;}
+    .instruction .desc h5{font-size: 16px; margin-right: 15px; word-wrap: break-word;width: fit-content;}
+    .instruction .desc p{font-size: 13px; width: fit-content;margin-right: 10px;}
+    .instruction .desc button{
+        width: 230px;
         margin-top: 10px;
-        font-size: 18px;
-        width: 360px !important;
-height: 114px;
-font-size: 14px;
-    }
- 
-    .instruction button{
-        display: block;
-        margin-top: 20px;
     }
 }
 
 /* //========= Trusted_companies section ===== */
 .Trusted_companies{
-    margin: 0;
+    margin-top: 40px;
 }
 .Trusted_companies .box{
      
@@ -872,25 +804,27 @@ font-size: 14px;
      padding-right: 15px;
      margin-top:  20px;
      border-right:4px solid  #13C636 ;
+     background: var(--second-bg);
      box-shadow: 0px 4px 37px 0px rgba(242, 242, 242, 0.10);
      width: 100%;
+     background-color: #F7F7F7;
 }
 .Trusted_companies .box .brand{
-    margin-right: 30px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .Trusted_companies i.complete{color:#FFB800}
 .Trusted_companies .box .list-methods{
-    width: 750px !important;
-align-items: flex-end;
+    width: 640px ;
+align-items: flex-start;
 }
 .Trusted_companies .box .list-methods h6{
     color: #A3A3A3;
-font-size: 18px;
-    font-weight: 500;
+font-size: 20px;
+    font-weight: 700;
 }
 .Trusted_companies .box .list-methods span{
-    font-size: 24px;
+    font-size: 20px;
 font-weight: 400;
 }
 .Trusted_companies .box .licenses,.Trusted_companies .box .licenses span{
@@ -906,26 +840,22 @@ font-weight: 400;
     background-color: var(--man--bg);
     color: #FFF;
     display: flex;
-    font-weight: 700;
-    font-size: 16px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 173px;
+    width: 180px;
     height: 41px;
-    padding: 0px 50px 0px 49px;
+    font-size: 18px;
+    padding: 13px 45px 14px 45px;
     justify-content: center;
     align-items: center;
 }
 .Trusted_companies .box .action a{
     color:var(--man--bg);
     font-weight: 700;
-    padding-bottom: 5px;
+height: 20px;
     border-bottom: 3px solid var(--man--bg);
-    font-size: 12px;
+    font-size: 16px;
   margin: 0 auto;
-  width: 113px;
-
+line-height: 36%;
+margin-top: 10px;
 }
 .Trusted_companies .box img{
     width: 152px;
@@ -933,10 +863,11 @@ font-weight: 400;
 margin-left: 28px;
 }
 .Trusted_companies .box span{font-size: 14px;}
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 767px) {
     .Trusted_companies .box {
-        width: 346px;
-        margin: 10px auto;
+        width: 107%;
+        margin: 0 auto;
+        margin-right: -10px;
     }
     .Trusted_companies .box .brand{
         margin-bottom: 10px;
@@ -945,12 +876,12 @@ margin-left: 28px;
         margin-bottom: 15px;
     }
     .Trusted_companies .box .licenses,.Trusted_companies .box .licenses span{
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
     }
 
     .Trusted_companies .box .list-methods h6{
-    font-size: 12px;
+    font-size: 16px;
     }
     .Trusted_companies .box .list-methods span{
         font-size:18px;
@@ -961,7 +892,7 @@ margin-left: 28px;
         margin-top: 10px;
     }
     .Trusted_companies .box .list-methods{
-        width: 100% !important;
+        width: 100% ;
     align-items: flex-end;
     gap:10px;
     flex-wrap: wrap;
@@ -973,37 +904,32 @@ margin-left: 28px;
 margin-left: 28px;
 }
 .Trusted_companies .box .action button{
-    width: 131px;
-    height: 36px;
+    width: 160px;
+    height: 40px;
     padding: 12px 29px 13px 28px;
     margin-right: 40px;
     font-size: 16px;
 }
        .Trusted_companies .box .action a{
-        margin-top: 10px;
-        display: flex;
-height: 20px;
-padding-top: 3px;
-width: 127px;
-flex-direction: column;
-justify-content: center;
-font-size: 14px;
-align-items: flex-start;
+font-size: 13px;
+line-height: 20%;
+width: max-content;
        }
     }
-@media (min-width:767px) and  (max-width: 990px) {
+@media (min-width:768px) and  (max-width: 990px) {
     .Trusted_companies .box {
         margin: 10px auto;
+        padding: 30px 0;
     }
     .Trusted_companies .box .brand{
-        margin-bottom: 10px;
+        width: 50px;
     }
-    .Trusted_companies .box .licenses,.Trusted_companies .box .licenses span{
-        font-size: 16px;
+    /* .Trusted_companies .box .licenses,.Trusted_companies .box .licenses span{
+        font-size: 24px;
         font-weight: 400;
-    }
+    } */
     .Trusted_companies .box .list-methods h6{
-    font-size: 13px;
+    font-size: 18px;
     }
     .Trusted_companies .box .list-methods span{
         font-size:18px;
@@ -1019,25 +945,21 @@ align-items: flex-start;
     gap:40px;
     }
    .Trusted_companies .box img{
-    margin-bottom: 10px;
-    width: 155px;
-    height: 50px;
-margin-left: 28px;
-margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 70px;
+display: flex;justify-content: center;
 }
 .Trusted_companies .box .action button{
-    width: 131px;
-    height: 36px;
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
     padding: 12px 29px 13px 28px;
+    margin-right: 40px;
+    margin-bottom: 10px;
 }
        .Trusted_companies .box .action a{
-        margin-top: 10px;
-        display: flex;
-height: 20px;
-padding-top: 3px;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
+      font-size: 18px;
        }
     }
 @media (min-width:991px) and  (max-width: 1200px) {
@@ -1052,31 +974,18 @@ align-items: flex-start;
         margin-right: 10px;
     }
     .Trusted_companies .box .list-methods{
-        width: 100% !important;
+        width:fit-content;
     align-items: flex-end;
     gap:20px;
     }
-   
+    .Trusted_companies .box .list-methods .method{margin-left: 15px;}
+    .Trusted_companies .box .list-methods .method h6{font-size: 15px;}
     }
-    @media (min-width:1201px) and  (max-width: 1399px) {
-        .Trusted_companies .box .brand{
-            margin-right: 15px;
-            margin-left: 15px;
-        }
-        .Trusted_companies .box .action {
-            margin-right: 30px;
-        }
-        .Trusted_companies .box .list-methods{
-            width: 650px !important;
-        align-items: flex-end;
-        gap:20px;
-        }
-       
-        }
+
     
         @media screen and (max-width: 500px) {
             .header-section h3,.header-section span{
-                font-size: 14px;
+                font-size: 16px;
             }
         }
         /* /// Conpanyies articles  section ======  */
