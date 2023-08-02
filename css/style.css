@@ -33,7 +33,7 @@ ul{
 body,html{
     direction: rtl !important;
     overflow-x: hidden;
-   
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--body--bg);
@@ -187,16 +187,14 @@ font-weight: 700;
     font-size: 20px;
     cursor: pointer;
 }
-.main-header .main-btn{background-color: var(--man--bg);color:#fff}
+.main-header .main-btn{background-color: var(--man--bg);color:#fff; font-size: 18px;
+width: 173px;
+}
 /* main header in responsive area  */
-@media screen and (max-width: 1220px) {
-   .seconnd-btn{
-    font-size: 15px; 
-    display: block;   
-    padding: 10px 30px !important;
-   }
+@media screen and (max-width: 1200px) {
+    .main-header .links li a{font-size: 20px;}
   }
-  .main-header  button{ margin-top: -5px; border-radius:0 !important ; -webkit-border-radius:0 !important ; -moz-border-radius:0 !important ; -ms-border-radius:0 !important ; -o-border-radius:0 !important ; } 
+  .main-header  button{ margin-top: -5px; } 
  /* // side nav  */
 
  .modal-dialog{
