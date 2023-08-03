@@ -292,10 +292,11 @@ padding: 0 24px;
 margin-top: 20px;
 font-size: 18px;
 font-weight: 700;
-padding-bottom: 15px;
 border-bottom:1px solid #D6D4D4;
 
 }
+.modal-body #sibar_Sub_link1,.modal-body #sibar_Sub_link2{cursor: pointer;}
+.modal-body .sub-menu {margin-right: 40px;}
 .modal-body .other_links{
     margin-top: 50px;
     font-size: 20px;
@@ -305,10 +306,11 @@ font-weight: 600;
 height: 158px;
 
 }
+.modal-body .sub-menu a:hover{color:var(--man--bg) !important}
 .modal-body .services{
     font-weight: 600;
 line-height: 120%;
-margin-top: 80px;
+margin-top: 60px;
 padding: 0 24px;
 font-size: 14px;
 }
@@ -321,7 +323,7 @@ button.btn-close{
 }
 .modal-body .footer{
     font-size: 14px;
-    margin-top: 75px;
+    margin-top: 30px;
 font-weight: 600;
 margin-bottom: 20px;
 }

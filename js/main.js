@@ -38,3 +38,44 @@ menu2.addEventListener('mouseleave',()=>{
     menu2.style.display='none'
  
 })
+
+// side menu in small screen 
+
+// links sub menu 
+//first link
+let subLink1=document.getElementById('sibar_Sub_link1');
+let subMenu1=document.getElementById('sibar_Sub_menu1');
+let subUparrow1=document.getElementById('sibar_Sub_Uparow1');
+let subDownarrow1=document.getElementById('sibar_Sub_Updown1');
+// second link 
+let subLink2=document.getElementById('sibar_Sub_link2');
+let subMenu2=document.getElementById('sibar_Sub_menu2');
+let subUparrow2=document.getElementById('sibar_Sub_Uparow2');
+let subDownarrow2=document.getElementById('sibar_Sub_Updown2');
+
+subLink1.addEventListener("click",()=>{
+    if(subUparrow1.classList.contains('d-none')){
+        subUparrow1.classList.remove('d-none')
+        subDownarrow1.classList.add('d-none')
+        subMenu1.classList.remove('d-none')
+    }
+    else{
+        subUparrow1.classList.add('d-none')
+        subDownarrow1.classList.remove('d-none')
+        subMenu1.classList.add('d-none')
+    }
+
+})
+subLink2.addEventListener("click",()=>{
+    if(subUparrow2.classList.contains('d-none')){
+        subUparrow2.classList.remove('d-none')
+        subDownarrow2.classList.add('d-none')
+        subMenu2.classList.remove('d-none')
+    }
+    else{
+        subUparrow2.classList.add('d-none')
+        subDownarrow2.classList.remove('d-none')
+        subMenu2.classList.add('d-none')
+    }
+
+})
