@@ -60,7 +60,7 @@ margin-right: 15px;
 }
 /* ///change scroll  */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
@@ -76,7 +76,7 @@ margin-right: 15px;
   
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
-  }
+  } */
  /* notficaton classes  */
  .not-header {
     display: flex;
@@ -266,12 +266,7 @@ display: block;
     -o-border-radius: 0;
     scroll-behavior: smooth;
 }
-.modal-dialog::-webkit-scrollbar {
-    width: 0px;
-  }
-  .modal::-webkit-scrollbar {
-    width: 0px;
-  }
+
   .modal-dialog::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
