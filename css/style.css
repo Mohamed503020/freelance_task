@@ -33,6 +33,7 @@ ul{
 body,html{
     direction: rtl !important;
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
 }
 body{
@@ -126,7 +127,6 @@ font-weight: 400;
 /* ======================== */
 /* === top header Area ===== */
 .top-header{background-color: var(--man--bg);
-    overflow: hidden;
     height: 35px;
 padding: 5px 0;
    
@@ -229,7 +229,6 @@ display: block;
   /* ///menue  */
   
  /* // side nav  */
-
   .modal-dialog {
     width: 100%;
     max-width: 100%;
@@ -242,34 +241,32 @@ display: block;
     outline: none;
     box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
     background-color: #fbfbfb;
-    overflow-y: scroll;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    scroll-behavior: smooth;
 }
-  
 .modal-dialog::-webkit-scrollbar {
-    width: 3px !important;
-    height: 3px !important
+    width: 8px;
   }
   
-   .modal-dialog::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 1px;
- 
-}
+  .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
   
-   .modal-dialog::-webkit-scrollbar-track {
-    background-color: var(--second-bg);
+  .modal-dialog::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
 .modal-content{
     border-radius: 0;
     border:none;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
  .modal-dialog a{
     color:#000
