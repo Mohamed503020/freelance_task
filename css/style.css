@@ -202,7 +202,7 @@ display: block;
     left: 34%;
     text-align: right;
     top: 130px;
-    z-index: 999999;
+    z-index: 999;
     background-color: #fff;
     padding-bottom: 30px;
 }
@@ -230,27 +230,24 @@ display: block;
   
  /* // side nav  */
 
- .modal-dialog{
-    padding: 0;
-    border-radius: 0;
-    border:none;
-    outline: none;
-    padding-left: 10px;
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    z-index: 999999999;
+    height: 100%;
     margin: 0;
-    margin-right: -10px;
-    height: 844px;
-    width: 110% !important;
-    background: #FBFBFB;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
     box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
+    background-color: #fbfbfb;
+    overflow-y: scroll;
     -webkit-border-radius:;
     -moz-border-radius:;
     -ms-border-radius:;
     -o-border-radius:;
 }
- .modal {
-    overflow-y: scroll;
-    scrollbar-color: #888 var(--second-bg);
-  }
   
    .modal::-webkit-scrollbar {
     width: 3px !important;
@@ -260,10 +257,10 @@ display: block;
    .modal-dialog::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 1px;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    -ms-border-radius: 1px;
-    -o-border-radius: 1px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
   
    .modal-dialog::-webkit-scrollbar-track {
@@ -284,8 +281,11 @@ display: block;
 .modal-header{
     border:none;
     margin-top: 20px;
-    margin-bottom: -20px;
 
+}
+
+.modal-header i{font-size: 30px; color:var(--man--bg);
+width: 40px;
 }
 .modal-body{
     margin-top: 20px;
@@ -443,7 +443,7 @@ height: 46px;
        left: 100px;
        bottom: 150px;
        padding: 8px 14px 12px 14px;
-       z-index: 999;
+       z-index: 99;
      background: #0E122E;
 box-shadow: 0px 4px 65px 0px rgba(0, 0, 0, 0.50);
  
