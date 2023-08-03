@@ -178,7 +178,7 @@ font-weight: 700;
     height: 100px; 
  }
  .main-header .logo img{
-    width: 236px;
+    width: 216px;
 height: 90px;
 display: block;
 margin-top: -20px;
@@ -218,7 +218,7 @@ margin-top: -20px;
     cursor: pointer;
 }
 .main-header .main-btn{background-color: var(--man--bg);color:#fff; font-size: 18px;
-width: 173px;
+width: 200px;
 height: 65px;
 display: block;
 }
