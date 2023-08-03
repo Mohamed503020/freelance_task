@@ -125,21 +125,21 @@ font-weight: 400;
    }
     /* classe header of each section  */
  .header-section h3{
-    font-size: 32px;
+    font-size: 1.7rem;
     font-weight: 700;
     padding-bottom: 7px;
    }
    .header-section h3::after{
     content: "";
-    margin-top: 10px;
-    height: 5px;
+    margin-top: 5px;
+    height: 4px;
     display: block;
     background-color: var(--man--bg);
 
 }
 .header-section a{color:#000}
 .header-section span{
-    font-size: 20px;
+    font-size: 1.1rem ;
     font-weight: 400;
     cursor: pointer;
    }
@@ -174,17 +174,16 @@ font-weight: 700;
 }
  /* ============ main Header Area ======== */
  .main-header{
-    padding: 30px;
-    height: 100px; 
+    padding:40px 15px 15px;
+    height: 100px;
  }
  .main-header .logo img{
     width: 216px;
 height: 90px;
 display: block;
-margin-top: -20px;
+margin-top: -30px;
  }
  .main-header .links li{
-    margin-top: 7px;
     font-weight: bold;
     font-size: 16px;
  }
@@ -202,7 +201,7 @@ margin-top: -20px;
  .main-header .links li a{
     color: black;
     font-weight: bold;
-    font-size: 20px;
+  font-size: 1.2rem;
 
 }
 .main-header .links li a i{margin-top: 10px;font-size: 14px;}
@@ -217,10 +216,20 @@ margin-top: -20px;
     font-size: 20px;
     cursor: pointer;
 }
-.main-header .main-btn{background-color: var(--man--bg);color:#fff; font-size: 18px;
-width: 200px;
-height: 65px;
-display: block;
+.main-header .main-btn{
+    background-color: var(--man--bg);
+    color:#fff;
+    padding: 8px;
+    margin-top: -10px;
+    font-size: 1.2rem;
+    width:  200px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: block;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 /* // dropdown-menu */
 .main-header .menu{
@@ -249,12 +258,13 @@ display: block;
 .main-header .menu .links-menu a{font-size: 16px;}
 /* main header in responsive area  */
 @media (max-width:991px){
-    .main-header{height: 80px;padding-top: 20px;}
+    .main-header{height: 80px !important;padding-top: 20px;padding-bottom: 0;}
+    .main-header  .logo img{margin-top: -20px;}
 }
-@media screen and (max-width: 1200px) {
-    .main-header .links li a{font-size: 20px;}
+@media screen and (max-width: 1400px) {
+    .main-header .main-btn{margin-top: -15px;}
+    .main-header{height: 115px;}
   }
-  .main-header  button{ margin-top: -10px; } 
   /* ///menue  */
   
  /* // side nav  */
@@ -383,12 +393,12 @@ background: linear-gradient(180deg, #07192C, #60143C);
 
 }
 .company_desc .title h1{
-font-size: 40px;
+font-size: 2rem;
 font-weight: 700;
 line-height: 163%;
 }
 .company_desc .title h3{
-font-size: 24px;
+font-size: 1.4rem;
 font-weight: 400;
 line-height: 163%;
 }
@@ -396,7 +406,7 @@ line-height: 163%;
 /* main header in responsive area  */
 @media screen and (max-width: 1220px) {
     .company_desc .title h1{
-        font-size: 30px;
+        font-size: 1.7rem;
         font-weight: 700;
 margin-bottom: 30px;
         }
@@ -406,7 +416,7 @@ margin-bottom: 30px;
         margin-top:79px;
     }
     .company_desc .title h1{
-        font-size: 30px;
+        font-size: 1.7rem;
         font-weight: 700;
         width: 344px;
         }
@@ -447,6 +457,10 @@ margin-bottom: 30px;
    font-size: 20px;
    font-weight: 700;
    background: var(--man--bg);
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   -ms-border-radius: 0;
+   -o-border-radius: 0;
 }
    .company_desc .search i{
     font-size: 20px;
@@ -514,7 +528,7 @@ height: 66px;
 }
 .last-warning .services .box-service{
     background-color: #fff;
-    width: 320px;
+    width: 336px;
     padding: 22px 22px;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 gap: 18px;
@@ -535,11 +549,11 @@ gap: 18px;
   -o-border-radius: 50%;
 }
    .services .box-service h5{
-    font-size: 17px;
+    font-size: 1.1rem;
     color:var(--man--bg);
 font-weight:700;
    }
-   .services .box-service p{font-size: 16px;
+   .services .box-service p{font-size: 14px;
         font-weight: 400;
         color:#444;
     line-height: 120%; /* 16.8px */
@@ -550,11 +564,11 @@ font-weight:700;
     margin-bottom: 100px;
    }
 
-
+   .warning-list .warning-content{margin-top: 20px;}
    .warning-list .warning-content .box{
     padding:  20px 20px !important;
     margin-top: 10px;
-    width: 95%;
+    width: 90%;
     margin: 10px auto;
     background: #f7f7f7;
 
@@ -567,45 +581,8 @@ font-weight:700;
  .end_arrow a i{color:var(--man--bg)}
 
 
-
-   @media (min-width:375px) and (max-width:380px) {
-    .warning-list .warning-content .box {
-        width:100% !important;
-           }
-           .warning-list .warning-content .box h6{
-            font-size: 16px;
-           }
-           .warning-list .warning-content .box .method button{
-           font-size: 10px;
-           margin-right: 5px;
-           }
-   }
-   @media screen and (max-width: 430px) {
-    .last-warning .services{
-        margin-top: 10px !important;
-    }
-   .warning-list .warning-content .box {
-width: 100% !important;
-   }
-   .warning-list .warning-content .box h6{
-    font-size: 16px;
-   }
-   .warning-list .warning-content .box .method button{
-   font-size: 10px;
-   margin-right: 5px;
-   }
-   }
-   @media (min-width:768px) and (max-width:991px) {
-    .warning-list .warning-content .box .method button{
-        font-size: 10px;
-        margin-right: 10px;
-        }
-        .warning-list  .method h6{
-            font-size: 15px;
-           }
-}
-.warning-content .box-head .head-state span{
-    font-size: 15px;
+ .warning-content .box-head .head-state span{
+    font-size: 1rem;
 color:#5a5a5a;   
  font-weight: 500
 }
@@ -646,12 +623,12 @@ color:#FFB800
 
 .method h6{
     color: #595959;
-font-size: 18px;
+font-size: 1.09rem;
 font-weight: 700;
    }
 .method span{
 text-align: right;
-font-size: 16px;
+font-size: 1.1rem;
 font-weight: 700;
 text-transform: capitalize;
 margin-right: 8px;
@@ -672,21 +649,89 @@ height: 7px;
 
 }
 .warning-content .method button{
-    display: flex;
-    height: 43px;
-    padding: 18px 27px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     color: #FFF;
     margin-top: 30px;
-    font-size: 12px;
+    font-size: 0.94rem;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 45px;
 }
  .warning-content .method button.warn-btn{
  background-color: var(--man--bg);
  }
+   /* @media (min-width:375px) and (max-width:380px) {
+    .warning-list .warning-content .box {
+        width:100% !important;
+           }
+           .warning-list .warning-content .box h6{
+            font-size: 16px;
+           }
+           .warning-list .warning-content .box .method button{
+           font-size: 10px;
+           margin-right: 5px;
+           }
+   } */
 
 
+   @media screen and (max-width: 430px) {
+    .last-warning .services{
+        margin-top: 10px !important;
+    }}
+
+
+    @media (min-width:375px) and (max-width:450px) {
+
+        .method h6 { font-size: 1rem;}
+        .warning-list .warning-content{margin-top: 0px;}
+   .warning-list .warning-content .box {
+width: 100% !important;
+   }
+   .warning-content .box-head .head-state span {
+    font-size: 0.77rem;}
+.method span {
+    font-size: 1rem;} 
+
+   }
+   .method span .img{width: 20px;height: 20px;}
+
+
+   @media (min-width:768px) and (max-width:991px) {
+
+           .method h6 {
+            font-size: 0.91rem;
+    }
+    .method span {
+        font-size: 0.94rem;
+    }
+    .warning-content .method button {
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+    .warning-content .method  img{width: 20px;height: 20px;}
+    .warning-content .box-head .head-state span {
+        font-size:13px;
+    }
+    .warning-content .box-head .head-state h6 {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1399px) {
+    .method h6 {
+        font-size: 1rem;
+}
+.method span {
+    font-size: 1rem;
+}
+.warning-content .method button {
+    font-size: 0.82rem;
+}
+.warning-content .box-head .head-state span{
+ font-size: 14px;
+}
+}
  /* ////  ============Statistics ====== */
  .Statistics{
 padding: 28px 92px 38px 92px;
@@ -1054,7 +1099,7 @@ display: flex;justify-content: center;
     
         @media screen and (max-width: 500px) {
             .header-section h3,.header-section span{
-                font-size: 16px;
+                font-size: 1.4rem;
             }
         }
 
