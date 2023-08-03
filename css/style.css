@@ -249,7 +249,7 @@ display: block;
     -o-border-radius:;
 }
   
-   .modal::-webkit-scrollbar {
+.modal-dialog::-webkit-scrollbar {
     width: 3px !important;
     height: 3px !important
   }
@@ -257,10 +257,7 @@ display: block;
    .modal-dialog::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 1px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+ 
 }
   
    .modal-dialog::-webkit-scrollbar-track {
