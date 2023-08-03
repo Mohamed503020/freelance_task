@@ -267,9 +267,11 @@ display: block;
     scroll-behavior: smooth;
 }
 .modal-dialog::-webkit-scrollbar {
-    width: 8px;
+    width: 0px;
   }
-  
+  .modal::-webkit-scrollbar {
+    width: 0px;
+  }
   .modal-dialog::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
