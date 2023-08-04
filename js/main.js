@@ -6,8 +6,7 @@ const messageNot=document.getElementById('messages');
  
 hidBtn.addEventListener('click',()=>{
    const services =document.getElementById('services')
-    messageNot.style.opacity='0';
-  messageNot.style.visibility="hidden"
+  messageNot.classList.remove('visible')
 })
 function toggleElement() {
     messageNot.classList.toggle('visible');
