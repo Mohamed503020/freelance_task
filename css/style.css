@@ -476,7 +476,7 @@ height: 46px;
 
     .company_desc .search .btn-seach{height: 36px;}
    }
-.user{        visibility: hidden;
+.userN{        visibility: hidden;
     opacity: 0;}
     .user-notfication{
         position: fixed;
