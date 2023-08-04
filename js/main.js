@@ -6,9 +6,15 @@ const messageNot=document.getElementById('messages');
  
 hidBtn.addEventListener('click',()=>{
    const services =document.getElementById('services')
-    messageNot.style.display='none';
-    services.style.marginTop='-85px'
+    messageNot.style.opacity='0';
+  messageNot.style.visibility="hidden"
 })
+function toggleElement() {
+    messageNot.classList.toggle('visible');
+  }
+  
+  // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
+  setInterval(toggleElement, 3000);
 
 /// header links and show and hide menue
 let linkP=document.getElementById("peple_links");
