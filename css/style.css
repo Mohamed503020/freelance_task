@@ -481,7 +481,7 @@ height: 46px;
     .user-notfication{
         position: fixed;
            border-radius: 170px;
-        min-width: 320px;
+        min-width: 340px;
         left: 40px;
         bottom: 150px;
         padding: 8px 2px 12px 14px;
