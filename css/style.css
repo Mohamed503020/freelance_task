@@ -476,7 +476,8 @@ height: 46px;
 
     .company_desc .search .btn-seach{height: 36px;}
    }
-.userN{     }
+.userN{        visibility: hidden;
+    opacity: 0;}
     .user-notfication{
         position: fixed;
            border-radius: 170px;
@@ -826,8 +827,8 @@ font-weight: 700;
 
 }
 .comments .user_logo{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: #D80027;
     font-size: 20px;
     border-radius:50%;
