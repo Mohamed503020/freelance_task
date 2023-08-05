@@ -1365,7 +1365,7 @@ font-weight: 500;
 }
 .body-footer {
     padding: 15px;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--main--font), sans-serif;
 }
 .main-footer .body-footer .content{
     border-bottom: 2px solid #b7b7b7;
@@ -1380,7 +1380,7 @@ font-weight: 500;
 
 
 .copy-write{
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--main--font), sans-serif;
     padding-bottom: 20px;
 
 }
