@@ -476,12 +476,11 @@ height: 46px;
 
     .company_desc .search .btn-seach{height: 36px;}
    }
-.userN{        visibility: hidden;
-    opacity: 0;}
+.userN{     }
     .user-notfication{
         position: fixed;
            border-radius: 170px;
-        min-width: 340px;
+        max-width: 320px;
         right: 40px;
         bottom: 150px;
         padding: 8px 2px 12px 14px;
