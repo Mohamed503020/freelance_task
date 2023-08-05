@@ -13,7 +13,7 @@ function toggleElement() {
   }
   
   // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
-  setInterval(toggleElement, 3000);
+  setTimeout(toggleElement, 3000);
 
 /// header links and show and hide menue
 let linkP=document.getElementById("peple_links");

@@ -1,0 +1,72 @@
+/* variables*/ 
+:root{
+    --scamp-head-bg:#272727;
+    --body-bg:#fff;
+    --main--bg:#D50900;
+    --scamp-second-color:rgba(255, 255, 255, 0.10);
+    --scamp-border-color:rgba(251, 251, 251, 0.30);
+}
+
+
+
+
+
+
+/* // scamp company Header // */
+.scamp-page{
+    height: 100vh;
+}
+.company-state header {
+    background-color: var(--scamp-head-bg);
+    padding: 40px 0;
+}
+.company-state header .logo .state{
+    width: 90px;
+    position: absolute;
+    left:-15px;
+    top:5px;
+height: 24px;
+display: flex;
+justify-content: center;align-items: center;
+transform: rotate(-23.632deg);
+padding: 15px;
+flex-direction: column;
+font-family: 'Tajawal', sans-serif;
+font-size: 14px;
+color:#fff;
+background-color: var(--main--bg);
+}
+.company-state header .logo{
+      background-color: var(--body-bg);
+      width: 300px;
+      height: 140px;
+      padding: 45px 27.333px 45px 26px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+}
+.company-state header .logo img {
+    width: 246px;
+    height: 50px;
+}
+.company-state header .company_info h6{
+    font-size: 28px;
+    font-weight: 600;
+    color:var(--body-bg)
+}
+.company-state header .company_info{margin-right: 35px;}
+.company-state header .company_info p{
+    background-color: var(--scamp-second-color);
+    border:1px solid var(--scamp-border-color);
+    padding: 5px 20px;
+    height: 36px;
+    width: 220px;
+    font-size: 16px;
+    color:var(--body-bg);
+}
+.company-state header .company_info p.date{width: 200px;}
+.company-state header .company_info p.cmp-link{
+    width: 320px;
+}
