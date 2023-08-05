@@ -519,7 +519,11 @@ height: 46px;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
- 
+ @media(max-width:500px){
+    .user-notfication{
+        bottom: 240px;
+    }
+ }
    .user-notfication .fa-close:before, .fa-multiply:before, .fa-remove:before,
     .fa-times:before, .fa-xmark:before 
         {
