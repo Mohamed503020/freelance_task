@@ -521,7 +521,7 @@ height: 46px;
 }
  @media(max-width:500px){
     .user-notfication{
-        bottom: 240px;
+        bottom: 340px;
     }
  }
    .user-notfication .fa-close:before, .fa-multiply:before, .fa-remove:before,
