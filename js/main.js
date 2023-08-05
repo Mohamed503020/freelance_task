@@ -8,12 +8,12 @@ hidBtn.addEventListener('click',()=>{
    const services =document.getElementById('services')
   messageNot.classList.remove('visible')
 })
-function toggleElement() {
-    messageNot.classList.toggle('visible');
-  }
+// function toggleElement() {
+//     messageNot.classList.toggle('visible');
+//   }
   
-  // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
-  setInterval(toggleElement, 3000);
+//   // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
+//   setInterval(toggleElement, 3000);
 
 /// header links and show and hide menue
 let linkP=document.getElementById("peple_links");
