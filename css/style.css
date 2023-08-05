@@ -828,6 +828,7 @@ font-weight: 700;
 }
 .comments .user_logo{
     width: 50px;
+    display: flex;justify-content: center;align-items: center;
     height: 50px;
     background: #D80027;
     font-size: 20px;
