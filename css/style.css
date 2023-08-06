@@ -1468,16 +1468,16 @@ font-weight: 500;
         .main-footer   .body-footer  p.coun{
             margin-left: 0 !important;
         } 
-        .copy-write .logo img{height: 40px;width: 98px;} 
+        .copy-write .logo img{height: 50px;width: 111px;} 
         .copy-write .logo{margin-top: 0;}
-        footer .copy-write p{font-size: 12px;}
+        footer .copy-write p{font-size: 0.783rem; margin-top: -5px;}
 
   
         .protected img{
             width: 100px;
             height: 60px;
             margin-bottom: 0px;
-            bottom:90px;
+            bottom:100px;
             left: 10px;
         }
         .protected a.cmc img{
