@@ -97,4 +97,44 @@ background-color: var(--main--bg);
     font-size: 16px;
     font-weight: 400;
 }
-.company-state header .comp_rating .starts{margin-top: 7px;}
+.company-state header .comp_rating .starts{margin-top: 7px;font-size: 16px;}
+
+.company-state header .header-action .btn-h-1{
+    background: var(--main--bg);
+    color:var(--body-bg);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 240px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    margin-left: 30px;
+    font-size: 1.2rem;
+
+}
+.company-state header .header-action{margin-top: 20px;}
+.company-state header .header-action .btn-h-1:hover{
+background-color: transparent;
+border: 2px solid #fff;
+color:#fff;
+}
+.company-state header .header-action .btn-h-2{
+    color:var(--body-bg);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 200px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    font-size: 1.2rem;
+}
+.company-state header .header-action .btn-h-2:hover{
+    background-color: var(--main--bg);
+    border:0
+}
