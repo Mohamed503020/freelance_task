@@ -1401,18 +1401,14 @@ font-weight: 500;
     color:#6a6b6c;
 }
 .copy-write .logo{margin-top: -10px;}
-.copy-write p a{    color:#6a6b6c;
-
-
-
-}
+.copy-write p a{    color:#6a6b6c;}
 
 
 
 .protected img{
     position: absolute;
-    bottom: 45px;
-    left:45px;
+    bottom: 65px;
+    left:65px;
     width: 100px;
     height: 80px;
     margin-bottom: 40px;
@@ -1422,7 +1418,7 @@ font-weight: 500;
     height: 24px;
     position: absolute;
     bottom: 0px;
-    left:41px;
+    left:64px;
 }
 
  .main-footer   .body-footer  p.coun{
@@ -1445,11 +1441,14 @@ font-weight: 500;
         }  
    
         .protected img{
-          bottom:40px
+          bottom:80px;
+          margin-bottom: 0;
+          left: 20px;
         }
         .protected a.cmc img{
 
-            bottom: 10px;
+            bottom: 0px;
+            left: 20px;
         }
     }
     @media(min-width:768px) and (max-width:991px){
@@ -1459,11 +1458,15 @@ font-weight: 500;
 
         .protected img{
             bottom:120px;
+            margin-bottom: 0;
         }
-
+        .protected a.cmc img{
+            bottom: 80px;
+        }
 
     }
     @media (max-width:768px){
+        .main-footer .body-footer .content{padding-bottom: 0;}
         .main-footer  {padding-top: 0;}
         .main-footer   .body-footer  p.coun{
             margin-left: 0 !important;
@@ -1477,7 +1480,7 @@ font-weight: 500;
             width: 100px;
             height: 60px;
             margin-bottom: 0px;
-            bottom:100px;
+            bottom:89px;
             left: 10px;
         }
         .protected a.cmc img{
