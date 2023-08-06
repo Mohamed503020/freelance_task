@@ -5,10 +5,14 @@
     --main--bg:#D50900;
     --scamp-second-color:rgba(255, 255, 255, 0.10);
     --scamp-border-color:rgba(251, 251, 251, 0.30);
+    --main--font: 'Tajawal';
 }
 
+/* // classes  */
 
-
+.complete{
+    color:#FFB800;
+}
 
 
 
@@ -70,3 +74,27 @@ background-color: var(--main--bg);
 .company-state header .company_info p.cmp-link{
     width: 320px;
 }
+.company-state header .comp_rating {
+    background: var(--scamp-second-color);
+    display: flex;
+    width: 300px;
+    height: 149px;
+    padding: 23px 71px;
+    font-family: var(--main--font);
+    color:var(--body-bg);
+    font-size: 16px;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+}
+.company-state header .comp_rating .rate-number{
+    font-size: 30px;
+}
+.company-state header .comp_rating .rate-number span{
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-weight: 400;
+}
+.company-state header .comp_rating .starts{margin-top: 7px;}

@@ -261,7 +261,7 @@ margin-top: -30px;
     .main-header  .logo img{margin-top: -20px;}
 }
 @media screen and (max-width: 1400px) {
-    .main-header .main-btn{margin-top: -15px;}
+    .main-header .main-btn{margin-top: -15px; padding: 6px;}
     .main-header{height: 115px;}
   }
   /* ///menue  */
