@@ -1470,7 +1470,7 @@ font-weight: 500;
         } 
         .copy-write .logo img{height: 50px;width: 111px;} 
         .copy-write .logo{margin-top: 0;}
-        footer .copy-write p{font-size: 0.783rem; margin-top: -5px;}
+        footer .copy-write p{font-size: 0.7711rem; margin-top: -5px;}
 
   
         .protected img{
@@ -1483,7 +1483,7 @@ font-weight: 500;
         .protected a.cmc img{
             width: 120px;
             height: 19px;
-            bottom:0;
+            bottom:-5px;
             left: 10px;
         }
       .main-footer .body-footer {padding: 0; margin-bottom: 0; padding-bottom: 0;}
