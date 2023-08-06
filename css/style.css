@@ -945,6 +945,7 @@ line-height: 227%; /* 40.86px */
 }
 
 @media screen and (max-width:550px) {
+    .instruction{padding: 0;}
     .instruction .content{background-color: #f7f7f7; padding: 0;width: 107%;margin-right: -10px;}
     .instruction .img img {width: 100%;}
     .instruction .desc h5{font-size: 1.1rem; margin-right: 15px; word-wrap: break-word;width: fit-content;}
@@ -1267,7 +1268,7 @@ width: 202px;
    }
    .sponser .content {width: 100%;}
    @media (min-width:576px) and (max-width:860px){
-    .sponser img{width: 35%;}
+    .sponser img{width: 30%;}
    }
     
    @media (max-width:575px) {
@@ -1365,12 +1366,7 @@ font-weight: 500;
 .main-footer .header{
     padding: 15px;
 }
-@media (min-width:1200px){
-    .main-footer .container{
-        padding-right: 110px;
-        padding-left: 110px;
-    }
-}
+
 
 .main-footer  .evalution{font-size: 18px;}
 .main-footer .evalution .rate{font-size: 16px;}
@@ -1378,7 +1374,7 @@ font-weight: 500;
     font-size: 12px;
 }
 .body-footer {
-    padding: 15px;
+    padding: 15px 0;
     font-family: var(--main--font), sans-serif;
 }
 .main-footer .body-footer .content{
@@ -1395,34 +1391,38 @@ font-weight: 500;
 
 .copy-write{
     font-family: var(--main--font), sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 
 }
 .copy-write p{
+    margin-right: 10px;
     font-size: 14px;
+    line-height: 1.7rem;
     color:#6a6b6c;
 }
 .copy-write .logo{margin-top: -10px;}
 .copy-write p a{    color:#6a6b6c;
-    margin-right: 12px;
-    border-right: 2px solid #6a6b6c;
-    padding-right: 10px;
+
+
+
 }
 
 
-.protected{
-    position: absolute;
-    left: 10%;
-    bottom: 20px;
-}
+
 .protected img{
+    position: absolute;
+    bottom: 45px;
+    left:45px;
     width: 100px;
     height: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .protected a.cmc img{
     width: 121px;
     height: 24px;
+    position: absolute;
+    bottom: 0px;
+    left:41px;
 }
 
  .main-footer   .body-footer  p.coun{
@@ -1433,58 +1433,65 @@ font-weight: 500;
         .main-footer   .body-footer  p.coun{
             margin-left: 100px !important;
         }  
-        .protected{
-            bottom: 56px;
-            
-        }
         .protected img{
-            margin-bottom: 10px;
+            margin-bottom: 0;
+            margin-bottom: 30px;
         }
+   
     }
     @media(min-width:991px) and (max-width:1199px){
         .main-footer   .body-footer  p.coun{
             margin-left: 90px !important;
         }  
-        .protected{
-            bottom: 56px;
-            left:3% !important;
-
-        }
+   
         .protected img{
-            margin-bottom: 10px;
+          bottom:40px
+        }
+        .protected a.cmc img{
+
+            bottom: 10px;
         }
     }
     @media(min-width:768px) and (max-width:991px){
         .main-footer   .body-footer  p.coun{
             margin-left: 86px !important;
         }  
-        .protected{
-            bottom: 109px;
-            left:3% !important;
 
-        }
         .protected img{
-            margin-bottom: 10px;
+            bottom:120px;
         }
+
 
     }
     @media (max-width:768px){
+        .main-footer  {padding-top: 0;}
         .main-footer   .body-footer  p.coun{
             margin-left: 0 !important;
-        }  
-        .protected{
-            bottom: 108px;
-            left:3% !important;
+        } 
+        .copy-write .logo img{height: 40px;width: 98px;} 
+        .copy-write .logo{margin-top: 0;}
+        footer .copy-write p{font-size: 12px;}
 
-        }
   
         .protected img{
-            width: 60px;
-            height: 50px;
-            margin-bottom: 30px;
+            width: 100px;
+            height: 60px;
+            margin-bottom: 0px;
+            bottom:90px;
+            left: 10px;
         }
         .protected a.cmc img{
-            width: 80px;
+            width: 120px;
             height: 19px;
+            bottom:0;
+            left: 10px;
         }
+      .main-footer .body-footer {padding: 0; margin-bottom: 0; padding-bottom: 0;}
+      .main-footer .body-footer p.coun{
+       padding-bottom: 0;
+       margin-bottom: 0;
+      }
+      .main-footer .body-footer p, .main-footer .body-footer h6 {line-height: 1.5rem;}
+      .copy-write p{margin-right: 0; line-height: 1.5rem; font-size: 12px;}
+       .copy-write{padding: 0;}
     }
