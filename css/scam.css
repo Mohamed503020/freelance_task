@@ -17,9 +17,7 @@
 
 
 /* // scamp company Header // */
-.scamp-page{
-    height: 100vh;
-}
+
 .company-state header {
     background-color: var(--scamp-head-bg);
     padding: 40px 0;
@@ -138,3 +136,189 @@ color:#fff;
     background-color: var(--main--bg);
     border:0
 }
+
+/* //===== responsive Area ========//   */
+@media (min-width:1200px) and (max-width:1399px) {
+    
+.company-state header .logo {
+    width: 280px;
+    height: 130px;
+}
+.company-state header .comp_rating {
+    width: 280px;
+    height: 139px
+}
+.company-state header .comp_rating .starts {font-size: 14px;}
+.company-state header .header-action .btn-h-1 {width: 180px;font-size: 1rem;}
+.company-state header .header-action .btn-h-2 {width: 170px;font-size: 1rem;}
+}
+
+@media (min-width:992px)  and (max-width:1199px){
+.company-state header .logo {
+    width: 210px;
+    height: 128px;
+}
+.company-state header .logo img {
+    width: 150px;
+    height: 40px;
+}
+.company-state header .company_info p {
+    padding: 5px;
+    height: 36px;
+    width: 172px;
+}
+
+.company-state header .company_info p.date {
+    width: 130px;
+}
+.company-state header .comp_rating {
+  padding: 0;
+    width: 240px;
+    height: 130px;
+}
+.company-state header .comp_rating .starts {
+    font-size: 14px;
+}
+.company-state header .header-action .btn-h-1 {
+  font-size: 1rem;
+    width: 153px;
+}
+.company-state header .header-action .btn-h-2 {
+    width: 150px;
+    font-size: 1rem;
+}
+}
+
+@media (min-width:768px)  and (max-width:991px){
+    .company-state header .logo {
+        width: 157px;
+        height: 128px;
+    }
+    .company-state header .logo img {
+        width: 120px;
+        height: 40px;
+    }
+    .company_info {   margin-right: 25px;}
+    .company-state header .company_info p {
+        padding: 5px;
+        height: 36px;
+        width: 167px;
+    }
+    
+    .company-state header .company_info p.date {
+        width: 130px;
+    }
+    .company-state header .company_info p.cmp-link {
+        width: 252px;
+    }
+    .company-state header .comp_rating {
+        padding: 0;
+        width: 165px;
+        height: 130px;
+    }
+
+    .company-state header .comp_rating .starts {
+        font-size: 14px;
+    }
+    .company-state header .header-action .btn-h-1 {
+      font-size: 1rem;
+        width: 153px;
+    }
+    .company-state header .header-action .btn-h-2 {
+        width: 150px;
+        font-size: 1rem;
+    }
+    }
+    
+    @media (min-width:541px)  and (max-width:768px){
+        .company-state header .logo {
+            width: 157px;
+            height: 128px;
+        }
+        .company-state header .logo .state {
+            width: 77px;
+            padding: 10px;
+        }
+        .company-state header .logo img {
+            width: 135px;
+            height: 40px;
+        }
+        .company-state header .company_info p {
+            padding: 5px;
+            height: 35px;
+            font-size: 14px;
+            width: 164px;
+                }
+        
+        .company-state header .company_info p.date {
+            width: 130px;
+        }
+        .company-state header .comp_rating {
+            padding: 0;
+            width: 281px;
+            height: 110px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        .company-state header .comp_rating .starts {
+            font-size: 14px;
+        }
+        .company-state header .header-action .btn-h-1 {
+            font-size: 0.85rem;
+            width: 139px;
+        }
+        .company-state header .header-action .btn-h-2 {
+            width: 130px;
+            font-size: 0.85rem;
+        }
+        }
+ @media (max-width:540px){
+
+    .company-state header .head-info{
+        flex-direction: column-reverse;
+    }
+            .company-state header .logo {
+                width: 240px;
+                height: 99px;
+                margin: 0 auto 10px;
+            }
+            .company-state header .logo .state {
+                width: 77px;
+                padding: 10px;
+            }
+            .company-state header .logo img {
+                width: 133px;
+                height: 27px;
+            }
+            .company-state header .company_info p {
+                padding: 5px;
+                height: auto;
+                font-size: 14px;
+                width: fit-content;
+                    }
+            
+            .company-state header .company_info p.date {
+                width: fit-content;
+            }
+            .company-state header .comp_rating {
+                padding: 0;
+                width: 240px;
+                height: 110px;
+                margin: 0 auto;
+                font-size: 14px;
+            }
+            .company-state header .comp_rating .starts {
+                font-size: 14px;
+            }
+            .company-state header .header-action .btn-h-1 {
+                font-size: 0.85rem;
+                width: 139px;
+            }
+            .company-state header .header-action .btn-h-2 {
+                width: 130px;
+                font-size: 0.85rem;
+            }
+            .company-state header .company_info p.cmp-link {
+                width: fit-content;
+            }
+            }
