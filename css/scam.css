@@ -1,20 +1,28 @@
-/* variables*/ 
-:root{
-    --scamp-head-bg:#272727;
-    --body-bg:#fff;
-    --main--bg:#D50900;
-    --scamp-second-color:rgba(255, 255, 255, 0.10);
-    --scamp-border-color:rgba(251, 251, 251, 0.30);
+/* variables*/
+:root {
+    --scamp-head-bg: #272727;
+    --body-bg: #fff;
+    --scond-bg:#f7f7f7;
+    --main--bg: #D50900;
+    --scamp-second-color: rgba(255, 255, 255, 0.10);
+    --scamp-border-color: rgba(251, 251, 251, 0.30);
     --main--font: 'Tajawal';
 }
 
 /* // classes  */
 
-.complete{
-    color:#FFB800;
+.complete {
+    color: #FFB800;
 }
-
-
+.border-b{
+    padding: 5px;
+    margin: 10px;
+    border-bottom: 4px solid var(--main--bg);
+    width: fit-content;
+}
+@media (max-width:500px) {
+    .border-b{font-size: 1.2rem !important;}
+}
 
 /* // scamp company Header // */
 
@@ -22,56 +30,70 @@
     background-color: var(--scamp-head-bg);
     padding: 40px 0;
 }
-.company-state header .logo .state{
+
+.company-state header .logo .state {
     width: 90px;
     position: absolute;
-    left:-15px;
-    top:5px;
-height: 24px;
-display: flex;
-justify-content: center;align-items: center;
-transform: rotate(-23.632deg);
-padding: 15px;
-flex-direction: column;
-font-family: 'Tajawal', sans-serif;
-font-size: 14px;
-color:#fff;
-background-color: var(--main--bg);
+    left: -15px;
+    top: 5px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-23.632deg);
+    padding: 15px;
+    flex-direction: column;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--main--bg);
 }
-.company-state header .logo{
-      background-color: var(--body-bg);
-      width: 300px;
-      height: 140px;
-      padding: 45px 27.333px 45px 26px;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
+
+.company-state header .logo {
+    background-color: var(--body-bg);
+    width: 300px;
+    height: 140px;
+    padding: 45px 27.333px 45px 26px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
+
 .company-state header .logo img {
     width: 246px;
     height: 50px;
 }
-.company-state header .company_info h6{
+
+.company-state header .company_info h6 {
     font-size: 28px;
     font-weight: 600;
-    color:var(--body-bg)
+    color: var(--body-bg)
 }
-.company-state header .company_info{margin-right: 35px;}
-.company-state header .company_info p{
+
+.company-state header .company_info {
+    margin-right: 35px;
+}
+
+.company-state header .company_info p {
     background-color: var(--scamp-second-color);
-    border:1px solid var(--scamp-border-color);
+    border: 1px solid var(--scamp-border-color);
     padding: 5px 20px;
     height: 36px;
     width: 220px;
     font-size: 16px;
-    color:var(--body-bg);
+    color: var(--body-bg);
 }
-.company-state header .company_info p.date{width: 200px;}
-.company-state header .company_info p.cmp-link{
+
+.company-state header .company_info p.date {
+    width: 200px;
+}
+
+.company-state header .company_info p.cmp-link {
     width: 320px;
 }
+
 .company-state header .comp_rating {
     background: var(--scamp-second-color);
     display: flex;
@@ -79,27 +101,33 @@ background-color: var(--main--bg);
     height: 149px;
     padding: 23px 71px;
     font-family: var(--main--font);
-    color:var(--body-bg);
+    color: var(--body-bg);
     font-size: 16px;
-    border-radius:5px ;
-    -webkit-border-radius:5px ;
-    -moz-border-radius:5px ;
-    -ms-border-radius:5px ;
-    -o-border-radius:5px ;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
-.company-state header .comp_rating .rate-number{
+
+.company-state header .comp_rating .rate-number {
     font-size: 30px;
 }
-.company-state header .comp_rating .rate-number span{
+
+.company-state header .comp_rating .rate-number span {
     color: rgba(255, 255, 255, 0.60);
     font-size: 16px;
     font-weight: 400;
 }
-.company-state header .comp_rating .starts{margin-top: 7px;font-size: 16px;}
 
-.company-state header .header-action .btn-h-1{
+.company-state header .comp_rating .starts {
+    margin-top: 7px;
+    font-size: 16px;
+}
+
+.company-state header .header-action .btn-h-1 {
     background: var(--main--bg);
-    color:var(--body-bg);
+    color: var(--body-bg);
     padding: 10px;
     font-size: 16px;
     font-weight: 700;
@@ -113,14 +141,19 @@ background-color: var(--main--bg);
     font-size: 1.2rem;
 
 }
-.company-state header .header-action{margin-top: 20px;}
-.company-state header .header-action .btn-h-1:hover{
-background-color: transparent;
-border: 2px solid #fff;
-color:#fff;
+
+.company-state header .header-action {
+    margin-top: 20px;
 }
-.company-state header .header-action .btn-h-2{
-    color:var(--body-bg);
+
+.company-state header .header-action .btn-h-1:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.company-state header .header-action .btn-h-2 {
+    color: var(--body-bg);
     padding: 10px;
     font-size: 16px;
     font-weight: 700;
@@ -132,85 +165,111 @@ color:#fff;
     -o-border-radius: 2px;
     font-size: 1.2rem;
 }
-.company-state header .header-action .btn-h-2:hover{
+
+.company-state header .header-action .btn-h-2:hover {
     background-color: var(--main--bg);
-    border:0
+    border: 0
 }
 
 /* //===== responsive Area ========//   */
 @media (min-width:1200px) and (max-width:1399px) {
-    
-.company-state header .logo {
-    width: 280px;
-    height: 130px;
-}
-.company-state header .comp_rating {
-    width: 280px;
-    height: 139px
-}
-.company-state header .comp_rating .starts {font-size: 14px;}
-.company-state header .header-action .btn-h-1 {width: 180px;font-size: 1rem;}
-.company-state header .header-action .btn-h-2 {width: 170px;font-size: 1rem;}
+
+    .company-state header .logo {
+        width: 280px;
+        height: 130px;
+    }
+
+    .company-state header .comp_rating {
+        width: 280px;
+        height: 139px
+    }
+
+    .company-state header .comp_rating .starts {
+        font-size: 14px;
+    }
+
+    .company-state header .header-action .btn-h-1 {
+        width: 180px;
+        font-size: 1rem;
+    }
+
+    .company-state header .header-action .btn-h-2 {
+        width: 170px;
+        font-size: 1rem;
+    }
 }
 
-@media (min-width:992px)  and (max-width:1199px){
-.company-state header .logo {
-    width: 210px;
-    height: 128px;
-}
-.company-state header .logo img {
-    width: 150px;
-    height: 40px;
-}
-.company-state header .company_info p {
-    padding: 5px;
-    height: 36px;
-    width: 172px;
+@media (min-width:992px) and (max-width:1199px) {
+    .company-state header .logo {
+        width: 210px;
+        height: 128px;
+    }
+
+    .company-state header .logo img {
+        width: 150px;
+        height: 40px;
+    }
+
+    .company-state header .company_info p {
+        padding: 5px;
+        height: 36px;
+        width: 172px;
+    }
+
+    .company-state header .company_info p.date {
+        width: 130px;
+    }
+
+    .company-state header .comp_rating {
+        padding: 0;
+        width: 240px;
+        height: 130px;
+    }
+
+    .company-state header .comp_rating .starts {
+        font-size: 14px;
+    }
+
+    .company-state header .header-action .btn-h-1 {
+        font-size: 1rem;
+        width: 153px;
+    }
+
+    .company-state header .header-action .btn-h-2 {
+        width: 150px;
+        font-size: 1rem;
+    }
 }
 
-.company-state header .company_info p.date {
-    width: 130px;
-}
-.company-state header .comp_rating {
-  padding: 0;
-    width: 240px;
-    height: 130px;
-}
-.company-state header .comp_rating .starts {
-    font-size: 14px;
-}
-.company-state header .header-action .btn-h-1 {
-  font-size: 1rem;
-    width: 153px;
-}
-.company-state header .header-action .btn-h-2 {
-    width: 150px;
-    font-size: 1rem;
-}
-}
-
-@media (min-width:768px)  and (max-width:991px){
+@media (min-width:768px) and (max-width:991px) {
     .company-state header .logo {
         width: 157px;
         height: 128px;
     }
+
     .company-state header .logo img {
         width: 120px;
         height: 40px;
     }
-    .company_info {   margin-right: 25px;}
+
+    .company_info {
+        margin-right: 25px;
+    }
+
     .company-state header .company_info p {
         padding: 5px;
         height: 36px;
         width: 167px;
     }
-    
+
     .company-state header .company_info p.date {
         width: 130px;
     }
+
     .company-state header .company_info p.cmp-link {
         width: 252px;
     }
+
     .company-state header .comp_rating {
         padding: 0;
         width: 165px;
@@ -220,105 +279,234 @@ color:#fff;
     .company-state header .comp_rating .starts {
         font-size: 14px;
     }
+
     .company-state header .header-action .btn-h-1 {
-      font-size: 1rem;
+        font-size: 1rem;
         width: 153px;
     }
+
     .company-state header .header-action .btn-h-2 {
         width: 150px;
         font-size: 1rem;
     }
-    }
-    
-    @media (min-width:541px)  and (max-width:768px){
-        .company-state header .logo {
-            width: 157px;
-            height: 128px;
-        }
-        .company-state header .logo .state {
-            width: 77px;
-            padding: 10px;
-        }
-        .company-state header .logo img {
-            width: 135px;
-            height: 40px;
-        }
-        .company-state header .company_info p {
-            padding: 5px;
-            height: 35px;
-            font-size: 14px;
-            width: 164px;
-                }
-        
-        .company-state header .company_info p.date {
-            width: 130px;
-        }
-        .company-state header .comp_rating {
-            padding: 0;
-            width: 281px;
-            height: 110px;
-            margin: 0 auto;
-            font-size: 14px;
-        }
-        .company-state header .comp_rating .starts {
-            font-size: 14px;
-        }
-        .company-state header .header-action .btn-h-1 {
-            font-size: 0.85rem;
-            width: 139px;
-        }
-        .company-state header .header-action .btn-h-2 {
-            width: 130px;
-            font-size: 0.85rem;
-        }
-        }
- @media (max-width:540px){
+}
 
-    .company-state header .head-info{
+@media (min-width:541px) and (max-width:768px) {
+    .company-state header .logo {
+        width: 157px;
+        height: 128px;
+    }
+
+    .company-state header .logo .state {
+        width: 77px;
+        padding: 10px;
+    }
+
+    .company-state header .logo img {
+        width: 135px;
+        height: 40px;
+    }
+
+    .company-state header .company_info p {
+        padding: 5px;
+        height: 35px;
+        font-size: 14px;
+        width: 164px;
+    }
+
+    .company-state header .company_info p.date {
+        width: 130px;
+    }
+
+    .company-state header .comp_rating {
+        padding: 0;
+        width: 281px;
+        height: 110px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    .company-state header .comp_rating .starts {
+        font-size: 14px;
+    }
+
+    .company-state header .header-action .btn-h-1 {
+        font-size: 0.85rem;
+        width: 139px;
+    }
+
+    .company-state header .header-action .btn-h-2 {
+        width: 130px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width:540px) {
+
+    .company-state header .head-info {
         flex-direction: column-reverse;
     }
-            .company-state header .logo {
-                width: 240px;
-                height: 99px;
-                margin: 0 auto 10px;
-            }
-            .company-state header .logo .state {
-                width: 77px;
-                padding: 10px;
-            }
-            .company-state header .logo img {
-                width: 133px;
-                height: 27px;
-            }
-            .company-state header .company_info p {
-                padding: 5px;
-                height: auto;
-                font-size: 14px;
-                width: fit-content;
-                    }
-            
-            .company-state header .company_info p.date {
-                width: fit-content;
-            }
-            .company-state header .comp_rating {
-                padding: 0;
-                width: 240px;
-                height: 110px;
-                margin: 0 auto;
-                font-size: 14px;
-            }
-            .company-state header .comp_rating .starts {
-                font-size: 14px;
-            }
-            .company-state header .header-action .btn-h-1 {
-                font-size: 0.85rem;
-                width: 139px;
-            }
-            .company-state header .header-action .btn-h-2 {
-                width: 130px;
-                font-size: 0.85rem;
-            }
-            .company-state header .company_info p.cmp-link {
-                width: fit-content;
-            }
-            }
+
+    .company-state header .logo {
+        width: 240px;
+        height: 99px;
+        margin: 0 auto 10px;
+    }
+
+    .company-state header .logo .state {
+        width: 77px;
+        padding: 10px;
+    }
+
+    .company-state header .logo img {
+        width: 133px;
+        height: 27px;
+    }
+
+    .company-state header .company_info p {
+        padding: 5px;
+        height: auto;
+        font-size: 14px;
+        width: fit-content;
+    }
+
+    .company-state header .company_info p.date {
+        width: fit-content;
+    }
+
+    .company-state header .comp_rating {
+        padding: 0;
+        width: 240px;
+        height: 110px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    .company-state header .comp_rating .starts {
+        font-size: 14px;
+    }
+
+    .company-state header .header-action .btn-h-1 {
+        font-size: 0.85rem;
+        width: 139px;
+    }
+
+    .company-state header .header-action .btn-h-2 {
+        width: 130px;
+        font-size: 0.85rem;
+    }
+
+    .company-state header .company_info p.cmp-link {
+        width: fit-content;
+    }
+}
+
+/* // scamp warning  Section (التحذيرات) */
+.scamp-warning .content {
+    border: 2px solid var(--main--bg);
+    background: #F9DEDD;
+    padding: 20px;
+}
+
+.scamp-warning .content .user,
+.scamp-warning .content .date {
+    font-size: 0.8rem;
+    color: #856D6D;
+}
+
+.scamp-warning .content .user a {
+    color: #000
+}
+
+.scamp-warning .content .user a:hover {
+    color: rgb(46, 46, 111)
+}
+
+.scamp-warning .content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.scamp-warning p {
+    line-height: 240%;
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media (max-width:500px) {
+    .scamp-warning .scamp-waring-img img {
+        height: 210px;
+    }
+
+}
+
+ /* ==scam company definition (تعريف الشركة ) ===== */
+
+ .scam-company-def h3{
+    font-size: 1.55rem;
+    font-weight: 700;
+    
+ }
+ 
+ .scam-company-def .def-text{
+    padding: 20px;
+    background-color: #f7f7f7;
+ }
+ .scam-company-def .def-text p{
+  font-weight: 500;
+  font-size: 16px;
+line-height: 240%;
+text-align: justify; 
+ }
+
+
+ @media (max-width:500px) {
+    .scam-company-def h3{
+        font-size: 1.2rem;
+    }
+ }
+
+
+ /* ======= scam question section (الاسئلة ) =========== */
+.scam-question h3{font-size: 1.55rem; font-weight: 700;}
+.scam-question .content{
+    padding: 20px;
+    background-color: var(--scond-bg);
+}
+  .accordion-button:lang(ar)::after {
+    margin-left: 0px !important;
+    margin-right: auto !important;
+}
+.accordion-header {
+    background-color: #ffffff;
+    color: #000000;
+}    .accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: right;
+}
+
+.accordion-button.collapsed {
+    background-color: #fff;
+    color:#000;
+}
+ .collapsed:lang(ar) {
+    margin-right: 0px !important;
+}
+.accordion-button:not(.collapsed) {
+    color:var(--main--bg);
+}

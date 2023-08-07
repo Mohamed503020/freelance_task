@@ -3,7 +3,7 @@
 
 const hidBtn=document.getElementById('icon-hidden');
 const messageNot=document.getElementById('messages');
- 
+ if(hidBtn){
 hidBtn.addEventListener('click',()=>{
    const services =document.getElementById('services')
   messageNot.classList.remove('visible')
@@ -11,7 +11,7 @@ hidBtn.addEventListener('click',()=>{
 function toggleElement() {
     messageNot.classList.toggle('visible');
   }
-  
+}
   // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
   setTimeout(toggleElement, 3000);
 
@@ -84,3 +84,7 @@ subLink2.addEventListener("click",()=>{
     }
 
 })
+
+
+
+

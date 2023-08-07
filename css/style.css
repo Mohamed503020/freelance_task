@@ -1405,7 +1405,7 @@ font-weight: 500;
 .protected img{
     position: absolute;
     bottom: 65px;
-    left:65px;
+    left:187px;
     width: 100px;
     height: 80px;
     margin-bottom: 40px;
@@ -1415,20 +1415,23 @@ font-weight: 500;
     height: 24px;
     position: absolute;
     bottom: 0px;
-    left:64px;
+    left:175px;
 }
 
  .main-footer   .body-footer  p.coun{
         margin-left: 250px !important;
     }
 
-    @media(min-width:1200px) and (max-width:1400px){
+    @media(min-width:1200px) and (max-width:1399){
         .main-footer   .body-footer  p.coun{
-            margin-left: 100px !important;
+            margin-right: 10px !important;
         }  
         .protected img{
             margin-bottom: 0;
-            margin-bottom: 30px;
+            left:56px;
+        }
+        .protected a.cmc img{
+            left:56px;
         }
    
     }
