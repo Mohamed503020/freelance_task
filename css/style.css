@@ -651,7 +651,7 @@ font-size: 20px;
 color:#FFB800
    }
   .method {
-    margin-top: 16px;
+    margin-top: 10px;
    }
 
 .method h6{
@@ -684,7 +684,7 @@ height: 7px;
 }
 .warning-content .method button{
     color: #FFF;
-    margin-top: 30px;
+    margin-top: 17px;
     font-size: 14px;
     padding: 15px;
     display: flex;
@@ -719,7 +719,7 @@ height: 7px;
 
     @media (min-width:375px) and (max-width:450px) {
 
-        .method h6 { font-size: 1rem;}
+        .method h6 { font-size: 14px;}
         .warning-list .warning-content{margin-top: 0px;}
    .warning-list .warning-content .box {
 width: 100% !important;
