@@ -360,7 +360,11 @@
         left: -6px;
         padding: 5px;
         border-radius: 1px;
-    }
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        -ms-border-radius: 1px;
+        -o-border-radius: 1px;
+}
 
     .company-state header .logo img {
         width: 92px;
@@ -403,20 +407,23 @@
     }
     .company-state header .header-action {
         margin-top: 9px;
-        justify-content: space-between;
+        justify-content: space-between !important;
     }
     .company-state header .header-action .btn-h-1 {
-        width: 44%;
+        width: 53%;
     font-size: 0.85rem;
+    margin-left: 10px;
     }
 
     .company-state header .header-action .btn-h-2 {
         width: 130px;
         font-size: 0.85rem;
+        width: 45%;
     }
 
     .company-state header .company_info p.cmp-link {
         width: fit-content;
+        margin-top: -10px;
     }
 }
 
