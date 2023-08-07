@@ -1371,7 +1371,7 @@ font-weight: 500;
     font-size: 12px;
 }
 .main-footer .icon a i{padding: 10px;}
-.main-footer .icon .fa-facebook-f:before {
+.main-footer .icon a .fa-facebook-f:before {
     content: "\f39e";
     padding: 3px;
 }

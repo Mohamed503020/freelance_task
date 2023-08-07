@@ -341,50 +341,73 @@
     }
 }
 
-@media (max-width:540px) {
+@media (min-width:380px) and (max-width:540px) {
+
+    .company-state header {
+        padding: 10px 0;
+    }
 
     .company-state header .logo {
-        width: 240px;
-        height: 99px;
-        margin: 0 auto 10px;
+            margin-top: 10px;
+            width: 35%;
+            height: 90px;
+            margin: 5px auto 0px;
     }
 
     .company-state header .logo .state {
-        width: 77px;
-        padding: 10px;
+        width: 63px;
+        font-size: 13px;
+        left: -6px;
+        padding: 5px;
+        border-radius: 1px;
     }
 
     .company-state header .logo img {
-        width: 133px;
-        height: 27px;
+        width: 92px;
+        height: 21px;
     }
 
+    .company-state header .company_info  h6{font-size: 18px;}
     .company-state header .company_info p {
         padding: 5px;
-        height: auto;
-        font-size: 14px;
+        height: 28px;
+        font-size: 0.63rem;
         width: fit-content;
     }
-
+.company-state header .company_info {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 65%;
+}
     .company-state header .company_info p.date {
         width: fit-content;
     }
 
     .company-state header .comp_rating {
-        padding: 0;
-        width: 240px;
-        height: 110px;
-        margin: 0 auto;
-        font-size: 14px;
+     margin: 0 auto;
+     font-size: 14px;
+    width: 100%;
+    height: 75px;
+    margin-top: -11px;
+    font-size: 14px;
+    padding: 5px;
     }
 
+    .company-state header .comp_rating .rate-number {
+        font-size: 1.4rem;
+        margin-top: -6px;
+    }
     .company-state header .comp_rating .starts {
         font-size: 14px;
+        margin-top: -10px;
     }
-
+    .company-state header .header-action {
+        margin-top: 9px;
+        justify-content: space-between;
+    }
     .company-state header .header-action .btn-h-1 {
-        font-size: 0.85rem;
-        width: 139px;
+        width: 44%;
+    font-size: 0.85rem;
     }
 
     .company-state header .header-action .btn-h-2 {
