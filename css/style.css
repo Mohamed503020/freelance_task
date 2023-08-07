@@ -675,7 +675,7 @@ height: 7px;
  .warning-content .method  .number img {
     display: inline-block;
     margin-left: -10px;
-    width: 15px;height: 15px;
+    width: 15px !important;height: 15px !important;
  }
 
 .warning-content .method.action{
