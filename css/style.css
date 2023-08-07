@@ -615,12 +615,12 @@ font-weight:700;
 
 
  .warning-content .box-head .head-state span{
-    font-size: 1rem;
+    font-size: 14px;
 color:#5a5a5a;   
  font-weight: 500
 }
 .warning-content .box-head .head-state h6{
-    font-size: 16px;
+    font-size: 14px;
 font-weight: 700;
 text-transform: capitalize;
 }
@@ -656,12 +656,12 @@ color:#FFB800
 
 .method h6{
     color: #595959;
-font-size: 1.09rem;
+font-size: 14px;
 font-weight: 700;
    }
 .method span{
 text-align: right;
-font-size: 1.1rem;
+font-size: 14px;
 font-weight: 700;
 text-transform: capitalize;
 margin-right: 8px;
@@ -675,6 +675,7 @@ height: 7px;
  .warning-content .method  .number img {
     display: inline-block;
     margin-left: -10px;
+    width: 15px;height: 15px;
  }
 
 .warning-content .method.action{
@@ -684,7 +685,7 @@ height: 7px;
 .warning-content .method button{
     color: #FFF;
     margin-top: 30px;
-    font-size: 0.94rem;
+    font-size: 14px;
     padding: 15px;
     display: flex;
     align-items: center;
@@ -757,10 +758,10 @@ width: 100% !important;
 
 @media (min-width:1200px) and (max-width:1399px) {
     .method h6 {
-        font-size: 1rem;
+        font-size: 14px;
 }
 .method span {
-    font-size: 1rem;
+    font-size: 14px;
 }
 .warning-content .method button {
     font-size: 0.82rem;
@@ -1410,7 +1411,7 @@ font-weight: 500;
 .protected img{
     position: absolute;
     bottom: 65px;
-    left:137px;
+    left:16%;
     width: 100px;
     height: 80px;
     margin-bottom: 40px;
@@ -1420,7 +1421,7 @@ font-weight: 500;
     height: 24px;
     position: absolute;
     bottom: 0px;
-    left:135px;
+    left:16%;
 }
 
  .main-footer   .body-footer  p.coun{
