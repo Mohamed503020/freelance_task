@@ -1370,6 +1370,11 @@ font-weight: 500;
 .main-footer .icon a{
     font-size: 12px;
 }
+.main-footer .icon a i{padding: 10px;}
+.main-footer .icon .fa-facebook-f:before {
+    content: "\f39e";
+    padding: 3px;
+}
 .body-footer {
     padding: 15px 0;
     font-family: var(--main--font), sans-serif;
