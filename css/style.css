@@ -1438,15 +1438,15 @@ font-weight: 500;
         left:160px;
     }
    }
-   @media (min-width:100px) {
+   @media (min-width:1700px) {
     .protected img{
-        left:190px;
+        left:180px;
     }
     .protected a.cmc img{
  
-        left:190px;
+        left:180px;
     }
-   }
+   } 
     @media(min-width:1200px) and (max-width:1399px){
         .main-footer   .body-footer  p.coun{
             margin-right: 10px !important;
