@@ -661,3 +661,40 @@ color:var(--body-color);
 .accordion-button:not(.collapsed) {
     color:#0c63e4;;
 }
+
+
+
+/* //=========rating Section ================// */
+.star-source {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input[name="star"] {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    margin-left: -2px;
+}
+.star {
+    color: transparent;
+    transition: color 0.2s ease-in-out;
+}
+
+svg {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.15rem;
+}
+input[name="star"]:checked+label .star {
+    animation: starred 0.5s;
+}
+label:hover~label .star, svg.star:hover, input[name="star"]:focus~label .star, input[name="star"]:checked~label .star {
+    color: gold;
+}
+.star-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    padding-bottom: 10px;
+}
