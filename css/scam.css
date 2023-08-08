@@ -370,7 +370,7 @@ font-size: 0.78rem;
     }
 }
 
-@media (min-width:541px) and (max-width:767px) {
+@media (min-width:575px) and (max-width:767px) {
     .company-state header .logo {
         width: 157px;
         height: 128px;
@@ -387,12 +387,14 @@ font-size: 0.78rem;
 
     .company-state header .company_info p {
         padding: 5px;
-        height: 36px;
+        height: 30px;
         width: 167px;
+        font-size: 13px;
     }
 
     .company-state header .company_info p.date {
-        width: 130px;
+        width: 118px;
+        font-size: 13px;
     }
 
     .company-state header .company_info p.cmp-link {
@@ -401,27 +403,42 @@ font-size: 0.78rem;
 
     .company-state header .comp_rating {
         padding: 0;
-        width: 165px;
-        height: 130px;
+        width: 160px;
+        height: 110px;
     }
 
     .company-state header .comp_rating .starts {
         font-size: 14px;
     }
-
+    .company-state header .header-action {
+        margin-top: -105px;
+        flex-direction: column;
+        margin-right: 174px;
+    }
     .company-state header .header-action .btn-h-1 {
-        font-size: 1rem;
-        width: 153px;
+        font-size: 0.8rem;
+        width: 184px;
+        margin-bottom: 20px;
     }
 
     .company-state header .header-action .btn-h-2 {
-        width: 150px;
-        font-size: 1rem;
+        width: 184px;
+        font-size: 0.8rem;
     }
 }
 
-
-
+@media (min-width:576px) and (max-width:766px) {
+    .company-state header .company_info p {
+    width: 145px;
+    font-size: 12px;
+    }  
+    .company-state header .company_info p.date {
+        width:120px
+        ;
+         font-size: 12px;
+        }
+        
+}
 @media (min-width:380px) and (max-width:540px) {
 
     .company-state header {
@@ -448,6 +465,7 @@ font-size: 0.78rem;
         -o-border-radius: 1px;
 }
 
+
     .company-state header .logo img {
         width: 88px;
     height: 15px;
@@ -469,7 +487,11 @@ font-size: 0.78rem;
         width: 40%;
          font-size: 0.69rem;
         }
-
+        .company-state header .company_info p.date img{
+            width: 15px;
+           height: 15px;
+           margin-left: 4px !important;
+            }
     .company-state header .comp_rating {
      margin: 0 auto;
      font-size: 14px;
