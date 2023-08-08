@@ -439,7 +439,7 @@ font-size: 0.78rem;
         }
         
 }
-@media (min-width:380px) and (max-width:540px) {
+@media (min-width:300px) and (max-width:540px) {
 
     .company-state header {
         padding: 10px 0;
@@ -475,7 +475,7 @@ font-size: 0.78rem;
     .company-state header .company_info p {
         padding: 5px;
     height: 28px;
-    font-size: 0.65rem;
+    font-size: 0.63rem;
     width: 58%;
     }
 .company-state header .company_info {
@@ -503,12 +503,12 @@ font-size: 0.78rem;
     }
 
     .company-state header .comp_rating .rate-number {
-        font-size: 1.4rem;
-        margin-top: -4px;
+        font-size: 1.23rem;
+        margin-top: 0px;
     }
     .company-state header .comp_rating .starts {
-        font-size: 14px;
-        margin-top: -7px;
+        font-size: 13px;
+        margin-top: -2px;
     }
     .company-state header .header-action {
         margin-top: 9px;
