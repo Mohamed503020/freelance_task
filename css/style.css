@@ -164,6 +164,7 @@ align-items: center;
     border-left:3px solid #F7F7F7;
     padding-left: 20px;
 }
+.top-header  .container li a{color:#fff}
 .top-header  .container li:last-of-type{border-left: 0;}
 .top-header li a{
     text-align: center;
