@@ -102,10 +102,10 @@ a{color:#000}
     height: 140px;
     padding: 45px 27.333px;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .company-state header .logo img {
@@ -150,10 +150,10 @@ a{color:#000}
     color: var(--body-bg);
     font-size: 16px;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .company-state header .comp_rating .rate-number {
@@ -178,10 +178,10 @@ a{color:#000}
     font-weight: 700;
     width: 234px;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     margin-left: 20px;
     font-size: 1rem;
 }
@@ -212,10 +212,10 @@ a{color:#000}
     font-weight: 700;
     width: 200px;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     font-size: 1rem;
 }
 
@@ -475,7 +475,7 @@ font-size: 0.78rem;
     .company-state header .company_info p {
         padding: 5px;
     height: 28px;
-    font-size: 0.69rem;
+    font-size: 0.65rem;
     width: 58%;
     }
 .company-state header .company_info {
