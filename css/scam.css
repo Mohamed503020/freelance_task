@@ -68,7 +68,7 @@ a{color:#000}
 /* // scamp company Header // */
 
 .company-state header {
-    margin-top: -7px;
+    margin-top: -15px;
     background-color: var(--scamp-head-bg);
     padding: 30px 10px;
 }
@@ -439,7 +439,7 @@ font-size: 0.78rem;
         }
         
 }
-@media (min-width:300px) and (max-width:540px) {
+@media(min-width:300px) and (max-width:575px) {
 
     .company-state header {
         padding: 10px 0;
@@ -459,10 +459,10 @@ font-size: 0.78rem;
         padding: 5px;
         top: 8px;
         border-radius: 1px;
-        -webkit-border-radius: 1px;
-        -moz-border-radius: 1px;
-        -ms-border-radius: 1px;
-        -o-border-radius: 1px;
+        -webkit-border-radius:;
+        -moz-border-radius:;
+        -ms-border-radius:;
+        -o-border-radius:;
 }
 
 
@@ -534,6 +534,13 @@ font-size: 0.78rem;
     }
 }
 
+@media (max-width:369px) {
+    .company-state header .company_info  p img{   width: 15px;height: 15px;margin: 0 !important;}
+    .company-state header .company_info  p{font-size: 0.56rem;}
+        .company-state header .company_info p.cmp-link img,
+         .company-state header .company_info p.date img { display: none;}
+
+}
 /* // scamp warning  Section (التحذيرات) */
 .scamp-warning .content {
     border: 2px solid var(--main--bg);
