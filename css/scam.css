@@ -89,7 +89,6 @@ a{color:#000}
 /* // scamp company Header // */
 
 .company-state header {
-    margin-top: -7px;
     background-color: var(--scamp-head-bg);
     padding: 30px 10px;
 }
