@@ -28,10 +28,13 @@ linkP.addEventListener('mouseover',()=>{
     }
     menu1.style.display='block';
 })}
-menu1.addEventListener('mouseleave',()=>{
-    menu1.style.display='none'
- 
-})
+if(menu1){
+    menu1.addEventListener('mouseleave',()=>{
+        menu1.style.display='none'
+     
+    })
+}
+
 
 if(linkC){
 
