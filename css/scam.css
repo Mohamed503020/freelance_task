@@ -12,6 +12,7 @@
 *{
     scroll-behavior: initial;
 }
+body{overflow-x: hidden;overflow-y: scroll;}
 a{color:#000}
 /* // classes  */
 
