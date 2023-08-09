@@ -697,6 +697,10 @@ height: 7px;
  .warning-content .method button.warn-btn{
  background-color: var(--man--bg);
  }
+ .warning-content .method button.warn-btn:hover{
+    background: #b70b02;
+    
+ }
     @media  (max-width:374px) {
         .warning-content .box-head .head-state span {
             font-size: 0.7rem;}

@@ -33,6 +33,15 @@ a{color:#000}
     font-size: 0.8rem !important;
     color: grey;
 }
+.tradingbtn {
+    background: var(--main--bg);
+    height: 45px;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 .scapm-page-content{
     width: 75%;
     margin: 0 auto;
@@ -700,4 +709,48 @@ label:hover~label .star, svg.star:hover, input[name="star"]:focus~label .star, i
     padding-bottom: 10px;
 }
 
+/* /*=================== reliable Conpany section   جزء الخاص بالشركات الموثوقة == */
 
+.reliabled_company .company-state header {
+    margin-top: -7px;
+    background-color: #0D8944;
+
+}
+.reliabled_company .company-state header .company_info p {
+    border: 1px solid #7CBB98;
+background: #249D5A;
+}
+.reliabled_company .company-state header .comp_rating {
+    background: #249D5A;
+}
+
+.reliabled_company .company-state header .logo .state {
+    background: #249D5A;
+    color:#fff;
+    flex-direction: row;
+    font-size: 12px;
+}
+.reliabled_company .company-state header .logo .state img{width: 35px;height: 20px;}
+
+@media (max-width:600px) {
+    .reliabled_company .company-state header .logo .state {
+        background: #249D5A;
+        color: #fff;
+        flex-direction: row;
+        font-size: 12px;
+        padding: 12px;
+        width: 65px;
+    }
+    
+}
+
+/* //===============table company section =======// */
+.tradingplatform:lang(ar) {
+    direction: rtl;
+    text-align: start;
+    padding: 5px 0px;
+    font-size: 14px;
+}
+.tradingplatform1 {
+    font-size: 14px;
+}
