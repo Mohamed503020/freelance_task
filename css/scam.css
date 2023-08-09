@@ -9,7 +9,9 @@
     --main--font: 'Tajawal';
     --body-color:#212529;
 }
-
+*{
+    scroll-behavior: smooth;
+}
 a{color:#000}
 /* // classes  */
 
