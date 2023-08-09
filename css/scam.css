@@ -10,9 +10,9 @@
     --body-color:#212529;
 }
 *{
-    scroll-behavior: initial;
+    scroll-behavior: smooth;
 }
-body{overflow-x: hidden;overflow-y: scroll;}
+body{overflow-x: hidden;overflow-y: auto;}
 a{color:#000}
 /* // classes  */
 
