@@ -123,63 +123,63 @@ let form =`
   </div>
 </form>`
 
-let replay = document.getElementById('replay');
+// let replay = document.getElementById('replay');
 
-if(replay){
-    replay.addEventListener('click',()=>{
-        let div =document.createElement('div');
-        div.innerHTML=form;
-        replay.after(div)
-    })
+// if(replay){
+//     replay.addEventListener('click',()=>{
+//         let div =document.createElement('div');
+//         div.innerHTML=form;
+//         replay.after(div)
+//     })
   
-}
-// replay content 
+// }
+// // replay content 
 
 
 
-let replayContent=`                <div class="replay_box p-2" id=">
-<div class="replay-head d-flex justify-content-between">
- <div class="user_name d-flex align-items-center"> 
-  <span class="p-2 d-flex align-items-center justify-content-center rounded-circle bg-info text-uppercase"> AM</span> <span class="me-2" id='commentName'> </span></div>
-<div class="replay_date d-flex align-items-center">7/8/2023</div>
-</div>
-<div class="replay-rate me-4 mt-1">
-  <i class="fa-solid fa-star complete"></i>
-  <i class="fa-regular fa-star"></i>
-  <i class="fa-regular fa-star"></i>
-  <i class="fa-regular fa-star"></i>
-  <i class="fa-regular fa-star"></i>
-</div>
-<div class="comment_body me-4 ">
-  <p class=" fw-normal" id="commentBody">
+// let replayContent=`                <div class="replay_box p-2" id=">
+// <div class="replay-head d-flex justify-content-between">
+//  <div class="user_name d-flex align-items-center"> 
+//   <span class="p-2 d-flex align-items-center justify-content-center rounded-circle bg-info text-uppercase"> AM</span> <span class="me-2" id='commentName'> </span></div>
+// <div class="replay_date d-flex align-items-center">7/8/2023</div>
+// </div>
+// <div class="replay-rate me-4 mt-1">
+//   <i class="fa-solid fa-star complete"></i>
+//   <i class="fa-regular fa-star"></i>
+//   <i class="fa-regular fa-star"></i>
+//   <i class="fa-regular fa-star"></i>
+//   <i class="fa-regular fa-star"></i>
+// </div>
+// <div class="comment_body me-4 ">
+//   <p class=" fw-normal" id="commentBody">
    
-  </p>
-</div>
-<div class="comment_replay_icon me-4" id="replay">
-  <i class="fa-solid fa-reply p-0 m-0 "></i> <span> رد </span>
-</div>
+//   </p>
+// </div>
+// <div class="comment_replay_icon me-4" id="replay">
+//   <i class="fa-solid fa-reply p-0 m-0 "></i> <span> رد </span>
+// </div>
 
-</div>`
+// </div>`
 
-let buttonS=document.getElementById('btn_reply-form')
-let nameU=document.getElementById("name");
-let number=document.getElementById("number");
-let email=document.getElementById("email");
-let comment=document.getElementById("comment");
-let form1=document.getElementById('form')
+// let buttonS=document.getElementById('btn_reply-form')
+// let nameU=document.getElementById("name");
+// let number=document.getElementById("number");
+// let email=document.getElementById("email");
+// let comment=document.getElementById("comment");
+// let form1=document.getElementById('form')
 
-let userName=document.getElementById('commentName');
-let commentBody=document.getElementById('commentBody');
+// let userName=document.getElementById('commentName');
+// let commentBody=document.getElementById('commentBody');
 
-if(buttonS){
+// if(buttonS){
 
-    buttonS.addEventListener("click",(e)=>{
-        e.preventDefault();
-        e.stopPropagation()
-        userName.innerHTML=nameU.value;
-        commentBody.innerHTML=comment.value;
-        let div =document.createElement('div');
-        div.innerHTML=replayContent;
-        form1.after(div)
-    })
-}
+//     buttonS.addEventListener("click",(e)=>{
+//         e.preventDefault();
+//         e.stopPropagation()
+//         userName.innerHTML=nameU.value;
+//         commentBody.innerHTML=comment.value;
+//         let div =document.createElement('div');
+//         div.innerHTML=replayContent;
+//         form1.after(div)
+//     })
+// }
