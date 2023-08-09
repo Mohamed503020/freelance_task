@@ -662,9 +662,10 @@ color:var(--body-color);
     color:#0c63e4;;
 }
 
-
-
-/* //=========rating Section ================// */
+/* comment Rating section ========= */
+.scam_commentRate_section p{margin-bottom: 0 !important;}
+.scam_commentRate_section .content {background-color: #f7f7f7;}
+/* //=========rating form  Section ================// */
 .star-source {
     width: 0;
     height: 0;
@@ -698,3 +699,5 @@ label:hover~label .star, svg.star:hover, input[name="star"]:focus~label .star, i
     justify-content: start;
     padding-bottom: 10px;
 }
+
+
