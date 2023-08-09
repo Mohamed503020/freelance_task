@@ -10,7 +10,7 @@
     --body-color:#212529;
 }
 *{
-    scroll-behavior: auto;
+    scroll-behavior: initial;
 }
 a{color:#000}
 /* // classes  */
