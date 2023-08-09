@@ -745,12 +745,22 @@ background: #249D5A;
 }
 
 /* //===============table company section =======// */
-.tradingplatform:lang(ar) {
+.tradingplatform1:lang(ar) {
     direction: rtl;
-    text-align: start;
+    text-align: end;
     padding: 5px 0px;
     font-size: 14px;
 }
 .tradingplatform1 {
     font-size: 14px;
+}
+ 
+
+/* /// waring section ==== */
+.reliabled_company .scamp-warning .content {
+    background-color: #D6F4E3;
+    border-right: 8px solid #0E9347;
+    border-left: 2px solid #0E9347;
+    border-top: 1px solid #1E2521;
+    border-bottom: 1px solid #1E2521;
 }
