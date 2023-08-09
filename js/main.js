@@ -21,28 +21,34 @@ let menu1=document.getElementById('menu1')
 let linkC=document.getElementById("company_links");
 let menu2=document.getElementById('menu2')
 
-
+if(linkP){
 linkP.addEventListener('mouseover',()=>{
     if( menu2.style.display=='block'){
         menu2.style.display='none'
     }
     menu1.style.display='block';
-})
+})}
 menu1.addEventListener('mouseleave',()=>{
     menu1.style.display='none'
  
 })
 
-linkC.addEventListener('mouseover',()=>{
-    if( menu1.style.display=='block'){
-        menu1.style.display='none'
-    }
-    menu2.style.display='block'
-})
-menu2.addEventListener('mouseleave',()=>{
-    menu2.style.display='none'
- 
-})
+if(linkC){
+
+    linkC.addEventListener('mouseover',()=>{
+        if( menu1.style.display=='block'){
+            menu1.style.display='none'
+        }
+        menu2.style.display='block'
+    })
+}
+if(menu2){
+    menu2.addEventListener('mouseleave',()=>{
+        menu2.style.display='none'
+     
+    })
+}
+
 
 // side menu in small screen 
 
@@ -58,19 +64,24 @@ let subMenu2=document.getElementById('sibar_Sub_menu2');
 let subUparrow2=document.getElementById('sibar_Sub_Uparow2');
 let subDownarrow2=document.getElementById('sibar_Sub_Updown2');
 
-subLink1.addEventListener("click",()=>{
-    if(subUparrow1.classList.contains('d-none')){
-        subUparrow1.classList.remove('d-none')
-        subDownarrow1.classList.add('d-none')
-        subMenu1.classList.remove('d-none')
-    }
-    else{
-        subUparrow1.classList.add('d-none')
-        subDownarrow1.classList.remove('d-none')
-        subMenu1.classList.add('d-none')
-    }
+if(subLink1){
+    subLink1.addEventListener("click",()=>{
+        if(subUparrow1.classList.contains('d-none')){
+            subUparrow1.classList.remove('d-none')
+            subDownarrow1.classList.add('d-none')
+            subMenu1.classList.remove('d-none')
+        }
+        else{
+            subUparrow1.classList.add('d-none')
+            subDownarrow1.classList.remove('d-none')
+            subMenu1.classList.add('d-none')
+        }
+    
+    })
+}
 
-})
+if(subLink2){
+
 subLink2.addEventListener("click",()=>{
     if(subUparrow2.classList.contains('d-none')){
         subUparrow2.classList.remove('d-none')
@@ -84,7 +95,8 @@ subLink2.addEventListener("click",()=>{
     }
 
 })
-
+    
+}
 // comment of rating  التقييمات 
 
 let form =`
