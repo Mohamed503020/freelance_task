@@ -10,7 +10,7 @@
     --body-color:#212529;
 }
 
-body{overflow-x: hidden;overflow-y: scroll !important;}
+
 a{color:#000}
 /* // classes  */
 
@@ -84,9 +84,14 @@ a{color:#000}
 .articaldetail-breadcum ul li {
     font-size: 0.6rem;
 }}
-/* // scamp company Header // */
 
+
+/* // scamp company Header // */
+.company-state{
+    overflow: hidden;
+}
 .company-state header {
+    overflow: hidden;
     background-color: var(--scamp-head-bg);
     padding: 30px 10px;
 }
@@ -107,6 +112,10 @@ a{color:#000}
     font-size: 14px;
     color: #fff;
     background-color: var(--main--bg);
+    -webkit-transform: rotate(-23.632deg);
+    -moz-transform: rotate(-23.632deg);
+    -ms-transform: rotate(-23.632deg);
+    -o-transform: rotate(-23.632deg);
 }
 
 .company-state header .logo {
@@ -556,6 +565,7 @@ font-size: 0.78rem;
 
 }
 /* // scamp warning  Section (التحذيرات) */
+.scamp-warning{overflow: hidden;}
 .scamp-warning .content {
     background-color: #daabab;
     border-right: 8px solid #832b2b;
@@ -625,6 +635,7 @@ color:var(--body-color);
 
 
  /* ======= scam question section (الاسئلة ) =========== */
+ .scam-question{overflow: hidden;}
 .scam-question h3{font-size: 1.55rem; font-weight: 700;}
   .accordion-button:lang(ar)::after {
     margin-left: 0px !important;
@@ -666,8 +677,8 @@ color:var(--body-color);
     background-color: #fff;
 
 }
-
 /* comment Rating section ========= */
+.scam_commentRate_section{overflow: hidden;}
 .scam_commentRate_section p{margin-bottom: 0 !important;}
 .scam_commentRate_section .content {background-color: #f7f7f7;}
 /* //=========rating form  Section ================// */
@@ -685,6 +696,10 @@ input[name="star"] {
 .star {
     color: transparent;
     transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
 }
 
 svg {
@@ -694,6 +709,7 @@ svg {
 }
 input[name="star"]:checked+label .star {
     animation: starred 0.5s;
+    -webkit-animation: starred 0.5s;
 }
 label:hover~label .star, svg.star:hover, input[name="star"]:focus~label .star, input[name="star"]:checked~label .star {
     color: gold;
