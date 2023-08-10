@@ -1,4 +1,4 @@
- 
+  
  /* ===== Variables ===== */
  :root{
     --man--bg:#D50900;
@@ -33,7 +33,6 @@ ul{
 body,html{
     direction: rtl !important;
     overflow-x: hidden;
-    overscroll-behavior: unset;
     scroll-behavior: smooth;
 }
 body{
@@ -71,11 +70,7 @@ margin-right: 15px;
   ::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
+  }
   
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555;
@@ -180,7 +175,6 @@ font-weight: 700;
  .main-header{
     padding:40px 15px 15px;
     height: 100px;
-    overflow: hidden;
  }
  .main-header .logo img{
     width: 216px;
@@ -276,8 +270,8 @@ margin-top: -30px;
   
  /* // side nav  */
   .modal-dialog {
-    width: 102%;
-    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
     z-index: 999999999;
     height: 100%;
     margin: 0;
@@ -287,37 +281,37 @@ margin-top: -30px;
     outline: none;
     box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.25);
     background-color: #fbfbfb;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
     scroll-behavior: smooth;
 }
 
   .modal-dialog::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
   
   .modal-dialog::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 .modal-content{
     border-radius: 0;
     border:none;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
  .modal-dialog a{
     color:#000
@@ -378,21 +372,6 @@ button.btn-close{
 font-weight: 600;
 margin-bottom: 20px;
 }
-.services .box-service .icon{
-    display: flex;
-    width: 50px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 2px solid var(--man--bg);
-    line-height: 50px;
-    padding: 10px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-  }
 
 
 
