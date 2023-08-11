@@ -91,10 +91,9 @@ body{
     padding: 7px 15px;
     border-radius: 5px;
     font-size: 1rem;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .tradingbtn:hover{
     background-color: #a80c04 !important;
@@ -163,6 +162,7 @@ h1 {
     margin-left: 0px !important;
     margin-right: auto !important;
 }
+.scam-question p{font-size: 0.9rem;}
 .accordion-header {
     color: #000000;
 }  
@@ -170,10 +170,10 @@ h1 {
 .accordion-button {
     border-bottom: none;
     border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .accordion-item {
