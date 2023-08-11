@@ -415,17 +415,18 @@ margin-bottom: 30px;
    @media screen and (max-width: 576px) {
     .company_desc{
         padding-bottom: 50px;
-        padding-top: 50px;
+        padding-top: 20px;
     }
     .company_desc .title{
         margin-top:79px;
     }
     .company_desc .title h1{
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         font-weight: 700;
         width: 344px;
         }
         .company_desc .title h3{
+            font-size: 0.9rem;
         }
 
         .last-warning .services{
