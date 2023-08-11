@@ -148,6 +148,7 @@ h1 {
  .aboutpara h2 {
     font-size: 1.3rem !important;
     font-weight: bold !important;
+    text-align: right;
 }
  .iti input, .iti input[type=text], .iti input[type=tel] {width: 100% !important;}
  .shareratingform h2{font-size: 1.2rem;}
