@@ -132,6 +132,9 @@ h1 {
     padding-right: 1.5rem !important;
     list-style: inside;
 }
+.rowcommon h5 {
+    font-size: 1.1rem;
+}
 .aboutpara li{    
     text-align: justify !important;
     line-height: 1.8;
