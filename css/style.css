@@ -381,10 +381,10 @@ margin-bottom: 20px;
 background: #07192C;
 background: linear-gradient(180deg, #07192C, #60143C);
 }
-
 @media screen and (max-width: 1200px) {
     .company_desc{
-        height: 510px;
+        height: fit-content;
+        padding-bottom: 130px;
     }
 }
 
@@ -394,12 +394,12 @@ background: linear-gradient(180deg, #07192C, #60143C);
 
 }
 .company_desc .title h1{
-font-size: 2rem;
+font-size: 1.6rem;
 font-weight: 700;
 line-height: 163%;
 }
 .company_desc .title h3{
-font-size: 1.4rem;
+font-size: 1.2rem;
 font-weight: 400;
 line-height: 163%;
 }
@@ -407,25 +407,25 @@ line-height: 163%;
 /* main header in responsive area  */
 @media screen and (max-width: 1220px) {
     .company_desc .title h1{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 700;
 margin-bottom: 30px;
         }
    }
    @media screen and (max-width: 576px) {
     .company_desc{
-        height: 400px;
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
     .company_desc .title{
         margin-top:79px;
     }
     .company_desc .title h1{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 700;
         width: 344px;
         }
         .company_desc .title h3{
-            margin-bottom: 20px;
         }
 
         .last-warning .services{
@@ -495,7 +495,7 @@ height: 46px;
            border-radius: 170px;
            max-width: 320px;
            right: 40px;
-           bottom: 200px;
+           bottom: 120px;
            padding: 8px 2px 12px 14px;
            z-index: 99;
            background: #0E122E;
@@ -530,7 +530,7 @@ height: 46px;
 }
  @media(max-width:500px){
     .user-notfication{
-        bottom: 340px;
+        bottom: 200px;
     }
  }
    .user-notfication .fa-close:before, .fa-multiply:before, .fa-remove:before,
