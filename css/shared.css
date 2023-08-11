@@ -14,9 +14,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 a{
     text-decoration: none;
-    color:#fff;
+    color:#000;
+}
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+    left: auto;
+    right:0;
+}
+.iti {
+width: 100%;
+
+}
+.iti__country-list {
+    direction: rtl;
+    text-align: right;
+}
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
+    padding-left: 0;
+    padding-right: 40px;
 }
 button,button:hover{
     background-color: var(--man--bg);
@@ -42,106 +60,141 @@ body{
     margin: 0;
     padding: 0;
 }
-/* scroll Area  */
 
-/* =========== Classes ============== */
-.seconnd-btn{
-display: flex !important;
-font-size: 20px;
-font-weight: bold;
-width: 150px;
-height: 50px;
-justify-content: center;
-padding: 15px 0;
-align-items: center;
-margin-right: 15px;
+
+.complete {
+    color: #FFB800;
 }
-/* ///change scroll  */
-
-/* ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
+.border-b{
+    padding: 5px 0px 5px 5px;
+    margin: 10px 0px;
+    border-bottom: 4px solid var(--man--bg) !important;
+    width: fit-content;
+}
+@media (max-width:500px) {
+    .border-b{font-size: 1.2rem !important;}
+}
+/* scroll Area  */
+.text-adjust {
+    font-size: 15px;
+    line-height: 1.5;
+}
+.author_name {
+    font-size: 0.8rem !important;
+    color: grey;
+}
+.tradingbtn {
+    background: var(--man--bg) !important;
+    height: 45px;
+    color: white;
+    border: none;
+    padding: 7px 15px;
     border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  } */
- /* notficaton classes  */
- .not-header {
+    font-size: 1rem;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+.tradingbtn:hover{
+    background-color: #a80c04 !important;
+}
+.scapm-page-content{
+    width: 75%;
+    margin: 0 auto;
+}
+/* =========== Classes ============== */
+.postdetail:lang(ar) {
+    direction: rtl;
+    justify-content: center;
+}
+.rowcommon {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+h1 {
+    font-size: 1.55rem !important;
+    font-weight: bold !important;
+}
+.depositbg {
+    padding: 5px;
+    background: rgb(248, 248, 248);
+    border: 1px dotted rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
-    font-family:var(--main--font);
+}
 
-   }
-.not-header div{
-font-size: 14px;
-color: #FFF;
-font-weight: 700;
-text-align: right;
-   }
-   .not-header div img{
-    margin-top: -5px;
-   }
- .not-header div span{
-font-size: 10px;
-color: #FF908C;
-font-weight: 500;
-   }
+.aboutpara {
+    font-size: 1rem;
+    text-align: justify;
+}
+.aboutpara ul {
+    padding-right: 1.5rem !important;
+    list-style: inside;
+}
+.aboutpara li{    
+    text-align: justify !important;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 14px;
+}
+ .aboutpara p{
+    text-align: justify !important;
+    line-height: 1.8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+ }
+ .aboutpara h2 {
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+}
+ .iti input, .iti input[type=text], .iti input[type=tel] {width: 100% !important;}
+ .shareratingform h2{font-size: 1.2rem;}
+/* ======================== */
+/* ======= scam question section (الاسئلة ) =========== */
+.scam-question{overflow: hidden;}
+.scam-question h3{font-size: 1.3rem; font-weight: 700;}
+  .accordion-button:lang(ar)::after {
+    margin-left: 0px !important;
+    margin-right: auto !important;
+}
+.accordion-header {
+    color: #000000;
+}  
 
-   .not-header img{
-    width: 65.8px;
-height: 100%;
-   }
- .rating{
-    margin-top: -7px;
-    margin-right: 25px;
-   }
+.accordion-button {
+    border-bottom: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
 
-.rating i{font-size: 10px;}
-  .rating i.complete{
-    color:#FFB800;
-   }
-   .location{font-size: 10px;}
-   .body{
-    width: 204px;
-    color: rgba(255, 255, 255, 0.60);
-font-size: 8px;
-font-weight: 400;
-   }
- .date{
-    font-size: 8px;
-    font-weight: 700;
-   }
-    /* classe header of each section  */
- .header-section h3{
-    font-size: 1.7rem;
-    font-weight: 700;
-    padding-bottom: 7px;
-   }
-   .header-section h3::after{
-    content: "";
-    margin-top: 5px;
-    height: 4px;
-    display: block;
-    background-color: var(--man--bg);
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    color: #000000;
+    text-align: right;
+}
+
+.accordion-button.collapsed {
+    background-color: #fff;
+    color:#000;
+    font-size: 16px;
+}
+
+ .collapsed:lang(ar) {
+    margin-right: 0px !important;
+}
+.accordion-button:not(.collapsed) {
+    color:var(--man--bg) !important;
+    background-color: #fff;
 
 }
-.header-section a{color:#000}
-.header-section span{
-    font-size: 1.1rem ;
-    font-weight: 400;
-    cursor: pointer;
-   }
-/* ======================== */
 /* === top header Area ===== */
 .top-header{background-color: var(--man--bg);
     height: 35px;
@@ -387,6 +440,33 @@ margin-bottom: 20px;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
   }
+
+  /* ///========breadcum section ==== */
+  .articaldetail-breadcum ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style: none;
+    direction: rtl;
+    margin: 20px 3px;
+}
+.articaldetail-breadcum ul li {
+    font-size: 1rem;
+}
+.articaldetail-breadcum {
+    padding-right: 10px;
+}
+.articaldetail-breadcum ul li a::after {
+    display: inline-block;
+    padding-left: 0.5rem;
+    color: #6c757d;
+    content: "/";
+}
+@media (max-width: 575.98px){
+.articaldetail-breadcum ul li {
+    font-size: 0.6rem;
+}}
+
 
 
 

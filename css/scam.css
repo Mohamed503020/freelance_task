@@ -634,49 +634,7 @@ color:var(--body-color);
  }
 
 
- /* ======= scam question section (الاسئلة ) =========== */
- .scam-question{overflow: hidden;}
-.scam-question h3{font-size: 1.55rem; font-weight: 700;}
-  .accordion-button:lang(ar)::after {
-    margin-left: 0px !important;
-    margin-right: auto !important;
-}
-.accordion-header {
-    color: #000000;
-}  
-
-.accordion-button {
-    border-bottom: none;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-}
-
-.accordion-item {
-    margin-bottom: 10px;
-}
-
-.accordion-button {
-    color: #000000;
-    text-align: right;
-}
-
-.accordion-button.collapsed {
-    background-color: #fff;
-    color:#000;
-    font-size: 16px;
-}
-
- .collapsed:lang(ar) {
-    margin-right: 0px !important;
-}
-.accordion-button:not(.collapsed) {
-    color:var(--main--bg);
-    background-color: #fff;
-
-}
+ 
 /* comment Rating section ========= */
 .scam_commentRate_section{overflow: hidden;}
 .scam_commentRate_section p{margin-bottom: 0 !important;}
