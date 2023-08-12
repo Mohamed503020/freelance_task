@@ -390,6 +390,8 @@ margin-bottom: 20px;
 background: #07192C;
 background: linear-gradient(180deg, #07192C, #60143C);
 }
+
+
 @media screen and (max-width: 1200px) {
     .company_desc{
         height: fit-content;
@@ -412,6 +414,7 @@ margin-bottom: 40px;
 font-size: 1.2rem;
 font-weight: 400;
 line-height: 163%;
+margin-bottom: 40px;
 }
 
 /* main header in responsive area  */
