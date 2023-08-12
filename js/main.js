@@ -16,43 +16,56 @@ function toggleElement() {
   setTimeout(toggleElement, 3000);
 
 /// header links and show and hide menue
-let linkP=document.getElementById("peple_links");
-let menu1=document.getElementById('menu1')
-let linkC=document.getElementById("company_links");
-let menu2=document.getElementById('menu2')
-
-if(linkP){
-linkP.addEventListener('mouseover',()=>{
-    if( menu2.style.display=='block'){
-        menu2.style.display='none'
+document.addEventListener('DOMContentLoaded', function() {
+    let linkP = document.getElementById("peple_links");
+    let menu1 = document.getElementById('menu1');
+    let linkC = document.getElementById("company_links");
+    let menu2 = document.getElementById('menu2');
+    let menu3 = document.getElementById('menu3');
+    let linkV = document.getElementById("legal_links");
+  
+    if (linkC) {
+      linkC.addEventListener('mouseover', () => {
+        menu2.classList.add('show');
+        menu1.classList.remove('show');
+        menu3.classList.remove('show');
+      });
     }
-    menu1.style.display='block';
-})}
-if(menu1){
-    menu1.addEventListener('mouseleave',()=>{
-        menu1.style.display='none'
-     
-    })
-}
-
-
-if(linkC){
-
-    linkC.addEventListener('mouseover',()=>{
-        if( menu1.style.display=='block'){
-            menu1.style.display='none'
-        }
-        menu2.style.display='block'
-    })
-}
-if(menu2){
-    menu2.addEventListener('mouseleave',()=>{
-        menu2.style.display='none'
-     
-    })
-}
-
-
+  
+    if (menu2) {
+      menu2.addEventListener('mouseleave', () => {
+        menu2.classList.remove('show');
+      });
+    }
+  
+    if (linkP) {
+      linkP.addEventListener('mouseover', () => {
+        menu1.classList.add('show');
+        menu2.classList.remove('show');
+        menu3.classList.remove('show');
+      });
+    }
+  
+    if (menu1) {
+      menu1.addEventListener('mouseleave', () => {
+        menu1.classList.remove('show');
+      });
+    }
+  
+    if (linkV) {
+      linkV.addEventListener('mouseover', () => {
+        menu3.classList.add('show');
+        menu2.classList.remove('show');
+        menu1.classList.remove('show');
+      });
+    }
+  
+    if (menu3) {
+      menu3.addEventListener('mouseleave', () => {
+        menu3.classList.remove('show');
+      });
+    }
+  });
 // side menu in small screen 
 
 // links sub menu 
@@ -66,7 +79,11 @@ let subLink2=document.getElementById('sibar_Sub_link2');
 let subMenu2=document.getElementById('sibar_Sub_menu2');
 let subUparrow2=document.getElementById('sibar_Sub_Uparow2');
 let subDownarrow2=document.getElementById('sibar_Sub_Updown2');
-
+// three link 
+let subLink3=document.getElementById('sibar_Sub_link3');
+let subMenu3=document.getElementById('sibar_Sub_menu3');
+let subUparrow3=document.getElementById('sibar_Sub_Uparow3');
+let subDownarrow3=document.getElementById('sibar_Sub_Updown3');
 if(subLink1){
     subLink1.addEventListener("click",()=>{
         if(subUparrow1.classList.contains('d-none')){
@@ -100,6 +117,24 @@ subLink2.addEventListener("click",()=>{
 })
     
 }
+
+if(subLink3){
+
+    subLink3.addEventListener("click",()=>{
+        if(subUparrow3.classList.contains('d-none')){
+            subUparrow3.classList.remove('d-none')
+            subDownarrow3.classList.add('d-none')
+            subMenu3.classList.remove('d-none')
+        }
+        else{
+            subUparrow3.classList.add('d-none')
+            subDownarrow3.classList.remove('d-none')
+            subMenu3.classList.add('d-none')
+        }
+    
+    })
+        
+    }
 // comment of rating  التقييمات 
 
 let form =`

@@ -74,6 +74,35 @@ body{
 @media (max-width:500px) {
     .border-b{font-size: 1.2rem !important;}
 }
+input{
+    direction:rtl;
+}
+.form-select {
+    padding-right: 2.5rem;
+    background-position: right 1.5rem center !important;
+  }
+
+  .form-select:focus {
+    padding-right: 2.5rem;
+    background-position: right 1.5rem center !important;
+  }
+
+  .form-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.35rem 0.35rem 0;
+    border-color: #000000 transparent transparent;
+    -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;
+}
 /* scroll Area  */
 .text-adjust {
     font-size: 15px;

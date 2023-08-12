@@ -30,6 +30,41 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/shared.css">
+
+    <style>
+    .custom-select-wrapper {
+      position: relative;
+    }
+
+    .custom-select-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0.75rem;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.35rem 0.35rem 0;
+      border-color: #000000 transparent transparent;
+      pointer-events: none;
+    }
+
+    .custom-select {
+      padding-left: 2.5rem !important;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-right: 17px;
+      background-image: none;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+.custom-select:focus{
+    cursor: pointer !important;
+    padding-right: 17px !important;
+}
+    </style>
 </head>
 
 <body>
@@ -228,7 +263,7 @@
             <div class="articaldetail-breadcum">
                 <ul>
                     <li><a href="https://daman.reviews"> <i class="fa-solid fa-house"></i> الرئيسية </a></li>
-                    <li class="careerstext"> الابلاغ عن شركات التداول النصابة</li>
+                    <li class="careerstext"> المتطلبات لحساب شركة</li>
                 </ul>
             </div>
         </div>
@@ -236,73 +271,85 @@
         <div class="row rowcommon postdetail">
             <div class="col-12 col-sm-9 p-0">
                 <div class="depositbg mb-3">
-                    <h1 class="depositheading border-b">الابلاغ عن شركات التداول النصابة</h1>
-                </div>
-                <div class=" container my-4" dir="rtl">
-                    <div class="d-flex gap-1 align-items-center mt-2 mb-3">
-                        <i class="fa-solid fa-user-tie author_name"></i>
-                        <small class="author_name">
-                            <a href="">احمد خليل</a>
-                        </small>
-                        <i class="fa-solid fa-pen-to-square mr-2 author_name"></i>
-                        <small class="author_name">نشر </small>
-                        <small class="author_name">2023-08-04</small>
-                        <i class="fa-solid fa-clock-rotate-left mr-2 author_name"></i>
-                        <small class="author_name"> التحديث</small>
-                        <small class="author_name">2023-08-08</small>
-                    </div>
+                    <h1 class="depositheading border-b">المتطلبات لحساب شركة</h1>
                 </div>
                 <div class="page-intro container mt-3 mt-lg-5">
                     <div class="justify-content-start articaldetailheading">
-                        <h5 class="mt-3 mb-2 fw-bold"> نموذج تقديم شكوى ضد شركة تداول نصابة</h5>
+                        <h5 class="mt-3 mb-2 fw-bold">نموذج تقديم طلب شركة</h5>
                         </div>
-                        <small class="fw-bold">الرجاء تعبئة النموذج ادناه لتقديم شكوى و بلاغ ضد شركة تداول محتالة او منصة&nbsp;استثمار&nbsp;نصابة:</small>
+                        <small class="fw-bold">الرجاء تعبئة النموذج ادناه لتقديم طلب شركة :</small>
                         <div class="shareratingform  mt-3  ">
-                     <form method="POST" action="" >
-                                <div class="row" dir="rtl">
-                                    <div class="col-12 col-md-6">
-                                        <div class="mb-3" dir="rtl">
-                                            <label for="name" class="form-label"> الاسم الكامل<span
-                                                    class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="text" class="form-control" name="name" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="mb-3" dir="rtl">
-                                            <label for="phone" class="form-label" style="display: flex"> رقم هاتفك
-                                                المحمول<span class="text-danger me-2">(مطلوب)</span></label>
-                                                <input type="tel" class="form-control" name="phone" id="phone"></input>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6 " dir="rtl">
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">البريد الإلكتروني<span
-                                                    class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="email" class="form-control" name="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <div class="mb-3">
-                                        <label for="name" class="form-label"> اسم الشركة<span class="text-danger me-2">(مطلوب)</span></label>
-                                        <input type="text" class="form-control" name="broker_name" data-parsley-required-message="هذه القيمة مطلوبة" required="" id="name" autocomplete="off" fdprocessedid="m3rb9">
-                                        </div>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <div class="mb-3">
-                                            <label for="name" class="form-label"> موقع الشركة<span class="text-danger me-2">(ان وجد)</span></label>
-                                            <input type="url" class="form-control" name="website"   placeholder="www.example.com" autocomplete="off">
-                                            </div>
-                                            </div>
-                                    <div class="col-12 col-md-12">
-                                        <div class="mb-2">
-                                            <label for="details" class="form-label"> اكتب رسالتك عن محتوى الشكوى وتفاصيل الاحتيال<span
-                                                    class="text-danger me-2">(مطلوب)</span></label>
-                                            <textarea name="details" class="form-control" required="" id="details" rows="5"
-                                                 autocomplete="off"></textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="tradingbtn text-center me-3 px-3 px-md-4 py-2 py-md-2 py-2 mt-1 mb-3 w-auto">إرسال </button>
+                     <form method="POST" action="./index.html" >
+                        <div class="row step" dir="rtl">
+                            <div class="aboutpara mt-4 mt-lg-5">
+                                <h2 >ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
+                                <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3" dir="rtl">
+                                    <label for="howConnect" class="form-label"> كيف تم الاتصال بك من قبل المحتال ؟<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="howConnect" autocomplete="off">
                                 </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3" dir="rtl">
+                                    <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك المحتال لأول مرة ؟ 
+                                        <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" name="dateConnect"></input>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 " dir="rtl">
+                                <div class="mb-3">
+                                    <label for="type" class="form-label" > أي نوع من الاحتيال ؟<span
+                                            class="text-danger">*</span></label>
+                                            <div class="custom-select-wrapper">
+                                                <select class="form-select custom-select" id="exampleSelect">
+                                                  <option selected>اختر...</option>
+                                                  <option value="arabic">العربية</option>
+                                                  <option value="english">الإنجليزية</option>
+                                                  <option value="french">الفرنسية</option>
+                                                </select>
+                                              </div>                               
+                                            </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3" dir="rtl">
+                                    <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك المحتال لأول مرة ؟ 
+                                        <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" name="dateConnect" dir="rtl"></input>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row step" dir="rtl">
+                            <div class="aboutpara mt-4 mt-lg-5">
+                                <h2 >ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
+                                <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3" dir="rtl">
+                                    <label for="name" class="form-label"> الاسم الكامل<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" name="name" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3" dir="rtl">
+                                    <label for="phone" class="form-label" style="display: flex"> رقم هاتفك
+                                        المحمول<span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" name="phone" id="phone"></input>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 " dir="rtl">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">البريد الإلكتروني<span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" name="email">
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -311,10 +358,10 @@
               <div class="aboutpara mt-4 mt-lg-5">
                 <div class="container">
                 <h2 >ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
-                <p class="text-muted" >نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
                 </p>
                 <h2 class="mt-4">ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
-                <p class="text-muted" >نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
                 </p>
               </div>
             </div>         <!-- ======= scam question section (الاسئلة ) =========== -->
