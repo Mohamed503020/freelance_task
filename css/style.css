@@ -387,8 +387,13 @@ margin-bottom: 20px;
     padding: 5px;
     height: 550px;
     background-size: cover;
-background: #333;
-/* background: linear-gradient(180deg, #07192C, #60143C); */
+
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=000000&c2=333333&gt=l&gd=dtt
+*/
+background: #000000;
+background: linear-gradient(180deg, #000000, #333333);
 }
 
 
