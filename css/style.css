@@ -237,8 +237,8 @@ margin-top: -30px;
     display: none;
     padding: 20px;
     position: absolute;
-    width: 600px;
-    left: 34%;
+    width: 800px;
+    left: 20%;
     text-align: right;
     top: 130px;
     z-index: 999;
@@ -403,13 +403,13 @@ background: linear-gradient(180deg, #07192C, #60143C);
 
 }
 .company_desc .title h1{
-font-size: 1.3rem;
+font-size: 1.45rem;
 font-weight: 700;
 line-height: 163%;
 margin-bottom: 40px;
 }
 .company_desc .title h3{
-font-size: 1rem;
+font-size: 1.2rem;
 font-weight: 400;
 line-height: 163%;
 }
