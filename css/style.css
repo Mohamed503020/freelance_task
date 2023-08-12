@@ -543,8 +543,28 @@ height: 46px;
 }
  @media(max-width:500px){
     .user-notfication{
-        bottom: 170px;
+        bottom: 10px;
+        width:230px;
+        padding: 5px;
     }
+    .user-notfication .logo {
+        height: 55px;
+        border-radius: 50%;
+        margin-left: 3px;
+        padding: 0px 17px;
+        font-size: 16px;
+    }
+    .not-header div {
+        font-size: 10px;
+    }
+    .user-notfication .body {
+        font-size: 10px;
+        word-wrap: break-word;
+    }
+    .user-notfication .date {
+        font-size: 9px;
+    }
+
  }
    .user-notfication .fa-close:before, .fa-multiply:before, .fa-remove:before,
     .fa-times:before, .fa-xmark:before 
