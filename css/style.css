@@ -392,7 +392,7 @@ margin-bottom: 20px;
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=000000&c2=333333&gt=l&gd=dtt
 */
-background: #000000;
+background: #000000 ;
 background: linear-gradient(180deg, #000000, #333333);
 }
 
@@ -992,7 +992,8 @@ line-height: 227%; /* 40.86px */
 
 @media screen and (max-width:550px) {
     .instruction{padding: 0;}
-    .instruction .content{background-color: #f7f7f7; padding: 0;width: 107%;margin-right: -10px;}
+    .instruction .content{background-color: #f7f7f7; padding: 0;
+      }
     .instruction .img img {width: 100%;}
     .instruction .desc h5{font-size: 1.1rem; margin-right: 15px; word-wrap: break-word;width: fit-content;}
     .instruction .desc p{font-size: 15px; width: fit-content;margin-right: 10px; padding: 10px;}
