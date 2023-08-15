@@ -266,7 +266,7 @@ hidContBtn.addEventListener("click",()=>{
   hidContBtn.style.display='none';
   showContBtn.style.display="block";
   window.scrollBy({
-    top: -600,
+    top: -800,
     behavior: 'smooth'
   });
 })
