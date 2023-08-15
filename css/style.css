@@ -275,7 +275,10 @@ margin-top: -30px;
     .main-header  .logo img{margin-top: -25px;}
 }
 @media (min-width:1200px) and (max-width: 1399px) {
-    .main-header .main-btn{margin-top: -2px; padding: 10px;}
+    .main-header .main-btn{
+        margin-top: -5px;
+        padding: 5px 6px;
+    }
   }
 @media screen and (max-width: 1399px) {
     .main-header{height: 115px;}
