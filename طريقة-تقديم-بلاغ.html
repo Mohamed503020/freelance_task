@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"
         content="موقع منصات الاحتيال مختص في تقييم شركات التداول والوساطة المالية العربية وكشف شركات تداول نصابة وتوجيه المتداولين الى شركات الاستثمار المرخصة&nbsp;والموثوقة">
-    <title>
+    <title> 
     </title>
 
     <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml" sizes="any" width="32" height="32"
@@ -46,110 +46,82 @@
             border-color: #000000 transparent transparent;
             pointer-events: none;
         }
+        .stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 
-        #signUpForm .form-header .stepIndicator {
-        position: relative;
-        flex: 1;
-        padding-bottom: 30px;
-    }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
 
-    #signUpForm .form-header .stepIndicator.active {
-        font-weight: 600;
-    }
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
 
-    #signUpForm .form-header .stepIndicator.finish {
-        font-weight: 600;
-        color: #009688;
-    }
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
 
-    #signUpForm .form-header .stepIndicator::before {
-        content: "1";
-        padding: 10px;color:#fff;
-        position: absolute;
-        right: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        z-index: 9;
-        width: 20px;
-        height: 20px;
-        background-color: #824f12;
-        border-radius: 50%;
-        border: 3px solid #ecf5f4;
-    }
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
 
-    #signUpForm .form-header .stepIndicator.active::before {
-        background-color: #a7ede8;
-        border: 3px solid #d5f9f6;
-    }
+.stepper-item.active {
+  font-weight: bold;
+}
 
-    #signUpForm .form-header .stepIndicator.finish::before {
-        background-color: #b70b02;
-        border: 3px solid #b7e1dd;
-    }
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
 
-    #signUpForm .form-header .stepIndicator::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 8px;
-        width: 100%;
-        height: 3px;
-        background-color: #f3f3f3;
-    }
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
 
-    #signUpForm .form-header .stepIndicator.active::after {
-        background-color: #b70b02;
-    }
-
-    #signUpForm .form-header .stepIndicator.finish::after {
-        background-color: #af3b3b;
-    }
-
-    #signUpForm .form-header .stepIndicator:last-child:after {
-        display: none;
-    }
-
-
-    #signUpForm input.invalid {
-        border: 1px solid #ffaba5;
-    }
-
-    #signUpForm .step {
-        display: none;
-    }
-
-    #signUpForm .form-footer {
-        overflow: auto;
-        gap: 20px;
-    }
-
-    #signUpForm .form-footer button {
-        background-color:#b70b02;
-        border: 1px solid #b70b02 !important;
-        color: #ffffff;
-        border: none;
-        padding: 13px 30px;
-        font-size: 1em;
-        width:250px;
-        cursor: pointer;
-        border-radius: 5px;
-        flex: 1;
-        margin-top: 5px;
-    }
-
-    #signUpForm .form-footer button:hover {
-        opacity: 0.8;
-    }
-
-    #signUpForm .form-footer #prevBtn {
-        background-color: #fff;
-        color: #009688;
-    }
-
-    #signUpForm .form-header .stepIndicator.finish::before {
-        background-color: #fa7d10;
-        border: 3px solid #b7e1dd;
-    }
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+       
 
     </style>
 </head>
@@ -366,8 +338,15 @@
                         <form method="POST" action="./index.html" id="signUpForm">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="form-header d-flex position-relative justify-content-center mb-4"> <span class="stepIndicator">Account Setup</span> <span
-                                        class="stepIndicator">Social Profiles</span> </div>
+                                    <div class="stepper-wrapper">
+                                        <div class="stepper-item completed">
+                                          <div class="step-counter">1</div>
+                                          <div class="step-name">First</div>
+                                        </div>
+                                        <div class="stepper-item ">
+                                          <div class="step-counter">2</div>
+                                          <div class="step-name">Second</div>
+                                        </div>
                                 </div>
                             </div>
                             <div class="step">

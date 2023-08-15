@@ -9,13 +9,13 @@
   if (scrollPosition > 170) {
     header.classList.add('sticky-header');
     menuMainHeader.forEach(ele=>{
-      ele.style.top="100px"
+      ele.style.top="92px"
     })
 
   } else {
     header.classList.remove('sticky-header');
       menuMainHeader.forEach(ele=>{
-      ele.style.top="125px"
+      ele.style.top="119px"
     })
   }
 });
