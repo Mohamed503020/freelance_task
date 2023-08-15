@@ -265,9 +265,17 @@ hidContBtn.addEventListener("click",()=>{
   Container.style.height="185px";
   hidContBtn.style.display='none';
   showContBtn.style.display="block";
+  window.scrollBy({
+    top: -600,
+    behavior: 'smooth'
+  });
 })
 showContBtn.addEventListener("click",()=>{
   Container.style.height="auto";
   hidContBtn.style.display='block';
   showContBtn.style.display="none";
+  window.scrollBy({
+    top: 100,
+    behavior: 'smooth'
+  });
 })}
