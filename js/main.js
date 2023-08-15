@@ -1,4 +1,24 @@
- 
+ //header sticky ========]
+ window.addEventListener('scroll', function() {
+  var header = document.querySelector('.main-header');
+  var scrollPosition = window.scrollY;
+  let menuMainHeader=document.querySelectorAll(" .main-header .menu ")
+
+
+
+  if (scrollPosition > 170) {
+    header.classList.add('sticky-header');
+    menuMainHeader.forEach(ele=>{
+      ele.style.top="100px"
+    })
+
+  } else {
+    header.classList.remove('sticky-header');
+      menuMainHeader.forEach(ele=>{
+      ele.style.top="125px"
+    })
+  }
+});
 //  / hidden user notofication
 
 const hidBtn=document.getElementById('icon-hidden');
@@ -233,3 +253,21 @@ let form =`
 //         form1.after(div)
 //     })
 // }
+
+
+//  table page content 
+
+let Container =document.getElementById("ez-toc-container");
+let hidContBtn=document.getElementById("hidCbtn");
+let showContBtn=document.getElementById("showCbtn");
+if(Container){
+hidContBtn.addEventListener("click",()=>{
+  Container.style.height="185px";
+  hidContBtn.style.display='none';
+  showContBtn.style.display="block";
+})
+showContBtn.addEventListener("click",()=>{
+  Container.style.height="auto";
+  hidContBtn.style.display='block';
+  showContBtn.style.display="none";
+})}

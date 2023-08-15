@@ -63,7 +63,8 @@
     }
 
     #signUpForm .form-header .stepIndicator::before {
-        content: "";
+        content: "1";
+        padding: 10px;color:#fff;
         position: absolute;
         right: 50%;
         bottom: 0;
@@ -97,7 +98,7 @@
     }
 
     #signUpForm .form-header .stepIndicator.active::after {
-        background-color: #a7ede8;
+        background-color: #b70b02;
     }
 
     #signUpForm .form-header .stepIndicator.finish::after {
@@ -369,78 +370,80 @@
                                         class="stepIndicator">Social Profiles</span> </div>
                                 </div>
                             </div>
-                     
-                            <div class="row step" dir="rtl">
-                                <div class="aboutpara mt-4 mt-lg-5">
-                                    <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
-                                    <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
-                                        في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
-                                        للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل
-                                        لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
-                                    </p>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3" dir="rtl">
-                                        <label for="howConnect" class="form-label"> كيف تم الاتصال بك من قبل المحتال
-                                            ؟<span class="text-danger me-2">(مطلوب)</span></label>
-                                        <input type="text" class="form-control" name="howConnect" autocomplete="off">
+                            <div class="step">
+                                <div class="row w-100" dir="rtl">
+                                    <div class="aboutpara mt-4 mt-lg-5">
+                                        <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
+                                        <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
+                                            في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
+                                            للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل
+                                            لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3" dir="rtl">
-                                        <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك
-                                            المحتال لأول مرة ؟
-                                            <span class="text-danger me-2">(مطلوب)</span></label>
-                                        <input type="date" class="form-control" name="dateConnect"></input>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3" dir="rtl">
+                                            <label for="howConnect" class="form-label"> كيف تم الاتصال بك من قبل المحتال
+                                                ؟<span class="text-danger me-2">(مطلوب)</span></label>
+                                            <input type="text" class="form-control" name="howConnect" autocomplete="off">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-12 " dir="rtl">
-                                    <div class="mb-3">
-                                        <label for="type" class="form-label"> أي نوع من الاحتيال ؟<span
-                                                class="text-danger me-2">(مطلوب)</span></label>
-                                        <div class="custom-select-wrapper">
-                                            <select class="form-select custom-select" id="exampleSelect">
-                                                <option selected>اختر...</option>
-                                                <option value="arabic">العربية</option>
-                                                <option value="english">الإنجليزية</option>
-                                                <option value="french">الفرنسية</option>
-                                            </select>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3" dir="rtl">
+                                            <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك
+                                                المحتال لأول مرة ؟
+                                                <span class="text-danger me-2">(مطلوب)</span></label>
+                                            <input type="date" class="form-control" name="dateConnect"></input>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-12 " dir="rtl">
+                                        <div class="mb-3">
+                                            <label for="type" class="form-label"> أي نوع من الاحتيال ؟<span
+                                                    class="text-danger me-2">(مطلوب)</span></label>
+                                            <div class="custom-select-wrapper">
+                                                <select class="form-select custom-select" id="exampleSelect">
+                                                    <option selected>اختر...</option>
+                                                    <option value="arabic">العربية</option>
+                                                    <option value="english">الإنجليزية</option>
+                                                    <option value="french">الفرنسية</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label for="details" class="form-label"> ماذا تعرف عن الاحتيال ؟<span
+                                                    class="text-danger me-2">(مطلوب)</span></label>
+                                            <textarea name="details" class="form-control" required="" id="details" rows="5"
+                                                autocomplete="off"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <div class="mb-3">
+                                            <label for="details" class="form-label"> اشرح طريقة الاحتيال<span
+                                                    class="text-danger me-2">(مطلوب)</span></label>
+                                            <textarea name="details" class="form-control" required="" id="details" rows="5"
+                                                autocomplete="off"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3" dir="rtl">
+                                            <label for="const" class="form-label"> المبلغ الذي تم الاحتيال عليك به ؟<span
+                                                    class="text-danger me-2">(مطلوب)</span></label>
+                                            <input type="number" class="form-control" name="cost" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3" dir="rtl">
+                                            <label for="const" class="form-label">
+                                                الرابط الخاص بعملية الاحتيال<span
+                                                    class="text-danger me-2">(مطلوب)</span></label>
+                                            <input type="url" class="form-control" name="cost" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="details" class="form-label"> ماذا تعرف عن الاحتيال ؟<span
-                                                class="text-danger me-2">(مطلوب)</span></label>
-                                        <textarea name="details" class="form-control" required="" id="details" rows="5"
-                                            autocomplete="off"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12 ">
-                                    <div class="mb-3">
-                                        <label for="details" class="form-label"> اشرح طريقة الاحتيال<span
-                                                class="text-danger me-2">(مطلوب)</span></label>
-                                        <textarea name="details" class="form-control" required="" id="details" rows="5"
-                                            autocomplete="off"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3" dir="rtl">
-                                        <label for="const" class="form-label"> المبلغ الذي تم الاحتيال عليك به ؟<span
-                                                class="text-danger me-2">(مطلوب)</span></label>
-                                        <input type="number" class="form-control" name="cost" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="mb-3" dir="rtl">
-                                        <label for="const" class="form-label">
-                                            الرابط الخاص بعملية الاحتيال<span
-                                                class="text-danger me-2">(مطلوب)</span></label>
-                                        <input type="url" class="form-control" name="cost" autocomplete="off">
-                                    </div>
-                                </div>
                             </div>
-                            <div class="row step" dir="rtl">
+                           <div class="step">
+                            <div class="row " dir="rtl">
                                 <div class="aboutpara mt-4 mt-lg-5">
                                     <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
                                     <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
@@ -471,6 +474,8 @@
                                     </div>
                                 </div>
                             </div>
+                           </div>
+
                             <div class="form-footer d-flex"> <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                     

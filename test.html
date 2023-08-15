@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>Two-Step Stepper</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  body,html{
+      direction: rtl !important;
+    }
+    .stepper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+      position: relative;
+    }
+    .step.active {
+      background-color: red;
+      color: #fff;
+    }
+    .step:not(:last-child):after {
+      content: "";
+      height: 3px;
+      width: calc(100% - 40px); /* Adjust the width as needed */
+      background-color: red;
+      position: absolute;
+      top: 18px;
+      right:0;
+      transform: translateX(50%);
+    }
+    .step.active:not(:last-child):after {
+      background-color: red;
+      width: 400px;
+    }
+    .step-content {
+      display: none;
+    }
+    .step-content.active {
+      display: block;
+    }
+    .step-content:first-child {
+      display: block;
+    }
+    .prev-button {
+      display: none;
+    }
+    body {
+      direction: rtl;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="stepper d-flex justify-content-between">
+    <div class="step active float-st">1</div>
+    <div class="step align-self-start">2</div>
+  </div>
+  
+  <form method="POST" action="./index.html" id="signUpForm">
+    <!-- Step 1 content -->
+    <div class="step-content active">
+      <!-- Step 1 form fields -->
+      <div class="row w-100" dir="rtl">
+        <div class="aboutpara mt-4 mt-lg-5">
+            <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
+            <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
+                في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
+                للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل
+                لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+            </p>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="howConnect" class="form-label"> كيف تم الاتصال بك من قبل المحتال
+                    ؟<span class="text-danger me-2">(مطلوب)</span></label>
+                <input type="text" class="form-control" name="howConnect" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك
+                    المحتال لأول مرة ؟
+                    <span class="text-danger me-2">(مطلوب)</span></label>
+                <input type="date" class="form-control" name="dateConnect"></input>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 " dir="rtl">
+            <div class="mb-3">
+                <label for="type" class="form-label"> أي نوع من الاحتيال ؟<span
+                        class="text-danger me-2">(مطلوب)</span></label>
+                <div class="custom-select-wrapper">
+                    <select class="form-select custom-select" id="exampleSelect">
+                        <option selected>اختر...</option>
+                        <option value="arabic">العربية</option>
+                        <option value="english">الإنجليزية</option>
+                        <option value="french">الفرنسية</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <label for="details" class="form-label"> ماذا تعرف عن الاحتيال ؟<span
+                        class="text-danger me-2">(مطلوب)</span></label>
+                <textarea name="details" class="form-control" required="" id="details" rows="5"
+                    autocomplete="off"></textarea>
+            </div>
+        </div>
+        <div class="col-12 ">
+            <div class="mb-3">
+                <label for="details" class="form-label"> اشرح طريقة الاحتيال<span
+                        class="text-danger me-2">(مطلوب)</span></label>
+                <textarea name="details" class="form-control" required="" id="details" rows="5"
+                    autocomplete="off"></textarea>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="const" class="form-label"> المبلغ الذي تم الاحتيال عليك به ؟<span
+                        class="text-danger me-2">(مطلوب)</span></label>
+                <input type="number" class="form-control" name="cost" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="const" class="form-label">
+                    الرابط الخاص بعملية الاحتيال<span
+                        class="text-danger me-2">(مطلوب)</span></label>
+                <input type="url" class="form-control" name="cost" autocomplete="off">
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Step 2 content -->
+    <div class="step-content">
+      <div class="row " dir="rtl">
+        <div class="aboutpara mt-4 mt-lg-5">
+            <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
+            <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
+                في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
+                للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل
+                لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+            </p>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="name" class="form-label"> الاسم الكامل<span
+                        class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="name" autocomplete="off">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3" dir="rtl">
+                <label for="phone" class="form-label" style="display: flex"> رقم هاتفك
+                    المحمول<span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" name="phone" id="phone"></input>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 " dir="rtl">
+            <div class="mb-3">
+                <label for="email" class="form-label">البريد الإلكتروني<span
+                        class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email">
+            </div>
+        </div>
+    </div>
+      <!-- Step 2 form fields -->
+    </div>
+    
+    <!-- Add additional steps as needed -->
+    
+    <button type="button" class="btn btn-primary" id="prevBtn" onclick="prevStep()">Previous</button>
+    <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextStep()">Next</button>
+  </form>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+var currentStep = 0;
+var steps = document.getElementsByClassName('step');
+var stepContents = document.getElementsByClassName('step-content');
+
+function showStep(step) {
+  // Hide all steps
+  for (var i = 0; i < stepContents.length; i++) {
+    stepContents[i].classList.remove('active');
+  }
+  // Show the current step
+  stepContents[step].classList.add('active');
+}
+
+function prevStep() {
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+}
+
+function nextStep() {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  }
+}
+
+// Set the initial step
+showStep(currentStep);
+  </script>
+</body>
+</html>
