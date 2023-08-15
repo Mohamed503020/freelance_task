@@ -394,7 +394,6 @@ margin-bottom: 20px;
 /* ////// === company Description Area  */
 .company_desc{
     padding: 5px;
-    height: 510px;
     background-size: cover;
 
 /*
@@ -402,6 +401,7 @@ margin-bottom: 20px;
 * Gradient link: https://www.css-gradient.com/?c1=000000&c2=333333&gt=l&gd=dtt
 */
 background: #000000 ;
+padding-bottom: 120px;
 background: linear-gradient(180deg, #333333, #000000);
 }
 
@@ -447,7 +447,7 @@ margin-bottom: 30px;
    }
    @media screen and (max-width: 576px) {
     .company_desc{
-        padding-bottom: 50px;
+        padding-bottom: 10px;
         padding-top: 20px;
     }
     .company_desc .title{
@@ -1321,14 +1321,11 @@ width: 202px;
  /* ============= Sponser section ==============  */
    .sponser{
     padding: 10px 0;
-    padding-left: 5px;
-    background-image: url("../assets/images/sponsor.jpg");
-    background-size: cover;
+    margin: 20px 0;
 }
-   .sponser p{font-size: 1.25rem; margin: 20px 0; color:#fff; border-bottom: 2px solid #fff;padding-bottom: 15px; width: fit-content;}
+   .sponser p{font-size: 1rem; margin: 20px 0; color:#fff; border-bottom: 2px solid #fff;padding-bottom: 15px; width: fit-content;}
    .sponser img{
-    width: 121px;
-    height: 70px;
+    width: 114px;
     margin: 20px auto;
     margin-left: 30px;
    }
@@ -1336,12 +1333,37 @@ width: 202px;
     margin-left: 0;
    }
    .sponser .content {width: 100%;}
-   @media (min-width:576px) and (max-width:860px){
-    .sponser img{width: 30%;}
+  
+   @media (min-width:1200px) and (max-width:1339px){
+    .sponser img{width: 110px}
+    .sponser {
+        margin: 5px 0;
+    }
    }
-    
+   @media (min-width:992px) and (max-width:1199px){
+    .sponser img{width: 110px; margin-left: 80px;}
+    .sponser img:last-of-type{
+        margin-left: 80px;
+       }
+   }
+   @media (min-width:768px) and (max-width:991px){
+    .sponser img{width: 110px;}
+    .sponser img:last-of-type{
+        margin-left: 30px;
+       }
+   }
+   @media (min-width:576px) and (max-width:767px){
+    .sponser img{width: 114px;margin-left: 61px;}
+    .sponser img:last-of-type{
+        margin-left: 61px;
+       }
+   }
+   
    @media (max-width:575px) {
-    .sponser img{width:30%;}
+    .sponser img{width:114px;}
+    .sponser img:last-of-type{
+        margin-left: 30px;
+       }
    }
 /* //===============footer section================// */
 footer{padding: 0;margin: 0;overflow-y: hidden; }
