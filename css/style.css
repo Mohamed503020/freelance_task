@@ -280,7 +280,7 @@ margin-top: -30px;
         padding: 5px 6px;
     }
   }
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1199px) {
     .main-header{height: 100px;}
     
 .main-header .main-btn {
