@@ -544,7 +544,8 @@ ul.ez-toc-list li{
 @media screen and (max-width:575px) {
     #ez-toc-container .ez-toc-icon-toggle-span{margin-top: 30px;}
     ul.ez-toc-list li{font-weight: 560;
-        font-size: 0.686rem;
+        font-size: 0.78rem;
+        width: max-content;
     };
     #ez-toc-container p.ez-toc-title  {
     font-size: 1rem !important;
