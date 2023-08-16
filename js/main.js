@@ -193,16 +193,21 @@ let form =`
   </div>
 </form>`
 
-// let replay = document.getElementById('replay');
+let replay = document.querySelectorAll('.replay');
+replay.forEach(ele=>{
+  ele.addEventListener("click",()=>{
+    let div =document.createElement('div');
+    div.innerHTML=form;
+   let content=document.querySelector("form");
+    if(content.style.display='none'){
+      ele.after(div)
 
-// if(replay){
-//     replay.addEventListener('click',()=>{
-//         let div =document.createElement('div');
-//         div.innerHTML=form;
-//         replay.after(div)
-//     })
+    }
+  })
+})
+
   
-// }
+
 // // replay content 
 
 
