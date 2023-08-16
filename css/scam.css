@@ -363,6 +363,13 @@ a{color:#000}
 
 
 @media (min-width:300px) and (max-width:575px) {
+    
+
+.company-state {
+    overflow: hidden;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
     .company-state header {
        padding: 15px 11px;
    }
