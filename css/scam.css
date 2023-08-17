@@ -404,6 +404,7 @@ a{color:#000}
     justify-content: space-between !important;
     padding: 5px 22px;
    }
+   .company-state header .comp_rating i.half{margin-left: -15px !important;}
    .company-state header .comp_rating .starts {
     font-size: 12px;
     margin-top: 0;
