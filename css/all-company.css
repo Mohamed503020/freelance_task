@@ -281,6 +281,7 @@ margin-left: 40px;
      .Trusted_companies .box {
         width: 100%;
         margin: 0 auto;
+        margin-top: 20px;
     }
     .Trusted_companies .box .brand{
         margin-bottom: 10px;
