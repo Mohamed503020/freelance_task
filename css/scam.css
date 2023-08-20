@@ -89,11 +89,14 @@ a{color:#000}
 /* // scamp company Header // */
 .company-state{
     overflow: hidden;
+    margin-top: -24px;
+    margin-bottom: -24px;
 }
 .company-state header {
     overflow: hidden;
     background-color: var(--scamp-head-bg);
     padding: 19px 10px;
+   
 }
 
 .company-state header .logo .state {
@@ -244,6 +247,7 @@ a{color:#000}
 @media (min-width:1200px) and (max-width:1399px) {
      .company-state header {
         padding: 20px 10px;
+     
     }
     .company-state header .logo {
            width: 186px;
@@ -595,7 +599,7 @@ label:hover~label .star, svg.star:hover, input[name="star"]:focus~label .star, i
     background: #249D5A;
     font-size: 20px;
     font-weight: bold;
-    width: 210px;
+    width: 185px;
 height:80px;
 padding: 14px 10px;
 }
@@ -638,7 +642,7 @@ padding: 15px 10px;
 }
 .reliabled_company  button.main{
     background-color: var(--main--bg);
-    width: 210px;
+    width: 185px;
     height: 40px;
     border: 2px solid var(--main--bg);
     outline: none;
@@ -654,7 +658,7 @@ padding: 15px 10px;
 .reliabled_company  button.second{
     background-color: transparent;
     border:2px solid #fff;
-    width: 210px;
+    width: 185px;
 height: 40px;
 font-size: 1rem;
 font-weight: 600;
