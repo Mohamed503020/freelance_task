@@ -279,3 +279,171 @@ showContBtn.addEventListener("click",()=>{
   Container.scrollIntoView({ behavior: 'smooth' })
 
 })}
+
+
+//stepper content 
+let stepForm = document.getElementById('stepForm');
+let stepNextBtn = document.getElementById("step_nextBtn");
+let StepPrevBtn = document.getElementById('step_prevBtn');
+let sendStepBtn = document.getElementById("sendStepBtn");
+let stepContent1 = document.getElementById("step_content_1");
+let stepContent2 = document.getElementById("step_content_2");
+let stepHeader1 = document.getElementById("step_header_1");
+let stepHeader2 = document.getElementById("step_header_2");
+(function () {
+  stepContent2.style.display = "none";
+  StepPrevBtn.style.display = "none";
+  const formElements = stepForm.querySelectorAll('input, select, textarea');
+
+  // Iterate over each form element
+  formElements.forEach(function(element) {
+    element.addEventListener("input",()=>{
+      if (element.value === '') {
+        element.classList.add('is-invalid');
+      } else {
+        element.classList.remove('is-invalid');
+      }
+    })
+
+  });
+  stepNextBtn.addEventListener("click", () => {
+    if (validateStep1()) {
+      StepPrevBtn.style.display = 'inline-block';
+      stepContent1.style.display = "none";
+      stepContent2.style.display = "block";
+      stepNextBtn.textContent = "ارسال";
+      stepNextBtn.id = 'sendStepBtn';
+      stepNextBtn.setAttribute('type', 'submit');
+      stepHeader2.classList.add("active")
+    }
+  });
+
+  StepPrevBtn.addEventListener("click", () => {
+    StepPrevBtn.style.display = 'none';
+    stepContent1.style.display = "block";
+    stepContent2.style.display = "none";
+    stepNextBtn.textContent = "التالي";
+    stepNextBtn.id = 'step_nextBtn';
+    stepNextBtn.setAttribute('type', 'button');
+    stepHeader2.classList.remove("active")
+
+  });
+
+  if (sendStepBtn) {
+    sendStepBtn.addEventListener("click", () => {
+      if (validateStep2()) {
+        stepForm.submit();
+      }
+    });
+  }
+})();
+
+function validateStep1() {
+  let howConnect = document.getElementById("howConnect");
+  let dateConnect = document.getElementById("dateConnect");
+  let type = document.getElementById("exampleSelect");
+  let aboutScam = document.getElementById("aboutScam");
+  let elplainScam = document.getElementById("elplainScam");
+  let cost = document.getElementById("cost");
+  let url = document.getElementById("url");
+
+  // Perform validation for step 1 form elements
+  let valid=false;  
+    if (howConnect.value === '') {
+        howConnect.classList.add('is-invalid');
+        valid=false
+      } else {
+        howConnect.classList.remove('is-invalid');
+        valid=true
+
+      }
+      if (dateConnect.value === '') {
+        dateConnect.classList.add('is-invalid');
+        valid=false
+
+      } else {
+        dateConnect.classList.remove('is-invalid');
+        valid=true
+      }
+      if (type.value === "اختر...") {
+        type.classList.add('is-invalid');
+        valid=false
+      } else {
+        type.classList.remove('is-invalid');
+        valid=true
+
+      }
+      if (aboutScam.value === '') {
+        aboutScam.classList.add('is-invalid');
+        valid=false
+
+      } else {
+        aboutScam.classList.remove('is-invalid');
+        valid=true
+      }
+      if (elplainScam.value === '') {
+        elplainScam.classList.add('is-invalid');
+        valid=false
+
+      } else {
+        elplainScam.classList.remove('is-invalid');
+        valid=true
+      }
+      if (cost.value === '') {
+        cost.classList.add('is-invalid');
+        valid=false
+      } else {
+        cost.classList.remove('is-invalid');
+                valid=true
+      }
+      if (url.value === '') {
+        url.classList.add('is-invalid');
+        valid=false
+
+      } else {
+        url.classList.remove('is-invalid');
+        valid=true
+
+      }
+    return valid;
+  }
+
+
+
+
+function validateStep2() {
+  let stepFname = document.getElementById("stepFname")
+  let stepFphone = document.getElementById("phone")
+  let stepFemail = document.getElementById("stepFemail")
+
+  // Perform validation for step 2 form elements
+
+  let valid=false;  
+  if (stepFname.value === '') {
+      stepFname.classList.add('is-invalid');
+      valid=false
+    } else {
+      stepFname.classList.remove('is-invalid');
+      valid=true
+
+    }
+    if (stepFphone.value === '') {
+      stepFphone.classList.add('is-invalid');
+      valid=false
+
+    } else {
+      stepFphone.classList.remove('is-invalid');
+      valid=true
+    }
+    if (stepFemail.value === '') {
+      stepFemail.classList.add('is-invalid');
+      valid=false
+
+    } else {
+      stepFemail.classList.remove('is-invalid');
+      valid=true
+    }
+  return valid;
+
+
+}

@@ -29,10 +29,75 @@
     <link rel="stylesheet" href="./css/shared.css">
 
     <style>
+   .progress-bar{
+    overflow: hidden;
+    counter-reset: step;
+    margin: 10px 0;
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+   }
+   .progress-bar li{
+    margin: 10px auto;
+    width: 100%;
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+   }
+
+   .progress-bar li::before{
+    position: relative;
+    z-index: 2;
+    content:counter(step);
+    counter-increment: step;
+  width: 35px;
+  left:-49%;
+  height: 35px;
+  line-height: 35px;
+display: block;
+font-size: 1rem;
+text-align: center;
+background-color: #CCC;
+color:#333;
+  border-radius: 100%;
+  max-width: 0 auto !important;
+   }
+   .progress-bar li::after{
+    content:'';
+    width: 100%;
+    height: 6px;
+    background-color: #ccc;
+    position: absolute;
+    left:-50%;
+    top:17px;
+    z-index: 1;
+   }
+   button#step_nextBtn,button#sendStepBtn{
+    background-color: #D50900;
+    color: #fff;
+    height: 40px;
+    padding: 5px;
+    width: auto;
+    margin-top: 20px;
+    width: 70px;
+   }
+   button#step_prevBtn, button#step_nextBtn{
+    font-size: 1rem;
+    margin-top: 20px;
+    height: 40px;
+   }
+   .progress-bar li.active::before,.progress-bar li.active::before{
+    background-color: #D50900;
+    color:#fff
+   }
+   .progress-bar li:last-of-type::after{content:none}
         .custom-select-wrapper {
             position: relative;
         }
-
+       
         .custom-select-wrapper::after {
             content: "";
             position: absolute;
@@ -46,64 +111,7 @@
             border-color: #000000 transparent transparent;
             pointer-events: none;
         }
-        .c-stepper {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.c-stepper__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.c-stepper__item:not(:last-child) {
-  flex: 1;
-}
-
-.c-stepper__item:before {
-  --size: 3rem;
-  content: attr(data-step);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background-color: #e0e0e0;
-  color: white;
-  font-weight: bold;
-}
-
-.c-stepper__item:not(:first-child):before {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1px);
-  right: -50%; /* Updated */
-  width: 50%; /* Updated */
-  height: 2px;
-  background-color: #e0e0e0;
-}
-
-.c-stepper__item:not(:last-child):before {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1px);
-  left: -50%; /* Updated */
-  width: 50%; /* Updated */
-  height: 2px;
-  background-color: #e0e0e0;
-}
-
-.c-stepper__item.active:before {
-  background-color: #007bff;
-}
-
-.c-stepper__item.active ~ .c-stepper__item:before {
-  background-color: #007bff;
-}  
-   
+        
     </style>
 </head>
 
@@ -316,32 +324,19 @@
                 <div class="page-intro container mt-3 mt-lg-5">
                     <div class="shareratingform  mt-3  ">
 
-                        <form method="POST" action="./index.html" id="signUpForm">
+                        <form method="POST" action="#" id="stepForm">
                             <div class="row">
-                              <div class="col-12">
-                                <ol class="c-stepper">
-                                    <li class="c-stepper__item">
-                                        <h3 class="c-stepper__title">1</h3>
-                                    </li>
-                                    <li class="c-stepper__item">
-                                        <h3 class="c-stepper__title">2</h3>
-                                    </li>
-                                    <!-- Other steps -->
-                                </ol>
-                              </div>
                                 <div class="col-12">
-                                    <div class="stepper-wrapper d-flex justify-content-center">
-                                        <div class="stepper-item ">
-                                          <div class="step-counter complete">1</div>
-                                        </div>
-                                        <div class="stepper-item ">
-                                          <div class="step-counter">2</div>
-                                        </div>
+                                    <ul class="progress-bar">
+                                        <li class="active" id="step_header_1"></li>
+                                        <li id="step_header_2"></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="step">
+                              
+                            <div class="step " id="step_content_1">
                                 <div class="row w-100" dir="rtl">
-                                    <div class="aboutpara mt-4 mt-lg-5">
+                                    <div class="aboutpara mt-3 mt-lg-5  mb-3 ">
                                         <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
                                         <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
                                             في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
@@ -353,15 +348,15 @@
                                         <div class="mb-3" dir="rtl">
                                             <label for="howConnect" class="form-label"> كيف تم الاتصال بك من قبل المحتال
                                                 ؟<span class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="text" class="form-control" name="howConnect" autocomplete="off">
+                                            <input type="text" class="form-control" name="howConnect" id="howConnect" autocomplete="off">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="mb-3" dir="rtl">
-                                            <label for="dateConnect" class="form-label" style="display: flex"> متى اتصل بك
+                                            <label for="dateConnect"  class="form-label" style="display: flex"> متى اتصل بك
                                                 المحتال لأول مرة ؟
                                                 <span class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="date" class="form-control" name="dateConnect"></input>
+                                            <input type="date" class="form-control" name="dateConnect" id="dateConnect"></input>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-12 " dir="rtl">
@@ -382,23 +377,23 @@
                                         <div class="mb-3">
                                             <label for="details" class="form-label"> ماذا تعرف عن الاحتيال ؟<span
                                                     class="text-danger me-2">(مطلوب)</span></label>
-                                            <textarea name="details" class="form-control" required="" id="details" rows="5"
+                                            <textarea name="aboutScam" class="form-control" required="" id="aboutScam" rows="5"
                                                 autocomplete="off"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12 ">
                                         <div class="mb-3">
-                                            <label for="details" class="form-label"> اشرح طريقة الاحتيال<span
+                                            <label for="elplainScam" class="form-label"> اشرح طريقة الاحتيال<span
                                                     class="text-danger me-2">(مطلوب)</span></label>
-                                            <textarea name="details" class="form-control" required="" id="details" rows="5"
-                                                autocomplete="off"></textarea>
+                                            <textarea class="form-control" required="" id="elplainScam" rows="5"
+                                                autocomplete="off" name="elplainScam"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="mb-3" dir="rtl">
                                             <label for="const" class="form-label"> المبلغ الذي تم الاحتيال عليك به ؟<span
                                                     class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="number" class="form-control" name="cost" autocomplete="off">
+                                            <input type="number" class="form-control" name="cost" autocomplete="off" id="cost">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -406,14 +401,14 @@
                                             <label for="const" class="form-label">
                                                 الرابط الخاص بعملية الاحتيال<span
                                                     class="text-danger me-2">(مطلوب)</span></label>
-                                            <input type="url" class="form-control" name="cost" autocomplete="off">
+                                            <input type="url" class="form-control" name="scamurl" id="url" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                           <div class="step">
+                           <div class="step" id="step_content_2">
                             <div class="row " dir="rtl">
-                                <div class="aboutpara mt-4 mt-lg-5">
+                                <div class="aboutpara mt-3 mt-lg-5  mb-3">
                                     <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
                                     <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه
                                         في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك
@@ -423,156 +418,38 @@
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="mb-3" dir="rtl">
-                                        <label for="name" class="form-label"> الاسم الكامل<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="name" autocomplete="off">
+                                        <label for="stepFname" class="form-label"> الاسم الكامل<span
+                                            class="text-danger me-2">(مطلوب)</span></label>
+                                        <input type="text" class="form-control" name="name" autocomplete="off" id="stepFname">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="mb-3" dir="rtl">
                                         <label for="phone" class="form-label" style="display: flex"> رقم هاتفك
-                                            المحمول<span class="text-danger">*</span></label>
+                                            المحمول<span
+                                            class="text-danger me-2">(مطلوب)</span></label>
                                         <input type="tel" class="form-control" name="phone" id="phone"></input>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 " dir="rtl">
                                     <div class="mb-3">
-                                        <label for="email" class="form-label">البريد الإلكتروني<span
-                                                class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" name="email">
+                                        <label for="stepFemail" class="form-label">البريد الإلكتروني <span
+                                            class="text-danger me-2">(مطلوب)</span></label>
+                                        <input type="email" class="form-control" name="email" id="stepFemail">
                                     </div>
                                 </div>
                             </div>
                            </div>
 
-                            <div class="form-footer d-flex"> <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            <div class="form-footer d-flex"> 
+                                <button type="button" id="step_nextBtn" class="btn ">التالي</button>
+                                <button type="button" id="step_prevBtn" class="btn btn-dark me-3">السابق</button>
                     
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <!-- ارشادات == -->
-                <div class="aboutpara mt-4 mt-lg-5">
-                    <div class="container">
-                        <h2>ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
-                        <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك
-                            لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية.
-                            لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة
-                            البيانات المقدمة.
-                        </p>
-                        <h2 class="mt-4">ماهي خطوات الإبلاغ والكشف عن منصات&nbsp;التداول النصابة</h2>
-                        <p class="text-muted">نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك
-                            لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية.
-                            لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة
-                            البيانات المقدمة.
-                        </p>
-                    </div>
-                </div> <!-- ======= scam question section (الاسئلة ) =========== -->
-                <div class="scam-question mt-4 mt-md-5" dir="rtl">
-                    <div class="container">
-                        <h3 class="border-b">الاسئلة المكررة عن الشركة</h3>
-                        <div class="content mt-2 mt-lg-4">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading59">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse59" aria-expanded="false"
-                                            aria-controls="collapse59">
-                                            <h6 class="fw-semibold  ">
-                                                &nbsp;كيف أبدأ في تداول العملات؟
-                                        </button>
-                                        </h6>
-                                    </h2>
-                                    <div id="collapse59" class="accordion-collapse collapse" aria-labelledby="heading59"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p dir="rtl" class="fw-normal">افتح حسابًا للتداول، قم بإيداع الأموال، تعلم
-                                                وضع استراتيجية التداول، وابدأ بتنفيذ الصفقات.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading60">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse60" aria-expanded="false"
-                                            aria-controls="collapse60">
-                                            <h6 class="fw-semibold">
-                                                &nbsp;هل تداول العملات الرقمية قانوني في السعودية؟
-                                            </h6>
-                                        </button>
-                                    </h2>
-                                    <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="heading60"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p dir="rtl" class="fw-normal">لا يوجد حظر رسمي لتداول العملات الرقمية في
-                                                السعودية</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading62">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false"
-                                            aria-controls="collapse62">
-                                            <h6 class="fw-semibold">
-                                                &nbsp; ما هو التدوال عبر الانترنت
-                                            </h6>
-                                        </button>
-                                    </h2>
-                                    <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="heading62"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p dir="rtl" class="fw-normal">التداول عبر الإنترنت هو عملية شراء وبيع
-                                                الأصول المالية مثل الأسهم والعملات الأجنبية والسلع والمشتقات المالية
-                                                وغيرها، وذلك باستخدام الإنترنت كوسيلة للتواصل والتعامل. يعتبر التداول
-                                                عبر الإنترنت طريقة شائعة للمستثمرين والتجار للوصول إلى الأسواق المالية
-                                                والقيام بالعمليات التجارية والاستثمارية بسرعة وسهولة
-                                                التداول عبر الإنترنت هو عملية شراء وبيع الأصول المالية مثل الأسهم
-                                                والعملات الأجنبية والسلع والمشتقات المالية وغيرها، وذلك باستخدام
-                                                الإنترنت كوسيلة للتواصل والتعامل. يعتبر التداول عبر الإنترنت طريقة شائعة
-                                                للمستثمرين والتجار للوصول إلى الأسواق المالية والقيام بالعمليات التجارية
-                                                والاستثمارية بسرعة وسهول
-                                                .
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading63">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false"
-                                            aria-controls="collapse63">
-                                            <h6 class="fw-semibold">
-                                                &nbsp; ما هو التدوال عبر الانترنت
-                                            </h6>
-                                        </button>
-                                    </h2>
-                                    <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="heading63"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p dir="rtl" class="fw-normal">التداول عبر الإنترنت هو عملية شراء وبيع
-                                                الأصول المالية مثل الأسهم والعملات الأجنبية والسلع والمشتقات المالية
-                                                وغيرها، وذلك باستخدام الإنترنت كوسيلة للتواصل والتعامل. يعتبر التداول
-                                                عبر الإنترنت طريقة شائعة للمستثمرين والتجار للوصول إلى الأسواق المالية
-                                                والقيام بالعمليات التجارية والاستثمارية بسرعة وسهولة
-                                                التداول عبر الإنترنت هو عملية شراء وبيع الأصول المالية مثل الأسهم
-                                                والعملات الأجنبية والسلع والمشتقات المالية وغيرها، وذلك باستخدام
-                                                الإنترنت كوسيلة للتواصل والتعامل. يعتبر التداول عبر الإنترنت طريقة شائعة
-                                                للمستثمرين والتجار للوصول إلى الأسواق المالية والقيام بالعمليات التجارية
-                                                والاستثمارية بسرعة وسهول
-                                                .
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
             <div>
@@ -583,7 +460,7 @@
 
 
     <!-- ////====================Footer Section =============/// -->
-    <footer class="position-relative">
+     <footer class="position-relative">
         <div class="mx-auto top-footer pb-0">
             <div class=" container-sm">
                 <div class="row mb-3">
@@ -744,78 +621,7 @@
                 "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
     </script>
- <script>var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
     
-    function showTab(n) {
-      // This function will display the specified tab of the form...
-      var x = document.getElementsByClassName("step");
-      x[n].style.display = "block";
-      //... and fix the Previous/Next buttons:
-      if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-      } else {
-        document.getElementById("prevBtn").style.display = "inline";
-      }
-      if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-      } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-      }
-      //... and run a function that will display the correct step indicator:
-      fixStepIndicator(n)
-    }
-    
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("step");
-      // Exit the function if any field in the current tab is invalid:
-      if (n == 1 && !validateForm()) return false;
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // if you have reached the end of the form...
-      if (currentTab >= x.length) {
-        // ... the form gets submitted:
-        document.getElementById("signUpForm").submit();
-        return false;
-      }
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
-    
-    function validateForm() {
-      // This function deals with validation of the form fields
-      var x, y, i, valid = true;
-      x = document.getElementsByClassName("step");
-      y = x[currentTab].getElementsByTagName("input");
-      // A loop that checks every input field in the current tab:
-      for (i = 0; i < y.length; i++) {
-        // If a field is empty...
-        if (y[i].value == "") {
-          // add an "invalid" class to the field:
-          y[i].className += " invalid";
-          // and set the current valid status to false
-          valid = false;
-        }
-      }
-      // If the valid status is true, mark the step as finished and valid:
-      if (valid) {
-        document.getElementsByClassName("stepIndicator")[currentTab].className += " finish";
-      }
-      return valid; // return the valid status
-    }
-    
-    function fixStepIndicator(n) {
-      // This function removes the "active" class of all steps...
-      var i, x = document.getElementsByClassName("stepIndicator");
-      for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace(" active", "");
-      }
-      //... and adds the "active" class on the current step:
-      x[n].className += " active";
-    }</script>
 </body>
 
 </html>
