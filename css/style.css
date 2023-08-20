@@ -184,6 +184,8 @@ font-weight: 700;
  .main-header {
     padding: 36px 15px;
     height: 100px;
+    scroll-behavior: smooth;
+
 }
  .main-header .logo img{
     width: 216px;
@@ -291,14 +293,21 @@ margin-top: -30px;
 
   /* ///menue  */
   .sticky-header {
+   scroll-behavior: smooth;
     position: fixed;
     top: 0;
+    transition: all 0.1s  ease-in-out;
     left: 0;
     background-color: #fff;
     right: 0;
     z-index: 949 !important;
-    /* Add any additional styles for the sticky header */
-  }
+    /*Addanyadditionalstylesforthestickyheader*/:;
+    -webkit-transition: all 0.1s  ease-in-out;
+    -moz-transition: all 0.1s  ease-in-out;
+    -ms-transition: all 0.1s  ease-in-out;
+    -o-transition: all 0.1s  ease-in-out;
+}
+
  /* // side nav  */
   .modal-dialog {
     width: 100%;

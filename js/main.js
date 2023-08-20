@@ -206,62 +206,10 @@ replay.forEach(ele=>{
   })
 })
 
-  
-
-// // replay content 
 
 
 
-// let replayContent=`                <div class="replay_box p-2" id=">
-// <div class="replay-head d-flex justify-content-between">
-//  <div class="user_name d-flex align-items-center"> 
-//   <span class="p-2 d-flex align-items-center justify-content-center rounded-circle bg-info text-uppercase"> AM</span> <span class="me-2" id='commentName'> </span></div>
-// <div class="replay_date d-flex align-items-center">7/8/2023</div>
-// </div>
-// <div class="replay-rate me-4 mt-1">
-//   <i class="fa-solid fa-star complete"></i>
-//   <i class="fa-regular fa-star"></i>
-//   <i class="fa-regular fa-star"></i>
-//   <i class="fa-regular fa-star"></i>
-//   <i class="fa-regular fa-star"></i>
-// </div>
-// <div class="comment_body me-4 ">
-//   <p class=" fw-normal" id="commentBody">
-   
-//   </p>
-// </div>
-// <div class="comment_replay_icon me-4" id="replay">
-//   <i class="fa-solid fa-reply p-0 m-0 "></i> <span> رد </span>
-// </div>
-
-// </div>`
-
-// let buttonS=document.getElementById('btn_reply-form')
-// let nameU=document.getElementById("name");
-// let number=document.getElementById("number");
-// let email=document.getElementById("email");
-// let comment=document.getElementById("comment");
-// let form1=document.getElementById('form')
-
-// let userName=document.getElementById('commentName');
-// let commentBody=document.getElementById('commentBody');
-
-// if(buttonS){
-
-//     buttonS.addEventListener("click",(e)=>{
-//         e.preventDefault();
-//         e.stopPropagation()
-//         userName.innerHTML=nameU.value;
-//         commentBody.innerHTML=comment.value;
-//         let div =document.createElement('div');
-//         div.innerHTML=replayContent;
-//         form1.after(div)
-//     })
-// }
-
-
-//  table page content 
-
+//  table page content
 let Container =document.getElementById("ez-toc-container");
 let hidContBtn=document.getElementById("hidCbtn");
 let showContBtn=document.getElementById("showCbtn");
@@ -293,21 +241,21 @@ let stepHeader2 = document.getElementById("step_header_2");
 (function () {
   stepContent2.style.display = "none";
   StepPrevBtn.style.display = "none";
-  const formElements = stepForm.querySelectorAll('input, select, textarea');
+  // const formElements = stepForm.querySelectorAll('input, select, textarea');
 
-  // Iterate over each form element
-  formElements.forEach(function(element) {
-    element.addEventListener("input",()=>{
-      if (element.value === '') {
-        element.classList.add('is-invalid');
-      } else {
-        element.classList.remove('is-invalid');
-      }
-    })
+  // // Iterate over each form element
+  // formElements.forEach(function(element) {
+  //   element.addEventListener("input",()=>{
+  //     if (element.value === '') {
+  //       element.classList.add('is-invalid');
+  //     } else {
+  //       element.classList.remove('is-invalid');
+  //     }
+  //   })
 
-  });
+  // });
   stepNextBtn.addEventListener("click", () => {
-    if (validateStep1()) {
+    // if (validateStep1()) {
       StepPrevBtn.style.display = 'inline-block';
       stepContent1.style.display = "none";
       stepContent2.style.display = "block";
@@ -315,7 +263,7 @@ let stepHeader2 = document.getElementById("step_header_2");
       stepNextBtn.id = 'sendStepBtn';
       stepNextBtn.setAttribute('type', 'submit');
       stepHeader2.classList.add("active")
-    }
+    // }
   });
 
   StepPrevBtn.addEventListener("click", () => {
@@ -329,121 +277,116 @@ let stepHeader2 = document.getElementById("step_header_2");
 
   });
 
-  if (sendStepBtn) {
-    sendStepBtn.addEventListener("click", () => {
-      if (validateStep2()) {
-        stepForm.submit();
-      }
-    });
-  }
+
 })();
 
-function validateStep1() {
-  let howConnect = document.getElementById("howConnect");
-  let dateConnect = document.getElementById("dateConnect");
-  let type = document.getElementById("exampleSelect");
-  let aboutScam = document.getElementById("aboutScam");
-  let elplainScam = document.getElementById("elplainScam");
-  let cost = document.getElementById("cost");
-  let url = document.getElementById("url");
+// function validateStep1() {
+//   let howConnect = document.getElementById("howConnect");
+//   let dateConnect = document.getElementById("dateConnect");
+//   let type = document.getElementById("exampleSelect");
+//   let aboutScam = document.getElementById("aboutScam");
+//   let elplainScam = document.getElementById("elplainScam");
+//   let cost = document.getElementById("cost");
+//   let url = document.getElementById("url");
 
-  // Perform validation for step 1 form elements
-  let valid=false;  
-    if (howConnect.value === '') {
-        howConnect.classList.add('is-invalid');
-        valid=false
-      } else {
-        howConnect.classList.remove('is-invalid');
-        valid=true
+//   // Perform validation for step 1 form elements
+//   let valid=false;  
+//     if (howConnect.value === '') {
+//         howConnect.classList.add('is-invalid');
+//         valid=false
+//       } else {
+//         howConnect.classList.remove('is-invalid');
+//         valid=true
 
-      }
-      if (dateConnect.value === '') {
-        dateConnect.classList.add('is-invalid');
-        valid=false
+//       }
+//       if (dateConnect.value === '') {
+//         dateConnect.classList.add('is-invalid');
+//         valid=false
 
-      } else {
-        dateConnect.classList.remove('is-invalid');
-        valid=true
-      }
-      if (type.value === "اختر...") {
-        type.classList.add('is-invalid');
-        valid=false
-      } else {
-        type.classList.remove('is-invalid');
-        valid=true
+//       } else {
+//         dateConnect.classList.remove('is-invalid');
+//         valid=true
+//       }
+//       if (type.value === "اختر...") {
+//         type.classList.add('is-invalid');
+//         valid=false
+//       } else {
+//         type.classList.remove('is-invalid');
+//         valid=true
 
-      }
-      if (aboutScam.value === '') {
-        aboutScam.classList.add('is-invalid');
-        valid=false
+//       }
+//       if (aboutScam.value === '') {
+//         aboutScam.classList.add('is-invalid');
+//         valid=false
 
-      } else {
-        aboutScam.classList.remove('is-invalid');
-        valid=true
-      }
-      if (elplainScam.value === '') {
-        elplainScam.classList.add('is-invalid');
-        valid=false
+//       } else {
+//         aboutScam.classList.remove('is-invalid');
+//         valid=true
+//       }
+//       if (elplainScam.value === '') {
+//         elplainScam.classList.add('is-invalid');
+//         valid=false
 
-      } else {
-        elplainScam.classList.remove('is-invalid');
-        valid=true
-      }
-      if (cost.value === '') {
-        cost.classList.add('is-invalid');
-        valid=false
-      } else {
-        cost.classList.remove('is-invalid');
-                valid=true
-      }
-      if (url.value === '') {
-        url.classList.add('is-invalid');
-        valid=false
+//       } else {
+//         elplainScam.classList.remove('is-invalid');
+//         valid=true
+//       }
+//       if (cost.value === '') {
+//         cost.classList.add('is-invalid');
+//         valid=false
+//       } else {
+//         cost.classList.remove('is-invalid');
+//                 valid=true
+//       }
+//       if (url.value === '') {
+//         url.classList.add('is-invalid');
+//         valid=false
 
-      } else {
-        url.classList.remove('is-invalid');
-        valid=true
+//       } else {
+//         url.classList.remove('is-invalid');
+//         valid=true
 
-      }
-    return valid;
-  }
-
-
+//       }
+//     return valid;
+//   }
 
 
-function validateStep2() {
-  let stepFname = document.getElementById("stepFname")
-  let stepFphone = document.getElementById("phone")
-  let stepFemail = document.getElementById("stepFemail")
-
-  // Perform validation for step 2 form elements
-
-  let valid=false;  
-  if (stepFname.value === '') {
-      stepFname.classList.add('is-invalid');
-      valid=false
-    } else {
-      stepFname.classList.remove('is-invalid');
-      valid=true
-
-    }
-    if (stepFphone.value === '') {
-      stepFphone.classList.add('is-invalid');
-      valid=false
-
-    } else {
-      stepFphone.classList.remove('is-invalid');
-      valid=true
-    }
-    if (stepFemail.value === '') {
-      stepFemail.classList.add('is-invalid');
-      valid=false
-
-    } else {
-      stepFemail.classList.remove('is-invalid');
-      valid=true
-    }
-  return valid;
 
 
-}
+// function validateStep2() {
+//   let stepFname = document.getElementById("stepFname")
+//   let stepFphone = document.getElementById("phone")
+//   let stepFemail = document.getElementById("stepFemail")
+
+//   // Perform validation for step 2 form elements
+
+//   let valid=false;  
+//   if (stepFname.value === '') {
+//       stepFname.classList.add('is-invalid');
+//       valid=false
+//     } else {
+//       stepFname.classList.remove('is-invalid');
+//       valid=true
+
+//     }
+//     if (stepFphone.value === '') {
+//       stepFphone.classList.add('is-invalid');
+//       valid=false
+
+//     } else {
+//       stepFphone.classList.remove('is-invalid');
+//       valid=true
+//     }
+//     if (stepFemail.value === '') {
+//       stepFemail.classList.add('is-invalid');
+//       valid=false
+
+//     } else {
+//       stepFemail.classList.remove('is-invalid');
+//       valid=true
+//     }
+//   return valid;
+
+
+// }
+// validateStep2()
