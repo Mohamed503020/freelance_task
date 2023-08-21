@@ -1,0 +1,196 @@
+h1{font-size: 1.1rem !important;}
+.warning-list {
+    margin-bottom: 20px;
+   }
+
+   .warning-list .warning-content{margin-top: 20px;}
+   .warning-list .warning-content .box{
+    padding:  20px 20px 10px !important;
+    margin-top: 10px;
+    width: 95%;
+    margin: 10px auto;
+    background: #f7f7f7;
+
+}
+
+ .end_arrow a{
+    color:#000;
+    font-size: 18px;
+}
+ .end_arrow a i{color:var(--man--bg)}
+
+
+ .warning-content .box-head .head-state span{
+    font-size: 14px;
+color:#5a5a5a;   
+ font-weight: 500
+}
+.warning-content .box-head .head-state h6{
+    font-size: 14px;
+font-weight: 700;
+text-transform: capitalize;
+}
+   .warning-content .box-head .img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    padding: 14px 12px 13px 13px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    background: rgba(237, 237, 237, 0.50);
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
+.warning-content .box-head .img img{width: 40px;height: 40px;}
+
+   .warning-content .box-head .icon{
+    gap: 13px;
+    font-weight: 700;
+font-size: 20px;
+   }
+   .warning-content .box-head .icon i{
+color:#FFB800
+   }
+  .method {
+    margin-top: 10px;
+   }
+
+.method h6{
+    color: #595959;
+font-size: 14px;
+font-weight: 700;
+   }
+.method span{
+text-align: right;
+font-size: 14px;
+font-weight: 700;
+text-transform: capitalize;
+margin-right: 8px;
+   }
+    .line{
+    width: 1px;
+    display: inline-block;
+   background-color: #000;
+height: 7px;
+ } 
+ .warning-content .method  .number img {
+    display: inline-block;
+    margin-left: -10px;
+    width: 15px !important;height: 15px !important;
+ }
+
+.warning-content .method.action{
+    margin: 0;
+
+}
+.warning-content .method button{
+    color: #FFF;
+    margin-top: 17px;
+    font-size: 14px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+}
+ .warning-content .method button.warn-btn{
+ background-color: var(--man--bg);
+ }
+ .warning-content .method button.warn-btn:hover{
+    background: #b70b02;
+    
+ }
+
+
+ /* // responsive area  ======== */
+ @media (min-width:992px) and (max-width:1199px) {
+    .warning-list .warning-content .box{width: 90%;} 
+    .warning-content .method button.warn-btn {
+        margin-right: 20px;
+    }
+    
+    .warning-content .method button {
+        font-size: 0.7rem !important;
+    }
+ }
+    @media  (max-width:374px) {
+        .warning-content .box-head .head-state span {
+            font-size: 0.7rem;}
+            .warning-content .box-head .head-state h6 {
+                font-size: 12px;
+        }
+        .method span {
+            font-size: 0.8rem;
+        }
+        .method h6 {            font-size: 0.8rem;}
+        .warning-content .method button {
+            font-size: 0.76rem !important;
+        }
+   } 
+
+
+   @media screen and (max-width: 430px) {
+
+
+.warning-list .warning-content .box{width: 100%;}
+}
+
+
+    @media (min-width:375px) and (max-width:450px) {
+
+        .method h6 { font-size: 14px;}
+        .warning-list .warning-content{margin-top: 0px;}
+   .warning-list .warning-content .box {
+width: 100% !important;
+   }
+   .warning-content .box-head .head-state span {
+    font-size: 0.77rem;}
+.method span {
+    font-size: 1rem;} 
+
+   }
+   .warning-content .method button {font-size: 0.89rem;}
+   .method span .img{width: 20px;height: 20px;}
+
+
+   @media (min-width:768px) and (max-width:991px) {
+    .warning-list .warning-content .box{width: 95%;} 
+
+           .method h6 {
+            font-size: 12px;
+    }
+    .method span {
+        font-size: 0.69rem;
+    }
+    .warning-content .method button {
+        font-size: 0.63rem;
+        margin-right: 5px;
+    }
+    .warning-content .method  img{width: 20px;height: 20px;}
+    .warning-content .box-head .head-state span {
+        font-size:13px;
+    }
+    .warning-content .box-head .head-state h6 {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1399px) {
+    .method h6 {
+        font-size: 12px;
+}
+.method span {
+    font-size: 0.77rem;
+}
+.warning-content .method button {
+    font-size: 0.7rem;
+}
+.warning-content .box-head .head-state span{
+ font-size: 14px;
+}
+}
