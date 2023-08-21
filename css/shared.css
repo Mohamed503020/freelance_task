@@ -167,8 +167,14 @@ h1 {
     text-align: justify !important;
     line-height: 1.8;
     margin-bottom: 0.5rem;
-    font-weight: 400;
+    font-weight: 400 !important;
+    line-height: normal;
+    
     font-size: 14px;
+}
+.aboutpara ul.par-list{margin-right: -1.5rem !important;}
+.aboutpara li p{
+    display: inline-block !important;
 }
  .aboutpara p{
     text-align: justify !important;
@@ -181,7 +187,14 @@ h1 {
     font-weight: bold !important;
     text-align: right;
 }
- .iti input, .iti input[type=text], .iti input[type=tel] {width: 100% !important;}
+
+
+.aboutpara img{width: 100% !important;height: 400px !important; margin-top: 10px;}
+@media (max-width:991px) {
+    .aboutpara img{height: 300px !important; }
+ 
+}
+.iti input, .iti input[type=text], .iti input[type=tel] {width: 100% !important;}
  .shareratingform h2{font-size: 1.2rem;}
 /* ======================== */
 /* ======= scam question section (الاسئلة ) =========== */
