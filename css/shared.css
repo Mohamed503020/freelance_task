@@ -180,7 +180,6 @@ h1 {
  .aboutpara p{
     text-align: justify !important;
     line-height: 1.8;
-    font-size: 0.9rem;
     margin-bottom: 0.5rem;
  }
  .aboutpara h2 {
@@ -208,6 +207,10 @@ margin-bottom: 10px;}
 .accordion-button {
     border-bottom: none;
     border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 
 .accordion-item {

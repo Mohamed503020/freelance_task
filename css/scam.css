@@ -659,7 +659,7 @@ a{color:#000}
 /* ///========breadcum section ==== */
 .articaldetail-breadcum {
     padding-right: 10px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 .articaldetail-breadcum ul li a::after {
     display: inline-block;
