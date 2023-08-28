@@ -1,91 +1,100 @@
- //header sticky ========]
- window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
   var header = document.querySelector('.main-header');
   var scrollPosition = window.scrollY;
-  let menuMainHeader=document.querySelectorAll(" .main-header .menu ")
-
-
+  let menuMainHeader = document.querySelectorAll(".main-header .menu");
+  let showClass = document.querySelectorAll(".main-header .menu.show");
 
   if (scrollPosition > 170) {
     header.classList.add('sticky-header');
-    menuMainHeader.forEach(ele=>{
-      ele.style.top="92px"
-    })
-
+    menuMainHeader.forEach(ele => {
+      ele.style.transition = "top ease 0.5s";
+      ele.style.top = "110px";
+    });
+    if (showClass) {
+      menuMainHeader.forEach(ele => {
+        ele.style.transitionDelay = "0.5s";
+      });
+    }
   } else {
     header.classList.remove('sticky-header');
-      menuMainHeader.forEach(ele=>{
-      ele.style.top="119px"
-    })
+    if (showClass) {
+      menuMainHeader.forEach(ele => {
+        ele.style.transitionDelay = "0s";
+        ele.style.top = "125px";
+      });
+    }
   }
 });
-//  / hidden user notofication
+// hidden user notification
+const hidBtn = document.getElementById('icon-hidden');
+const messageNot = document.getElementById('messages');
 
-const hidBtn=document.getElementById('icon-hidden');
-const messageNot=document.getElementById('messages');
- if(hidBtn){
-hidBtn.addEventListener('click',()=>{
-   const services =document.getElementById('services')
-  messageNot.classList.remove('visible')
-})
-function toggleElement() {
+if (hidBtn) {
+  hidBtn.addEventListener('click', () => {
+    const services = document.getElementById('services')
+    messageNot.classList.remove('visible');
+  });
+
+  function toggleElement() {
     messageNot.classList.toggle('visible');
   }
-}
-  // تنفيذ عرض وإخفاء العنصر كل ثلاث ثوانٍ
-  setTimeout(toggleElement, 3000);
 
-/// header links and show and hide menue
+  // Execute display and hide every three seconds
+  setTimeout(toggleElement, 3000);
+}
+
+// Header links and show/hide menu
 document.addEventListener('DOMContentLoaded', function() {
-    let linkP = document.getElementById("peple_links");
-    let menu1 = document.getElementById('menu1');
-    let linkC = document.getElementById("company_links");
-    let menu2 = document.getElementById('menu2');
-    let menu3 = document.getElementById('menu3');
-    let linkV = document.getElementById("legal_links");
-  
-    if (linkC) {
-      linkC.addEventListener('mouseover', () => {
-        menu2.classList.add('show');
-        menu1.classList.remove('show');
-        menu3.classList.remove('show');
-      });
-    }
-  
-    if (menu2) {
-      menu2.addEventListener('mouseleave', () => {
-        menu2.classList.remove('show');
-      });
-    }
-  
-    if (linkP) {
-      linkP.addEventListener('mouseover', () => {
-        menu1.classList.add('show');
-        menu2.classList.remove('show');
-        menu3.classList.remove('show');
-      });
-    }
-  
-    if (menu1) {
-      menu1.addEventListener('mouseleave', () => {
-        menu1.classList.remove('show');
-      });
-    }
-  
-    if (linkV) {
-      linkV.addEventListener('mouseover', () => {
-        menu3.classList.add('show');
-        menu2.classList.remove('show');
-        menu1.classList.remove('show');
-      });
-    }
-  
-    if (menu3) {
-      menu3.addEventListener('mouseleave', () => {
-        menu3.classList.remove('show');
-      });
-    }
-  });
+  var scrollPosition = window.scrollY;
+  let linkP = document.getElementById("peple_links");
+  let menu1 = document.getElementById('menu1');
+  let linkC = document.getElementById("company_links");
+  let menu2 = document.getElementById('menu2');
+  let menu3 = document.getElementById('menu3');
+  let linkV = document.getElementById("legal_links");
+
+  if (linkC) {
+    linkC.addEventListener('mouseover', () => {
+      menu2.classList.add('show');
+      menu1.classList.remove('show');
+      menu3.classList.remove('show');
+    });
+  }
+
+  if (menu2) {
+    menu2.addEventListener('mouseleave', () => {
+      menu2.classList.remove('show');
+    });
+  }
+
+  if (linkP) {
+    linkP.addEventListener('mouseover', () => {
+      menu1.classList.add('show');
+      menu2.classList.remove('show');
+      menu3.classList.remove('show');
+    });
+  }
+
+  if (menu1) {
+    menu1.addEventListener('mouseleave', () => {
+      menu1.classList.remove('show');
+    });
+  }
+
+  if (linkV) {
+    linkV.addEventListener('mouseover', () => {
+      menu3.classList.add('show');
+      menu2.classList.remove('show');
+      menu1.classList.remove('show');
+    });
+  }
+
+  if (menu3) {
+    menu3.addEventListener('mouseleave', () => {
+      menu3.classList.remove('show');
+    });
+  }
+});
 // side menu in small screen 
 
 // links sub menu 
@@ -232,161 +241,48 @@ showContBtn.addEventListener("click",()=>{
 //stepper content 
 let stepForm = document.getElementById('stepForm');
 let stepNextBtn = document.getElementById("step_nextBtn");
-let StepPrevBtn = document.getElementById('step_prevBtn');
 let sendStepBtn = document.getElementById("sendStepBtn");
+
+let StepPrevBtn = document.getElementById('step_prevBtn');
 let stepContent1 = document.getElementById("step_content_1");
 let stepContent2 = document.getElementById("step_content_2");
 let stepHeader1 = document.getElementById("step_header_1");
 let stepHeader2 = document.getElementById("step_header_2");
+
 (function () {
   stepContent2.style.display = "none";
   StepPrevBtn.style.display = "none";
-  // const formElements = stepForm.querySelectorAll('input, select, textarea');
-
-  // // Iterate over each form element
-  // formElements.forEach(function(element) {
-  //   element.addEventListener("input",()=>{
-  //     if (element.value === '') {
-  //       element.classList.add('is-invalid');
-  //     } else {
-  //       element.classList.remove('is-invalid');
-  //     }
-  //   })
-
-  // });
-  stepNextBtn.addEventListener("click", () => {
-    // if (validateStep1()) {
-      StepPrevBtn.style.display = 'inline-block';
-      stepContent1.style.display = "none";
-      stepContent2.style.display = "block";
-      stepNextBtn.textContent = "ارسال";
-      stepNextBtn.id = 'sendStepBtn';
-      stepNextBtn.setAttribute('type', 'submit');
-      stepHeader2.classList.add("active")
-    // }
-  });
-
-  StepPrevBtn.addEventListener("click", () => {
-    StepPrevBtn.style.display = 'none';
-    stepContent1.style.display = "block";
-    stepContent2.style.display = "none";
-    stepNextBtn.textContent = "التالي";
-    stepNextBtn.id = 'step_nextBtn';
-    stepNextBtn.setAttribute('type', 'button');
-    stepHeader2.classList.remove("active")
-
-  });
-
+  sendStepBtn.style.display = "none";
 
 })();
 
-// function validateStep1() {
-//   let howConnect = document.getElementById("howConnect");
-//   let dateConnect = document.getElementById("dateConnect");
-//   let type = document.getElementById("exampleSelect");
-//   let aboutScam = document.getElementById("aboutScam");
-//   let elplainScam = document.getElementById("elplainScam");
-//   let cost = document.getElementById("cost");
-//   let url = document.getElementById("url");
+stepNextBtn.setAttribute("type", "button");
+stepNextBtn.addEventListener("click",nexFunction);
 
-//   // Perform validation for step 1 form elements
-//   let valid=false;  
-//     if (howConnect.value === '') {
-//         howConnect.classList.add('is-invalid');
-//         valid=false
-//       } else {
-//         howConnect.classList.remove('is-invalid');
-//         valid=true
+function nexFunction (e){
+  e.preventDefault();
+  StepPrevBtn.style.display = 'inline-block';
+  stepContent1.style.display = "none";
+  stepContent2.style.display = "block";
+  stepNextBtn.style.display = "none";
+  sendStepBtn.style.display = "block";
+  stepHeader2.classList.add("active");
+}
+if(sendStepBtn){
+ sendStepBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+stepForm.submit()
+ })
+}
 
-//       }
-//       if (dateConnect.value === '') {
-//         dateConnect.classList.add('is-invalid');
-//         valid=false
-
-//       } else {
-//         dateConnect.classList.remove('is-invalid');
-//         valid=true
-//       }
-//       if (type.value === "اختر...") {
-//         type.classList.add('is-invalid');
-//         valid=false
-//       } else {
-//         type.classList.remove('is-invalid');
-//         valid=true
-
-//       }
-//       if (aboutScam.value === '') {
-//         aboutScam.classList.add('is-invalid');
-//         valid=false
-
-//       } else {
-//         aboutScam.classList.remove('is-invalid');
-//         valid=true
-//       }
-//       if (elplainScam.value === '') {
-//         elplainScam.classList.add('is-invalid');
-//         valid=false
-
-//       } else {
-//         elplainScam.classList.remove('is-invalid');
-//         valid=true
-//       }
-//       if (cost.value === '') {
-//         cost.classList.add('is-invalid');
-//         valid=false
-//       } else {
-//         cost.classList.remove('is-invalid');
-//                 valid=true
-//       }
-//       if (url.value === '') {
-//         url.classList.add('is-invalid');
-//         valid=false
-
-//       } else {
-//         url.classList.remove('is-invalid');
-//         valid=true
-
-//       }
-//     return valid;
-//   }
+StepPrevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  StepPrevBtn.style.display = 'none';
+  stepContent1.style.display = "block";
+  stepContent2.style.display = "none";
+  stepNextBtn.style.display = "block";
+  sendStepBtn.style.display = "none";
+  stepHeader2.classList.remove("active");
+});
 
 
-
-
-// function validateStep2() {
-//   let stepFname = document.getElementById("stepFname")
-//   let stepFphone = document.getElementById("phone")
-//   let stepFemail = document.getElementById("stepFemail")
-
-//   // Perform validation for step 2 form elements
-
-//   let valid=false;  
-//   if (stepFname.value === '') {
-//       stepFname.classList.add('is-invalid');
-//       valid=false
-//     } else {
-//       stepFname.classList.remove('is-invalid');
-//       valid=true
-
-//     }
-//     if (stepFphone.value === '') {
-//       stepFphone.classList.add('is-invalid');
-//       valid=false
-
-//     } else {
-//       stepFphone.classList.remove('is-invalid');
-//       valid=true
-//     }
-//     if (stepFemail.value === '') {
-//       stepFemail.classList.add('is-invalid');
-//       valid=false
-
-//     } else {
-//       stepFemail.classList.remove('is-invalid');
-//       valid=true
-//     }
-//   return valid;
-
-
-// }
-// validateStep2()
