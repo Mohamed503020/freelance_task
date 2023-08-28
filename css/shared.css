@@ -334,7 +334,6 @@ margin-top: -30px;
    position: absolute;
    border-radius: 10px;
    min-width: 250px;
-   transition:all ease-in-out 0.5s !important;
    left: 20%;
    text-align: right;
    z-index: 999;
@@ -345,10 +344,10 @@ margin-top: -30px;
    -ms-border-radius: 10px;
    -o-border-radius: 10px;
    transition: top ease 0.5s, transition-delay 0.5s;
-   -webkit-transition: top ease 0.5s, transition-delay 0.5s;
-   -moz-transition: top ease 0.5s, transition-delay 0.5s;
-   -ms-transition: top ease 0.5s, transition-delay 0.5s;
-   -o-transition: top ease 0.5s, transition-delay 0.5s;
+   -webkit-transition:all ease-in-out 0.6s !important;
+   -moz-transition:all ease-in-out 0.6s !important;
+   -ms-transition:all ease-in-out 0.6s !important;
+   -o-transition:all ease-in-out 0.6s !important;
 }
 
   .menu.show {
