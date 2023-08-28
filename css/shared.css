@@ -334,7 +334,7 @@ margin-top: -30px;
    position: absolute;
    border-radius: 10px;
    min-width: 250px;
-   transition:all ease-in-out 0.7s !important;
+   transition:all ease-in-out 0.5s !important;
    left: 20%;
    text-align: right;
    z-index: 999;
