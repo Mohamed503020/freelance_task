@@ -8,7 +8,7 @@ window.addEventListener('scroll', function() {
     header.classList.add('sticky-header');
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
-      ele.style.top = "110px";
+      ele.style.top = "100px";
     });
     if (showClass) {
       menuMainHeader.forEach(ele => {
@@ -19,7 +19,7 @@ window.addEventListener('scroll', function() {
     header.classList.remove('sticky-header');
     if (showClass) {
       menuMainHeader.forEach(ele => {
-        ele.style.transitionDelay = "0s";
+        ele.style.transitionDelay = "0.5s";
         ele.style.top = "125px";
       });
     }
