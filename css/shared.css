@@ -288,11 +288,12 @@ font-weight: 700;
     border-left: 1px solid #eee;
     font-size: 0.7rem;
     margin: 0;
+    margin-top: 5px;
     color:#909099;
   padding-left: 13px;
 }
 .top-header li.search {
-    margin-top: 11.2px;
+    margin-top: 17.2px;
     display: flex;align-items: center;
     justify-content: center;
 }
