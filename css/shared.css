@@ -157,6 +157,7 @@ input{
 @media (min-width:1700px){
     .rowcommon{width: 75% !important;
     margin: 0 auto !important;
+    /* hhhhh? */
     } 
 }
 h1 {
