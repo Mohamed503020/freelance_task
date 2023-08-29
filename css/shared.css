@@ -301,6 +301,11 @@ font-weight: 700;
 }
 .top-header li.search a i{font-size: 13px;}
 }
+@media (max-width: 389px){
+.top-header .container li {
+    margin-left: 5px;
+    margin-right: 8px;
+}}
  /* ============ main Header Area ======== */
  .main-header {
     padding: 36px 15px;
