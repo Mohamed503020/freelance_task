@@ -99,7 +99,7 @@ text-align: right;
    }
  .not-header div span{
 font-size: 10px;
-color: #FF908C;
+color: #fff;
 font-weight: 500;
    }
 
@@ -626,15 +626,15 @@ height: 46px;
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 0.3s linear;
-    -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
-    -moz-transition: visibility 0s linear 0s, opacity 0.3s linear;
-    -ms-transition: visibility 0s linear 0s, opacity 0.3s linear;
-    -o-transition: visibility 0s linear 0s, opacity 0.3s linear;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
-.user-notfication .body{font-size: 11px;width: 215px;    color: #bdbdb3}
+.user-notfication .body{font-size: 14px;width: 215px;font-weight: 600;    color: #bdbdb3}
 .user-notfication .date{font-size: 11px;}
 .user-notfication .date span{ margin-right: 5px;}
-.user-notfication .not-header span a{font-size: 18px; color:#FFB800;font-weight: 700; }
+.user-notfication .not-header span a{font-size: 14px; color:#FFB800;font-weight: 700; }
  .user-notfication .logo{
     width: 60px;
     height: 60px;
@@ -660,7 +660,11 @@ height: 46px;
         margin-left: 3px;
         padding: 0px 20px;
         font-size: 16px;
-    }
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
     .not-header div {
         font-size: 10px;
     }

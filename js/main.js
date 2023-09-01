@@ -42,7 +42,11 @@ if (hidBtn) {
   // Execute display and hide every three seconds
   setTimeout(toggleElement, 3000);
 }
+let bodyCommentUser=document.getElementById("bodyUserNcomment");
+if(bodyCommentUser){
+  bodyCommentUser.innerHTML= bodyCommentUser.textContent.slice(0, 30);
 
+}
 // Header links and show/hide menu
 document.addEventListener('DOMContentLoaded', function() {
   var scrollPosition = window.scrollY;
