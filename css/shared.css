@@ -201,6 +201,10 @@ h1 {
     font-weight: bold !important;
     text-align: right;
 }
+.aboutpara img{height: 400px;}
+@media (max-width:768px){
+    .aboutpara img{height: 300px;}
+}
  .iti input, .iti input[type=text], .iti input[type=tel] {width: 100% !important;}
  .shareratingform h2{font-size: 1.2rem;}
 /* ======================== */
