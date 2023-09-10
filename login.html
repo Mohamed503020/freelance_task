@@ -33,7 +33,6 @@
 <style>
 .login-section {
 	color: #fff;
-	background: #D50900;
     height: 100vh;
     padding-top: 20px;
     font-family: Tajawal serif;
@@ -53,14 +52,15 @@
 .login-form {
 	width: 370px;
 	margin: 80px auto;
+    background: #fff;
 }
 .login-form form {
 	color: #999;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+    rgba(0, 0, 0, 0.07) 0px 32px 64px;
 	border-radius: 3px;
 	margin-bottom: 15px;
-	background: #fff;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 30px 20px;
+	padding: 30px 20px 15px;
     padding-bottom: 0px;
 }
 .login-form h1  {
@@ -74,7 +74,8 @@
     color:#D50900
 }
 .login-form hr  {
-	margin: 0 -30px 20px;
+	margin: 0 0px 20px;
+    width: 100%;
 }    
 .login-form .form-group {
 	margin-bottom: 20px;
@@ -120,7 +121,7 @@
 @media (max-width:768px){ .login-section{height: 100%; overflow: hidden;}}
 @media (max-width:475px){
     .login-section{background-color: #fff; height: auto;}
-    .login-form{width: 100%; margin: 0 ; margin-top: 10px;
+    .login-form{width: 100%; margin: 0 ; margin-top: 10px; 
     }
     .login-form form{box-shadow: none;padding: 20px 10px;padding-bottom: 0;}
       .login-form .hint-text {color:#333}
@@ -165,8 +166,9 @@
         </div>
     </div>
     </div>
-    </form>
     <div class="hint-text">ليس لديك حساب؟ <a href="#"> انشأ حساب جديد هنا</a></div>
+
+    </form>
 
 </div>
 </div>

@@ -33,8 +33,6 @@
 <style>
 .signup-section {
 	color: #fff;
-	background: #D50900;
-    height: 100vh;
     padding-top: 20px;
     font-family: Tajawal serif;
 }
@@ -59,8 +57,9 @@
 	border-radius: 3px;
 	margin-bottom: 15px;
 	background: #fff;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 30px 20px;
+    color: #999;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;	
+    padding: 30px 20px 15px;
 }
 .signup-form h1  {
 	color: #333;
@@ -71,7 +70,7 @@
     color:#D50900
 }
 .signup-form hr  {
-	margin: 0 -30px 20px;
+	margin: 0 0px 20px;
 }    
 .signup-form .form-group {
 	margin-bottom: 20px;
@@ -113,6 +112,7 @@
 .signup-form .hint-text  {
 	padding-bottom: 15px;
 	text-align: center;
+    padding-top: 8px;
 }
 @media (max-width:768px){ .signup-section{height: 100%; overflow: hidden;}}
 @media (max-width:475px){
@@ -168,9 +168,10 @@
             <button type="submit" class="btn btn-primary btn-lg">انشاء حساب</button>
         </div>
     </div>
+    <div class="hint-text">هل لديك حساب؟ <a href="#">سجل دخول هنا</a></div>
+
     </form>
 </div>
-<div class="hint-text">هل لديك حساب؟ <a href="#">سجل دخول هنا</a></div>
 
 </div>
 </body>
