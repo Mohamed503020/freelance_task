@@ -177,7 +177,7 @@ h1 {
     text-align: justify;
 }
 .aboutpara ul {
-    padding-right: 1.5rem !important;
+    padding-right: 0.55rem !important;
     list-style: inside;
 }
 .rowcommon h5 {
