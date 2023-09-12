@@ -26,6 +26,45 @@
     <!-- bootstrap css file link  -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <style>
+ /*
+الشركاء 
+*/
+.Partners,.police {
+    margin-top: 20px;
+
+}
+.Partners h2,.police h2{font-size: 1.35rem;font-weight: bold; margin-bottom: 20px;}
+.Partners a.box,.police a.box {
+    display: block;
+    width: 100%;
+    height: 270px;
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0 1px 2px rgba(0,0,0,.5), 0 0 0 1px #f2f2f2;
+    text-align: center;
+
+}
+
+.Partners a.box .img-box,.police a.box .img-box{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fefefe;
+}
+a.box:hover  h3{color:#D50900}
+a.box h3{display: flex; font-weight: bold; justify-content: center; align-items: center; height: 20%;padding-bottom: 5px;}
+.Partners .box  img,.police .box  img{width: 80% !important;height: 90px;}
+@media (max-width:475px) {
+  .Partners a.box,.police a.box {width: 90%;
+  margin: 15px auto;
+  
+  }
+  .Partners .box  img,.police .box  img{width: 70% !important;height: 50px;}
+}
+    </style>
 </head>
 
 <body>
@@ -259,87 +298,91 @@
         <div class="row rowcommon postdetail">
             <div class="col-12 col-sm-9">
                 <div class=" container mt-4 p-0 p-sm-2" dir="rtl">
-                  <h1 class="border-b mb-1">الشركاء</h1>
+                  <h1 class="border-b mb-1">الشركات والهيئات الحكومية</h1>
                 </div>
               <!-- ارشادات == -->
               <div class="aboutpara">
                 <div class="container p-0 p-sm-2">
-                <p class="text-muted" >نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
+                <p  >نظرًا لأهمية البحث عن الحقائق والتأكد من صحة المعلومات، فإنه في حال تقديمك لشكوى بشأن شركة تداول مشبوهة، قد نحتاج إلى إعادة التواصل معك للحصول على معلومات إضافية. لذلك، يرجى تقديم معلومات الاتصال الخاصة بك بشكل كامل لضمان تسهيل التواصل معك والتأكد من صحة البيانات المقدمة.
                 </p>
               </div>
             </div>        
     <!-- المشتركين ==== -->
     <!-- Partners section ========== -->
     <div class="Partners">
-      <h2 class="border-b">شركائنا</h2>
+      <h2 class="heading1">شركائنا</h2>
 
       <div class="row gap-0">
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/amazon-d14f4 (1).png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/p2.svg" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/p3.png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/amazon-d14f4 (1).png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
       </div>
     </div>
     <!-- // لشرطة وإنفاذ القانون -->
     <div class="police mt-3 mt-sm-5">
-      <h2 class="border-b">الشرطة وإنفاذ القانون</h2>
+      <h2 class="heading2">الشرطة وإنفاذ القانون</h2>
 
       <div class="row gap-0">
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/amazon-d14f4 (1).png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/brands/Brand00.svg" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Gualf News</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/p3.png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
-        </div>
-        <div class="col-6 col-sm-3  col-lg-2">
-          <div class="box">
-            <img src="./assets/images/Partners/nasdaq.png" alt="nasdaq">
-          </div>
+        <div class="col-12 col-sm-6 col-md-4  col-lg-3">
+          <a class="box" href="#">
+            <div class="img-box">
+              <img src="./assets/images/Partners/amazon-d14f4 (1).png" alt="nasdaq">
+            </div>
+            <h3 class="border-top w-100">Amazon</h3>
+          </a>
         </div>
       </div>
     </div>

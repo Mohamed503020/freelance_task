@@ -1042,17 +1042,4 @@ font-weight: 500;
 
 
 
-    /*
-الشركاء 
-*/
-.Partners,.police {
-    margin-top: 20px;
-}
-.Partners h2,.police h2{font-size: 1.25rem;}
-.Partners .box,.police .box {
-    background-color: #f7f7f7;
-    padding: 20px;
-    width: 100%;
-    margin-top: 15px;
-}
-.Partners .box  img,.police .box  img{width: 90% !important;height: 70px;}
+   
