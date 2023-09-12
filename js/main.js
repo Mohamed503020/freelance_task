@@ -244,6 +244,7 @@ showContBtn.addEventListener("click",()=>{
 
 //stepper content 
 let stepForm = document.getElementById('stepForm');
+if(stepForm){
 let stepNextBtn = document.getElementById("step_nextBtn");
 let sendStepBtn = document.getElementById("sendStepBtn");
 
@@ -289,4 +290,32 @@ StepPrevBtn.addEventListener("click", (e) => {
   stepHeader2.classList.remove("active");
 });
 
+}
+//======= profile setting"
+let profileForm = document.getElementById("profileForm");
+if(profileForm){
 
+let btnEditProfile =document.getElementById("editProfile");
+let btnSaveProfile =document.getElementById("saveProfile");
+    // Enable/disable form inputs
+    function toggleFormInputs(disabled) {
+      var inputs = document.querySelectorAll("#profileForm input");
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = disabled;
+      }
+    }
+    toggleFormInputs(true);
+    btnEditProfile.addEventListener("click",(e)=>{
+  e.preventDefault();
+  btnEditProfile.style.display="none";
+  console.log(btnSaveProfile);
+  btnSaveProfile.style.display="block";
+  toggleFormInputs(false)
+    })
+
+
+    btnSaveProfile.addEventListener("click",(e)=>{
+      e.preventDefault();
+       profileForm.submit()
+        })
+      }
