@@ -70,7 +70,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   white-space: nowrap;
-  max-height: 200px;
+  max-height: 200px !important;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch
 }
