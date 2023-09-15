@@ -10,6 +10,7 @@
 /* Global setting
   */
 * {
+    font-family: serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,7 +49,14 @@ body {
     padding: 0;
 }
 
-
+@font-face{font-family:'Tajawal';font-style:normal;font-weight:500;font-display:swap;src:local('Tajawal Medium'),local('Tajawal-Medium'),url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE80-FEFC}
+/* latin */
+@font-face{font-family:'Tajawal';font-style:normal;font-weight:500;font-display:swap;src:local('Tajawal Medium'),local('Tajawal-Medium'),url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrFpiQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* arabic */
+@font-face{font-family:'Tajawal';font-style:normal;font-weight:700;font-display:swap;src:local('Tajawal Bold'),local('Tajawal-Bold'),url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l4qkHrRpiYlJ.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE80-FEFC}
+/* latin */
+@font-face{font-family:'Tajawal';font-style:normal;font-weight:700;font-display:swap;src:local('Tajawal Bold'),local('Tajawal-Bold'),url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l4qkHrFpiQ.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
 /* scroll Area  */
 
 /* =========== Classes ============== */
@@ -64,29 +72,7 @@ body {
     margin-right: 15px;
 }
 
-/* ///change scroll  */
 
-/* ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 5px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
-}
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  } */
 /* notficaton classes  */
 .not-header {
     display: flex;
@@ -218,7 +204,7 @@ body {
     text-align: center;
     font-family: Tajawal;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .top-header .container li:last-of-type a {
@@ -231,22 +217,26 @@ body {
     }
 
     .top-header .container li {
-        margin-left: 10px;
-        margin-right: 11px;
+        margin-left: 0px;
+        margin-right: 24px;
     }
-
+    .top-header .container ul{
+        padding: 0;
+    }
     .top-header .container li a {
         border-left: 1px solid #eee;
         font-size: 0.7rem;
         margin: 0;
         margin-top: 5px;
         color: #909099;
-        padding-left: 13px;
-    }
+        padding-right: 11px;
+        padding-left: 7px;
 
+    }
+    .top-header .container ul.user li:last-of-type a {        border-left: 1px solid #eee;
+    }
     .top-header ul {
         justify-content: space-between !important;
-        display: flex !important;
         margin-left: -5px;
         margin-right: -1px !important;
     }
@@ -262,18 +252,24 @@ body {
         font-size: 13px;
     }
 }
+@media(min-width:576px) and (max-width:767px){    .top-header .container li a {font-size:9px;}
+}
+@media(min-width:420px) and (max-width:575px){
+    .top-header .container li a {font-size: 0.72rem;}
 
+}
 @media (max-width: 389px) {
     .top-header .container li {
-        margin-left: 5px;
-        margin-right: 11px;
+        margin-right: 25px;
     }
+    .top-header .container li a{padding-right: 0;}
 }
 
 /* ============ main Header Area ======== */
 .main-header {
     padding: 36px 15px;
     height: 100px;
+    border-bottom: 3px solid var(--man--bg);
 }
 
 .main-header .logo img {
@@ -304,7 +300,7 @@ body {
 
 .main-header .links li a {
     color: black;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1rem;
 
 }
@@ -325,7 +321,7 @@ body {
     margin-top: 14px;
     content: "\f0c9";
     display: block;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -347,6 +343,7 @@ body {
 
 /* // dropdown-menu */
 .main-header .menu {
+    top:120px;
     display: none;
     position: absolute;
     border-radius: 10px;
@@ -361,10 +358,10 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     transition: top ease 0.5s, transition-delay 0.5s;
-    -webkit-transition: all ease-in-out 0.6s !important;
-    -moz-transition: all ease-in-out 0.6s !important;
-    -ms-transition: all ease-in-out 0.6s !important;
-    -o-transition: all ease-in-out 0.6s !important;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
 
 .menu.show {
@@ -385,7 +382,8 @@ body {
     padding: 15px 30px;
     background: #e8e8e8;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .main-header .menu h6 i {
@@ -399,7 +397,7 @@ body {
 
 .main-header .menu .links-menu a {
     width: 100%;
-    font-weight: normal;
+    font-weight: 600;
     transition: all ease-in-out 0.3s;
     margin-bottom: 5px;
     font-size: 16px;
@@ -417,7 +415,7 @@ body {
 }
 
 .main-header .menu#menu1 {
-    right: 20%;
+    right: 26%;
     width: 300px;
 }
 
@@ -440,7 +438,10 @@ body {
     }
 
     .main-header .logo img {
-        margin-top: -25px;
+        margin-top: -6px;
+        width: 170px;
+        height: 60px;
+        margin-right: -10px;
     }
 }
 
@@ -461,7 +462,33 @@ body {
         margin-top: -13px;
     }
 }
-
+.main-header .bar i{color:#333 }
+.main-header ul.user{position: relative;}
+.main-header ul.user a{font-size: 20px;    margin-left: -14px;display: block; margin-top: 13px;color:#333}
+.main-header ul.user a.icon-user{margin-left: 20px;}
+.main-header ul.user a.icon-user i{padding-left: 10px; border-left:1px solid #ccc}
+.main-header ul.user a i{padding-left: 10px;  }
+.main-header ul.user #user-menu {
+    padding: 10px;
+    font-size: 14px;
+    left:-31%;
+    top:61px;
+    position: absolute;
+   background-color: #fff;
+   z-index: 999;
+    border-radius: 3px;
+    width: 250px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.main-header ul.user #user-menu a{margin-top: 5px;}
+.main-header ul.user #user-menu a i{padding-left: 2px;}
+@media (max-width:475px){
+    .main-header ul.user #user-menu{left: -51px;}
+}
+.main-header ul.user #user-menu li a{font-size: 12px;}
 /* ///menue  */
 .sticky-header {
     position: fixed;
@@ -470,6 +497,7 @@ body {
     background-color: #fff;
     right: 0;
     z-index: 949 !important;
+    border-bottom: none !important;
     /* Add any additional styles for the sticky header */
 }
 
@@ -605,14 +633,9 @@ button.btn-close {
 .company_desc {
     padding: 5px;
     background-size: cover;
-
-    /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=000000&c2=333333&gt=l&gd=dtt
-*/
-    background: #000000;
     padding-bottom: 120px;
-    background: linear-gradient(180deg, #333333, #000000);
+    /* background: linear-gradient(180deg, #333333, #000000); */
+    background: #131722;
 }
 
 
@@ -759,7 +782,8 @@ button.btn-close {
 .user-notfication {
     position: fixed;
     border-radius: 170px;
-    max-width: 350px;
+    max-width: 400px;
+    min-width: 350px;
     right: 20px;
     bottom: 120px;
     padding: 8px 2px 12px 14px;
@@ -784,8 +808,9 @@ button.btn-close {
 
 .user-notfication .body {
     font-size: 14px;
-    width: 215px;
+    width: auto;
     font-weight: 600;
+    margin: 2px;
     color: #bdbdb3
 }
 
@@ -804,12 +829,12 @@ button.btn-close {
 }
 
 .user-notfication .logo {
-    width: 80px;
+    width: 58px;
     height: 60px;
     background-color: #ccc;
     border-radius: 50%;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 18px;
     color: #000;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -826,10 +851,11 @@ button.btn-close {
 
     .user-notfication .logo {
         height: 55px;
+        width: 57px;
         border-radius: 50%;
         margin-left: 3px;
         padding: 0px 20px;
-        font-size: 16px;
+        font-size: 14px;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
@@ -841,7 +867,7 @@ button.btn-close {
     }
 
     .user-notfication .body {
-        font-size: 14px;
+        font-size: 12px;
         word-wrap: break-word;
     }
 
@@ -932,9 +958,9 @@ button.btn-close {
 }
 
 .warning-list .warning-content .box {
-    padding: 20px 20px 10px !important;
+    padding: 20px 10px 10px !important;
     margin-top: 10px;
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
     background: #f7f7f7;
 
@@ -952,8 +978,8 @@ button.btn-close {
 
 .warning-content .box-head .head-state span {
     font-size: 14px;
-    color: #5a5a5a;
-    font-weight: 500
+    color: #000;
+    font-weight: 700
 }
 
 .warning-content .box-head .head-state h6 {
@@ -999,8 +1025,8 @@ button.btn-close {
 }
 
 .method h6 {
-    color: #595959;
-    font-size: 14px;
+    color: #000;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -1009,9 +1035,10 @@ button.btn-close {
     font-size: 14px;
     font-weight: 700;
     text-transform: capitalize;
-    margin-right: 8px;
+    margin-right: 0px;
+    margin-top: -44px;
 }
-
+.method .scam-method span{font-size: 0.65rem; margin-top: 13px !important;}
 .line {
     width: 1px;
     display: inline-block;
@@ -1054,7 +1081,8 @@ button.btn-close {
     .warning-content .box-head .head-state span {
         font-size: 0.7rem;
     }
-
+    .warning-list .warning-content .box {
+        padding: 20px 4px 10px !important;}
     .warning-content .box-head .head-state h6 {
         font-size: 12px;
     }
@@ -1062,9 +1090,11 @@ button.btn-close {
     .method span {
         font-size: 0.8rem;
     }
-
+    .method .scam-method span {
+        font-size: 8px  !important;
+    }
     .method h6 {
-        font-size: 0.8rem;
+        font-size: 10px;
     }
 
     .warning-content .method button {
@@ -1073,19 +1103,21 @@ button.btn-close {
 }
 
 
-@media screen and (max-width: 430px) {
-
+@media screen and (max-width: 475px) {
+    .method .scam-method span{font-size: 0.56rem; margin-top: 11px !important;}
+    .warning-list .warning-content .box {
+        padding: 20px 7px 10px !important;}
 
     .warning-list .warning-content .box {
-        width: 100%;
+        width: 96%;
     }
 }
 
 
-@media (min-width:375px) and (max-width:450px) {
+@media (min-width:375px) and (max-width:475px) {
 
     .method h6 {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .warning-list .warning-content {
@@ -1093,7 +1125,7 @@ button.btn-close {
     }
 
     .warning-list .warning-content .box {
-        width: 100% !important;
+        width: 97% !important;
     }
 
     .warning-content .box-head .head-state span {
@@ -1119,9 +1151,12 @@ button.btn-close {
 @media (min-width:768px) and (max-width:991px) {
 
     .method h6 {
-        font-size: 14px;
+        font-size: 10px;
     }
-
+    .method .scam-method span {
+        font-size: 0.52rem;
+        margin-top: 10px !important;
+    }
     .method span {
         font-size: 14px;
     }
@@ -1147,13 +1182,18 @@ button.btn-close {
 
 
 @media (min-width:1200px) and (max-width:1399px) {
+    .warning-list .warning-content .box {
+        padding: 20px 4px 10px !important;}
     .method h6 {
-        font-size: 14px;
-    }
+        font-size: 11px;
+        }
 
     .method span {
         font-size: 14px;
     }
+    .method .scam-method span{    font-size: 0.57rem;
+        font-weight: 700;    margin-top: 11px !important;}
+
 
     .warning-content .method button {
         font-size: 0.82rem;
@@ -1185,6 +1225,7 @@ button.btn-close {
 }
 
 @media screen and (max-width: 768px) {
+    .Statistics{padding: 28px 10px 92px}
     .Statistics .St-box.first {
         width: 250px !important;
         height: 80px;
@@ -1201,7 +1242,7 @@ button.btn-close {
     .Statistics .St-box h5 {
         font-size: 11px;
     }
-
+.Statistics h3{font-size: 19px;}
     .Statistics .St-box svg {
         width: 18px !important;
         height: 18px !important;
@@ -1245,11 +1286,11 @@ button.btn-close {
 }
 
 .comments .user_logo {
-    width: 47px;
+    width: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 52px;
     background: #D80027;
     font-size: 15px;
     border-radius: 50%;
@@ -1273,7 +1314,8 @@ button.btn-close {
 .comments .user .body {
     font-size: 14px;
     margin-top: 2px;
-    width: 95%;
+    margin-bottom: 3px;
+    width: auto;
     color: #5A5A5A;
     font-weight: 400;
 }
@@ -1509,20 +1551,20 @@ button.btn-close {
 }
 
 .Trusted_companies .box .list-methods h6 {
-    color: #A3A3A3;
+    color: #000;
     font-size: 1rem;
     font-weight: 700;
 }
 
 .Trusted_companies .box .list-methods span {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .Trusted_companies .box .licenses,
 .Trusted_companies .box .licenses span {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .Trusted_companies .box .licenses .line {
@@ -1581,6 +1623,7 @@ button.btn-close {
 .Trusted_companies .box .licenses,
 .Trusted_companies .box .licenses span {
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .Trusted_companies .box span {
@@ -1606,7 +1649,7 @@ button.btn-close {
     .Trusted_companies .box .licenses,
     .Trusted_companies .box .licenses span {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .Trusted_companies .box .list-methods h6 {
@@ -1615,7 +1658,7 @@ button.btn-close {
 
     .Trusted_companies .box .list-methods span {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .Trusted_companies .box .action {
@@ -1844,11 +1887,10 @@ button.btn-close {
 }
 
 .comp_articles .main h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--man--bg);
-    width: 202px;
 }
 
 .comp_articles .main p {
@@ -1984,7 +2026,8 @@ footer {
     margin: 0;
     margin-top: 20px;
     overflow-y: hidden;
-    background-color: #e9ecef;
+    background-color: #131722;
+    color:#fff;
 }
 
 .top-footer {
@@ -2003,6 +2046,7 @@ footer {
     height: 24px;
     font-size: 14px;
     font-weight: 700;
+    color:#fff;
 }
 
 .top-footer .contact .icon {
@@ -2030,16 +2074,17 @@ footer {
 
 .top-footer .links h6 {
     font-weight: bold;
+    color:#fff
 }
 
 .top-footer .links a {
-    color: #6c757d;
+    color: #fff;
     display: block;
     font-size: 14px;
 }
 
 .top-footer .links h6 {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .top-footer .conction_info {
@@ -2078,7 +2123,7 @@ footer {
 }
 } */
 .top-footer .other_links ul {
-    color: #000;
+    color: #fff;
     font-size: 14px;
 }
 
@@ -2087,7 +2132,7 @@ footer {
 }
 
 .top-footer .other_links ul a {
-    color: #000;
+    color: #fff;
     text-align: center;
 
     font-size: 16px;
@@ -2140,8 +2185,8 @@ footer {
 .main-footer .body-footer p,
 .main-footer .body-footer h6 {
     text-align: justify;
-    color: #6a6b6c;
-    font-size: 14px;
+    color: #fff;
+    font-size: 13px;
     line-height: 1.7rem;
 }
 
@@ -2156,7 +2201,7 @@ footer {
     margin-right: 10px;
     font-size: 14px;
     line-height: 1.7rem;
-    color: #6a6b6c;
+    color: #fff;
 }
 
 .copy-write .logo {
@@ -2164,7 +2209,7 @@ footer {
 }
 
 .copy-write p a {
-    color: #6a6b6c;
+    color: #fff;
 }
 
 .body-footer .member {
@@ -2407,12 +2452,12 @@ footer {
 @media (max-width:374px) {
     .protected img {
         width: 70px;
-        bottom: 145px;
+        bottom: 123px;
         height: 30px;
     }
 
     .protected a.cmc img {
-        bottom: 97px;
+        bottom: 72px;
         width: 70px;
         height: 30px;
     }
