@@ -578,12 +578,44 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/main.js"></script>
     <script >
-    
-    const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
-      utilsScript:
-        "./js/cdnjs.cloudflare.com_ajax_libs_intl-tel-input_17.0.8_js_utils.js"
+  var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    // allowDropdown: false,
+    // autoInsertDialCode: true,
+    // autoPlaceholder: "off",
+    // dropdownContainer: document.body,
+    // excludeCountries: ["us"],
+    // formatOnDisplay: false,
+    geoIpLookup: function(callback) {
+      fetch("https://ipapi.co/json")
+        .then(function(res) { return res.json(); })
+        .then(function(data) { callback(data.country_code); })
+        .catch(function() { callback("us"); });
+    },
+    // hiddenInput: "full_number",
+    initialCountry: "auto",
+    // localizedCountries: { 'de': 'Deutschland' },
+    // nationalMode: false,
+    // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    // placeholderNumberType: "MOBILE",
+    // preferredCountries: ['cn', 'jp'],
+    // separateDialCode: true,
+    // showFlags: false,
+    utilsScript:  "./js/cdnjs.cloudflare.com_ajax_libs_intl-tel-input_17.0.8_js_utils.js"
+  });
+</script>
+<script>
+    // Add event listener to list items
+    var listItems = document.querySelectorAll('.iti__country');
+    var dialCodeInput = document.getElementById('dial_code');
+
+    listItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            var selectedDialCode = this.getAttribute('data-dial-code');
+            dialCodeInput.value = selectedDialCode;
+        });
     });
+</script>
     </script>
 </body>
 </html>
