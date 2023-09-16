@@ -26,6 +26,26 @@
     <!-- bootstrap css file link  -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <style>
+           .progress-bar li:last-of-type::after{content:none}
+        .custom-select-wrapper {
+            position: relative;
+        }
+       
+        .custom-select-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0.75rem;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0.35rem 0.35rem 0;
+            border-color: #000000 transparent transparent;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -247,7 +267,7 @@
               <div class="container">
                 <ul>
                     <li><a href="https://daman.reviews"> <i class="fa-solid fa-house"></i> الرئيسية </a></li>
-                    <li class="careerstext"> المتطلبات لحساب شركة</li>
+                    <li class="careerstext"> طلب مساعدة </li>
                 </ul>
             </div>
         </div>
@@ -255,36 +275,22 @@
         <div class="row rowcommon postdetail">
             <div class="col-12 col-sm-9 p-0">
                 <div class="depositbg mb-3">
-                    <h1 class=" border-b">المتطلبات لحساب شركة</h1>
+                    <h1 class=" border-b">طلب مساعدة </h1>
                 </div>
                
               <!-- ارشادات == -->
               <div class="aboutpara mt-3">
                 <div class="container p-0 p-sm-3">
-                <p>يعد موقع منصات الاحتيال Scam platforms أحد المنصات الرسمية التي تمتلك أكبر قاعدة بيانات حول الشركات والخدمات على الإنترنت. هذا الأمر يساهم بشكل كبير في توجيه المستهلكين نحو التجارب الجيدة وتجنب التعامل مع شركات مشبوهة. ومن أجل تحقيق العدالة والدقة في هذه العمليات، يجب أن تتاح فرصة للشركات المعنية للتفاعل مع المعلومات المنشورة على هذه المنصات.
-                </p>
+              <p>تلعب أمام منصات الاحتيال Scam Platforms دور حيوي وفعال في حماية المتداولين والمستثمرين العرب، حيث يتم تقديم الاستشارة كأحد الأدوات الرئيسية في مكافحة الاحتيال والنصب. يمكنك الآن طلب الاستشارة المجانية بالكامل من خلال هذا بشأن عمليات النصب والاحتيال التي تتعرض لها عمومًا المتداولين والمستثمرين في الوطن العربي.
+            </p>
                 <div class="shareratingform  mt-3  ">
-                  <form method="POST" action="" >
+                  <form method="POST" action="form-route" >
                               <div class="row" dir="rtl">
-                                  <div class="col-12 col-md-6">
-                                      <div class="mb-3" dir="rtl">
-                                          <label for="compName" class="form-label">  اسم الشركة<span
-                                                  class="text-danger me-2">(مطلوب)</span></label>
-                                          <input type="text" class="form-control" name="compName" autocomplete="off">
-                                      </div>
-                                  </div>
                                   <div class="col-12 col-md-6">
                                       <div class="mb-3" dir="rtl">
                                           <label for="name" class="form-label"> الاسم الكامل<span
                                                   class="text-danger me-2">(مطلوب)</span></label>
                                           <input type="text" class="form-control" name="name" autocomplete="off">
-                                      </div>
-                                  </div>
-                                  <div class="col-12 col-md-6">
-                                      <div class="mb-3" dir="rtl">
-                                          <label for="phone" class="form-label" style="display: flex"> رقم هاتفك
-                                              المحمول<span class="text-danger me-2">(مطلوب)</span></label>
-                                              <input type="tel" class="form-control" name="phone" id="phone"></input>
                                       </div>
                                   </div>
                                   <div class="col-12 col-md-6 " dir="rtl">
@@ -294,19 +300,32 @@
                                           <input type="email" class="form-control" name="email">
                                       </div>
                                   </div>
-
-                                  <div class="col-12 col-md-6 " dir="rtl">
-                                      <div class="mb-3">
-                                          <label for="CompLink" class="form-label">رابط الشركة الخاص بك <span
-                                                  class="text-danger me-2">(مطلوب)</span></label>
-                                          <input type="url" class="form-control" name="CompLink">
-                                      </div>
-                                  </div>
-
-
+                                  <div class="col-12 col-md-12 " dir="rtl">
+                                    <div class="mb-3">
+                                        <label for="type" class="form-label"> نوع الاستشارة<span
+                                                class="text-danger me-2">(مطلوب)</span></label>
+                                        <div class="custom-select-wrapper">
+                                            <select class="form-select custom-select" >
+                                                <option selected>اختر...</option>
+                                                <option value="شكاوي نصب 
+                                                ">شكاوي نصب 
+                                            </option>
+                                                <option value="تحذيرات النصب 
+                                                ">تحذيرات النصب 
+                                            </option>
+                                                <option value="استرداد الاموال
+                                                ">استرداد الاموال
+                                            </option>
+                                            <option value="استرداد الاموال
+                                            ">استرداد الاموال
+                                        </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                   <div class="col-12 col-md-12">
                                       <div class="mb-2">
-                                          <label for="details" class="form-label"> اكتب رسالتك <span
+                                          <label for="details" class="form-label">  تفاصيل الاستشارة <span
                                                   class="text-danger me-2">(مطلوب)</span></label>
                                           <textarea name="details" class="form-control" required="" id="details" rows="5"
                                                autocomplete="off"></textarea>
@@ -316,34 +335,24 @@
                               </div>
                   </form>
               </div>
-           <h2 class="heading1 mt-3">ما هي خدمة المطلبات لحساب الشركات؟
-          </h2>
-           <p>تعد خدمة المطالبات لحساب الشركات واحدة من الأدوات الهامة التي تقدمها منصات الاحتيال لتحقيق مبدأ العدالة والشفافية في العالم الرقمي. 
-          </p>
-           <p>تتيح هذه الخدمة للشركات التي تم نشر معلومات حولها على موقع منصات الاحتيال الطلب على تعديلات أو تغييرات في تلك المعلومات، سواء كانت هذه المعلومات تقييمًا إيجابيًا أو تحذيرًا عن الشركة. </p>
-           <p>وتأتي هذه الخدمة من أجل تحقيق التوازن والعدالة بين جميع الأطراف المعنية.
-          </p>
-          <h2 class="heading2">ما هي خطوات تقديم طلب تعديل حول المعلومات المنشورة عن الشركات؟</h2>
-          <p>لتحقيق العدالة، يجب وضع بعض الشروط والمعايير التي تضمن توجيه ومعالجة الطلبات بشكل منصف وفعال، وهي:
-          </p>
-          <h3> توثيق الهوية
-          </h3>
-          <p>للتحقق من صحة الأطراف المتفاعلة مع المعلومات المنشورة على منصات الاحتيال، يجب على ممثلي الشركة تقديم وثائق تثبت هويتهم وانتمائهم للشركة المعنية. هذا يضمن عدم انتحال أي شخص لصفة ممثل للشركة دون وجه حق.
-          </p>
-          <h3> شروط تعديل المعلومات
-          </h3>
-          <p>عندما يتعلق الأمر بشركات موثوقة ومرخصة، يجب أن يقدم ممثل الشركة أدلة قوية وموثوقة تثبت أن المعلومات التي يرغب في تعديلها تحتوي على أخطاء أو تشويه للشركة. هذه الأدلة يمكن أن تكون في شكل تراخيص رسمية أو شهادات.
-          </p>
-          <h3> شروط التحذيرات
-          </h3>
-          <p>فيما يتعلق بالتحذيرات من الشركات غير الموثوقة وغير المرخصة، يجب أن يكون هناك دليل قوي يثبت أن هذه الشركة قامت بتحسين خدماتها أو حصلت على تراخيص من هيئات معروفة. يجب عدم تعديل التحذيرات إلا إذا توفر هذا الدليل.
-          </p>
-          <h2 class="heading3">التواصل مع موقع منصات الاحتيال Scam platforms 
-          </h2>
-          <p>نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في تحقيق أهدافكم. إذا كنتم ترغبون في التواصل معنا لمناقشة متطلبات شركتكم، ندعوكم لتعبئة النموذج الموجود في أعلى الصفحة. هذا النموذج مصمم خصيصًا لجمع المعلومات الأساسية التي ستمكننا من فهم احتياجاتكم بشكل أفضل.
-          </p>
-          <p>بمجرد إكمال النموذج وإرسال المعلومات المطلوبة، سيقوم أحد ممثلينا بالتواصل معكم في أقرب وقت ممكن لتقديم الدعم والمشورة التي تحتاجونها.
-          </p>
+          <h2 class="heading1">الاستشارة المجانية بالكامل
+        </h2>
+          <p>يمكنك الآن الاستفادة من الاستشارة المجانية بالكامل المتاحة على موقع منصات الاحتيال. إنها خدمة تقدم المشورة والإرشاد بشكل كامل فيما يتعلق بعمليات النصب والاحتيال. ستتعاون مع خبراء متخصصين في مجال الاحتيال المالي الذين يمكنهم توجيهك وتقديم الدعم اللازم.
+        </p>
+          <h2 class="heading2">ما يمكن تضمينه في الاستشارة</h2>
+          <ul class="me-3">
+            <li>تقديم البلاغات ضد شركات التداول النصابة: يمكنني الآن تقديم بلاغ رسمي ضد الشركات التي قامت بالنصب عليّ أو على أي شخص آخر من خلال هذا الموقع. ستوفر الاستشارة التوجيه الكامل حول كيفية ملء البلاغ والخطوات القانونية الضرورية.
+            </li>
+            <li>استرداد الأموال من الشركات النصابة: إذا فقدت أموالك بسبب شركة تداول نصابة، يمكنني الآن الاستفادة من إرشادات حول كيفية محاولة استعادة الأموال المفقودة. ستشمل الخدمة استخدام القوانين واللوائح المتاحة لحماية حقوق المستثمرين.
+            </li>
+            <li>التحقق من مصداقية الشركة: هذه الخدمة ستمكنني من التحقق من مصداقية شركة معينة قبل أن أقرر الاستثمار أو التداول معها. ستوجهني على كيفية فحص التراخيص والتصنيفات والمراجعات والسجلات السابقة للشركة.
+            </li>
+           
+          </ul>
+          <h2 class="heading3">استثمار في المعرفة
+        </h2>
+        <p>ليس هناك شيء أهم من الاستثمار في المعرفة قبل اتخاذ أي قرار مالي. ستكون هذه الخدمة مفيدة بشكل كبير في مساعدتي على البقاء حذرًا ومتجهزًا قبل القرارات المالية الهامة. في عالم التداول والاستثمار، لا يمكن لأي شخص أن يكون متخاذلًا، والاستشارة هي أداة قوية يمكن أن تساعدك في ذلك.
+        </p>
               </div>
             </div>       
               <!-- ======= scam question section (الاسئلة ) =========== -->
