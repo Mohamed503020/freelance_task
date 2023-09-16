@@ -1,10 +1,10 @@
 window.addEventListener('scroll', function() {
-  var header = document.querySelector('.main-header');
+  var header = document.getElementById("main-header")
   var scrollPosition = window.scrollY;
   let menuMainHeader = document.querySelectorAll(".main-header .menu");
   let showClass = document.querySelectorAll(".main-header .menu.show");
-
-  if (scrollPosition > 170) {
+  let topHeader= document.getElementById("top-header")
+  if (scrollPosition > 1) {
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -14,7 +14,11 @@ window.addEventListener('scroll', function() {
         ele.style.transitionDelay = "0.5s";
       });
     }
+    header.style.top=`0px `
+
   } else {
+        header.style.top=`${topHeader.offsetHeight}px `
+
     if (showClass) {
       menuMainHeader.forEach(ele => {
         ele.style.transitionDelay = "0.5s";
