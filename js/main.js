@@ -5,7 +5,6 @@ window.addEventListener('scroll', function() {
   let showClass = document.querySelectorAll(".main-header .menu.show");
 
   if (scrollPosition > 170) {
-    header.classList.add('sticky-header');
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -16,7 +15,6 @@ window.addEventListener('scroll', function() {
       });
     }
   } else {
-    header.classList.remove('sticky-header');
     if (showClass) {
       menuMainHeader.forEach(ele => {
         ele.style.transitionDelay = "0.5s";
