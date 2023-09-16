@@ -4,7 +4,7 @@ window.addEventListener('scroll', function() {
   let menuMainHeader = document.querySelectorAll(".main-header .menu");
   let showClass = document.querySelectorAll(".main-header .menu.show");
   let topHeader= document.getElementById("top-header")
-  if (scrollPosition > topHeader.offsetHeight) {
+  if (scrollPosition > 10) {
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
