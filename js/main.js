@@ -4,7 +4,7 @@ window.addEventListener('scroll', function() {
   let menuMainHeader = document.querySelectorAll(".main-header .menu");
   let showClass = document.querySelectorAll(".main-header .menu.show");
   let topHeader= document.getElementById("top-header")
-  if (scrollPosition > 100) {
+  if (scrollPosition > 0) {
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -15,7 +15,7 @@ window.addEventListener('scroll', function() {
       });
     }
     header.style.top=`0px `
-
+    header.style.border="none"
   } else {
         header.style.top=`${topHeader.offsetHeight}px `
 
