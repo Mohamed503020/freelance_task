@@ -4,7 +4,7 @@ window.addEventListener('scroll', function() {
   let menuMainHeader = document.querySelectorAll(".main-header .menu");
   let showClass = document.querySelectorAll(".main-header .menu.show");
   let topHeader= document.getElementById("top-header")
-  if (scrollPosition > 28.99) {
+  if (scrollPosition > 1) {
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -14,10 +14,9 @@ window.addEventListener('scroll', function() {
         ele.style.transitionDelay = "0.5s";
       });
     }
-    header.style.top=`0px `
-    header.style.border="none"
+    header.classList.add("stiky")
   } else {
-        header.style.top=`${topHeader.offsetHeight}px `
+    header.classList.remove("stiky")
 
     if (showClass) {
       menuMainHeader.forEach(ele => {
