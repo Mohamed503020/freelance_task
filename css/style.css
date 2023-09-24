@@ -37,7 +37,6 @@ ul {
 body,
 html {
     direction: rtl !important;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -271,6 +270,8 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     padding: 36px 15px;
     height: 100px;
     z-index: 999;
+    top:0;
+    position: sticky;
     transition: all ease 0.3s;
     border-bottom: 3px solid var(--man--bg);
     -webkit-transition: all ease 0.3s;
@@ -278,21 +279,7 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     -ms-transition: all ease 0.3s;
     -o-transition: all ease 0.3s;
 }
-.main-header.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transform: translateY(-100%);
-    animation: slideDown 0.3s forwards;
-  }
-  
-  @keyframes slideDown {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }}
+
 .main-header .logo img {
     width: 216px;
     height: 90px;

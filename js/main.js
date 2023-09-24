@@ -1,3 +1,4 @@
+
 window.addEventListener('scroll', function() {
   var header = document.getElementById("main-header")
   var scrollPosition = window.scrollY;
@@ -9,9 +10,7 @@ window.addEventListener('scroll', function() {
   // } else {
 
   // }
-  
   if (scrollPosition  >header.offsetHeight ) {
-    header.classList.add('sticky');
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -22,7 +21,6 @@ window.addEventListener('scroll', function() {
       });
     }
   } else {
-    header.classList.remove('sticky');
     
     if (showClass) {
       menuMainHeader.forEach(ele => {

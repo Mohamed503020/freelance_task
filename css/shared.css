@@ -62,7 +62,6 @@ ul{
 
 body,html{
     direction: rtl !important;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 body{
@@ -169,6 +168,10 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .tradingbtn:hover{
     background-color: #a80c04 !important;
@@ -383,7 +386,11 @@ margin-bottom: 20px;}
  /* ============ main Header Area ======== */
  .main-header {
     padding: 36px 15px;
+    position: sticky;
+    top:0;
     height: 100px;
+    background-color: #fff;
+    z-index: 999;
     border-bottom: 3px solid var(--man--bg);
 }
  .main-header .logo img{
