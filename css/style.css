@@ -363,11 +363,8 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    transition: top ease 0.5s, transition-delay 0.5s;
-    -webkit-transition: top ease 0.5s, transition-delay 0.5s;
-    -moz-transition: top ease 0.5s, transition-delay 0.5s;
-    -ms-transition: top ease 0.5s, transition-delay 0.5s;
-    -o-transition: top ease 0.5s, transition-delay 0.5s;
+    transition: top 0.3s ease-in-out;
+
 }
 
 .menu.show {
@@ -400,7 +397,7 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
 .main-header .menu .links-menu {
     padding: 15px 30px;
 }
-.stiky{
+.main-header.stiky{
         position: fixed !important;
         top: 0;  
         width: 100%;    
