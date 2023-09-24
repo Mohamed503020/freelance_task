@@ -391,7 +391,12 @@ margin-bottom: 20px;}
     height: 100px;
     background-color: #fff;
     z-index: 999;
+    transition: top ease-in-out 0.3s;
     border-bottom: 3px solid var(--man--bg);
+    -webkit-transition: top ease-in-out 0.3s;
+    -moz-transition: top ease-in-out 0.3s;
+    -ms-transition: top ease-in-out 0.3s;
+    -o-transition: top ease-in-out 0.3s;
 }
  .main-header .logo img{
     width: 216px;

@@ -272,12 +272,9 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     z-index: 999;
     top:0;
     position: sticky;
-    transition: all ease 0.3s;
+    transition: top ease-in-out 0.3s;
     border-bottom: 3px solid var(--man--bg);
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
+
 }
 
 .main-header .logo img {
