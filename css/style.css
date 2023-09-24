@@ -282,7 +282,8 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     position: fixed;
     top: 0;
     width: 100%;
-    animation: slideDown 0.3s ease-in-out;
+    transform: translateY(-100%);
+    animation: slideDown 0.3s forwards;
   }
   
   @keyframes slideDown {
@@ -291,8 +292,7 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     }
     100% {
       transform: translateY(0);
-    }
-  }
+    }}
 .main-header .logo img {
     width: 216px;
     height: 90px;

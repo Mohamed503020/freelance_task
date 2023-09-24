@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
 
   // }
   
-  if (window.pageYOffset  > 0) {
+  if (scrollPosition  >header.offsetHeight ) {
     header.classList.add('sticky');
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
