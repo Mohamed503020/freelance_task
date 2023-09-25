@@ -38,6 +38,7 @@ body,
 html {
     direction: rtl !important;
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -46,6 +47,7 @@ body {
     font-weight: 700;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 @font-face{font-family:'Tajawal';font-style:normal;font-weight:500;font-display:swap;src:local('Tajawal Medium'),local('Tajawal-Medium'),url(https://fonts.gstatic.com/s/tajawal/v3/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2');unicode-range:U+0600-06FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE80-FEFC}
@@ -270,13 +272,17 @@ body *:not(.fa,.fa-solid,.fa-regular){font-family:'Tajawal',sans-serif}
     padding: 36px 15px;
     height: 100px;
     z-index: 999;
-    top:0;
-    position: sticky;
     transition: top ease-in-out 0.3s;
     border-bottom: 3px solid var(--man--bg);
 
 }
 
+.main-header.stiky{
+    position: sticky;top:0  
+ }
+@supports(position: sticky){
+    .main-header.stiky{position: sticky;top:0}  
+}
 .main-header .logo img {
     width: 216px;
     height: 90px;

@@ -10,7 +10,8 @@ window.addEventListener('scroll', function() {
   // } else {
 
   // }
-  if (scrollPosition  >header.offsetHeight ) {
+  if (scrollPosition  >0 ) {
+    header.classList.add("stiky")
     menuMainHeader.forEach(ele => {
       ele.style.transition = "top ease 0.5s";
       ele.style.top = "100px";
@@ -21,7 +22,7 @@ window.addEventListener('scroll', function() {
       });
     }
   } else {
-    
+    header.classList.remove("stiky")
     if (showClass) {
       menuMainHeader.forEach(ele => {
         ele.style.transitionDelay = "0.5s";
