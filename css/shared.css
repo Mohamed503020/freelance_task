@@ -397,11 +397,9 @@ margin-bottom: 20px;}
     -ms-transition: .3s;
     -o-transition: .3s;
 }
- .main-header.stiky{
-    position: sticky;top:0  
- }
+
 @supports(position: sticky){
-    .main-header.stiky{position: sticky;top:0}  
+    .main-header{position: sticky;top:0}  
 }
  .main-header .logo img{
     width: 216px;
